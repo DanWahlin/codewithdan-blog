@@ -1,1 +1,3 @@
-node_modules/\ndist/\n.astro/
+node_modules/
+dist/
+.astro/
