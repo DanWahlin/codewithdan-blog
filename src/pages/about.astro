@@ -1,0 +1,41 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="About - Code with Dan" />
+	</head>
+	<body>
+		<Header />
+		<div class="wrapper">
+			<div class="two-column">
+				<div class="main-content" id="main-content">
+					<article>
+						<header class="entry-header">
+							<h1 class="entry-title">About</h1>
+						</header>
+						<section class="entry-content">
+							<p>
+								Dan Wahlin founded Wahlin Consulting, which provides consulting and training services on
+								JavaScript, Angular, Node.js, Docker, Kubernetes, AI, and more. He is a Google Developer Expert (GDE),
+								Microsoft MVP and Regional Director, and speaks at conferences and user groups around the world.
+							</p>
+							<p>
+								Dan has authored/co-authored several technical books and created many courses for Pluralsight.
+								He blogs regularly at <a href="https://blog.codewithdan.com">blog.codewithdan.com</a> and can be
+								found on X at <a href="https://x.com/DanWahlin">@DanWahlin</a>.
+							</p>
+						</section>
+					</article>
+				</div>
+				<Sidebar />
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>

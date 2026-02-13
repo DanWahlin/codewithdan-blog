@@ -1,0 +1,66 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import { getReadingTime } from '../utils/reading-time';
+import type { BlogPostProps } from '../types';
+
+type Props = BlogPostProps;
+
+const { title, date, categories, tags, body, postId, headings = [] } = Astro.props;
+const shareUrl = Astro.url;
+const shareTitle = encodeURIComponent(title);
+const readingTime = body ? getReadingTime(body) : '';
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={`${title} - Code with Dan Blog`} />
+	</head>
+
+	<body>
+		<Header />
+		<div class="wrapper">
+			<article class="post-article" id="main-content" data-pagefind-body>
+				<header class="entry-header">
+					<h1 class="entry-title">{title}</h1>
+					<div class="entry-meta">
+						<FormattedDate date={date} />
+						<span class="meta-sep">·</span>
+						{readingTime && <><span>{readingTime}</span><span class="meta-sep">·</span></>}
+						<span>Dan Wahlin</span>
+						<span class="meta-sep">·</span>
+						<span class="share-links">
+							Share on
+							<a href={`https://x.com/intent/tweet/?url=${shareUrl}&text=${shareTitle}`} target="_blank" rel="noopener noreferrer" title="Share on X">X</a>
+							<a href={`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`} target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">LinkedIn</a>
+						</span>
+					</div>
+				</header>
+
+				<TableOfContents headings={headings} />
+
+				<section class="entry-content">
+					<slot />
+				</section>
+
+				{tags && tags.length > 0 && (
+					<div class="post-tags">
+						{tags.map((tag, i) => (
+							<>
+								<span class="tag-pill">{tag}</span>
+								{i < tags.length - 1 && ' '}
+							</>
+						))}
+					</div>
+				)}
+			</article>
+
+			<RelatedPosts currentId={postId || ''} tags={tags} categories={categories} />
+		</div>
+		<Footer />
+	</body>
+</html>

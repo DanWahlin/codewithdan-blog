@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/png" href="/favicon.png"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Code with Dan" href="https://blog.codewithdan.com/rss.xml"><meta name="generator" content="Astro v5.17.2"><!-- Google Fonts: Roboto --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900&display=swap"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CDGfc0hd.js"></script><!-- Pagefind Search --><link href="/pagefind/pagefind-ui.css" rel="stylesheet"><!-- Canonical URL --><link rel="canonical" href="https://blog.codewithdan.com/adding-azure-active-directory-and-owin-code-into-an-angularjsasp-net-mvc-application-to-handle-user-authentication/"><!-- Primary Meta Tags --><title>Adding Azure Active Directory and OWIN Code into an AngularJS/ASP.NET MVC Application to Handle User Authentication - Code with Dan Blog</title><meta name="title" content="Adding Azure Active Directory and OWIN Code into an AngularJS/ASP.NET MVC Application to Handle User Authentication - Code with Dan Blog"><meta name="description" content><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://blog.codewithdan.com/adding-azure-active-directory-and-owin-code-into-an-angularjsasp-net-mvc-application-to-handle-user-authentication/"><meta property="og:title" content="Adding Azure Active Directory and OWIN Code into an AngularJS/ASP.NET MVC Application to Handle User Authentication - Code with Dan Blog"><meta property="og:description" content><!-- Twitter --><meta property="twitter:card" content="summary"><meta property="twitter:site" content="@DanWahlin"><meta property="twitter:url" content="https://blog.codewithdan.com/adding-azure-active-directory-and-owin-code-into-an-angularjsasp-net-mvc-application-to-handle-user-authentication/"><meta property="twitter:title" content="Adding Azure Active Directory and OWIN Code into an AngularJS/ASP.NET MVC Application to Handle User Authentication - Code with Dan Blog"><meta property="twitter:description" content><link rel="stylesheet" href="/_astro/_slug_.DiafShDQ.css"></head> <body> <a href="#main-content" class="skip-to-content">Skip to main content</a> <header class="tc-header"> <div class="wrapper"> <div class="header-inner"> <a class="brand" href="/" title="Code with Dan | see it, learn it, code it"> <img src="/images/codeWithDanLogo.png" alt="Code with Dan" width="250" height="59"> </a> <div class="header-right"> <ul class="nav"> <li><a href="https://www.pluralsight.com/authors/dan-wahlin" target="_blank">Videos</a></li> </ul> <div class="header-social"> <a href="https://x.com/danwahlin" target="_blank" rel="noopener noreferrer" aria-label="Follow on X"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a> <a href="https://www.linkedin.com/in/danwahlin/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://github.com/danwahlin" target="_blank" rel="noopener noreferrer" aria-label="Follow on GitHub"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg> </a> <a href="https://www.youtube.com/channel/UCtbxTmNfHcXLV5nfpnQxFkw" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a>  </div> <div class="header-search" id="header-search"></div> <button class="dark-mode-toggle" id="dark-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"> <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21.752 15.002A9.72 9.72 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path></svg> <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zm4.5-6a6 6 0 100 12 6 6 0 000-12zm9.75 5.25a.75.75 0 010 1.5h-2.25a.75.75 0 010-1.5h2.25zM12 18.75a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25a.75.75 0 01.75-.75zm-7.28-2.03a.75.75 0 011.06 0l1.59 1.59a.75.75 0 01-1.06 1.06l-1.59-1.59a.75.75 0 010-1.06zm14.56-9.44a.75.75 0 010 1.06l-1.59 1.59a.75.75 0 01-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zM2.25 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zm16.03 4.72a.75.75 0 011.06 1.06l-1.59 1.59a.75.75 0 01-1.06-1.06l1.59-1.59zM7.28 5.69a.75.75 0 010 1.06L5.69 8.34a.75.75 0 01-1.06-1.06l1.59-1.59a.75.75 0 011.06 0z"></path></svg> </button> </div> </div> </div> </header> <script type="module" src="/_astro/Header.astro_astro_type_script_index_0_lang.DN2bt1Sc.js"></script> <div class="wrapper"> <article class="post-article" id="main-content" data-pagefind-body> <header class="entry-header"> <h1 class="entry-title">Adding Azure Active Directory and OWIN Code into an AngularJS/ASP.NET MVC Application to Handle User Authentication</h1> <div class="entry-meta"> <time datetime="2015-01-25T00:00:00.000Z"> Jan 25, 2015 </time> <span class="meta-sep">·</span> <span>7 min read</span><span class="meta-sep">·</span> <span>Dan Wahlin</span> <span class="meta-sep">·</span> <span class="share-links">
+Share on
+<a href="https://x.com/intent/tweet/?url=https://blog.codewithdan.com/adding-azure-active-directory-and-owin-code-into-an-angularjsasp-net-mvc-application-to-handle-user-authentication/&text=Adding%20Azure%20Active%20Directory%20and%20OWIN%20Code%20into%20an%20AngularJS%2FASP.NET%20MVC%20Application%20to%20Handle%20User%20Authentication" target="_blank" rel="noopener noreferrer" title="Share on X">X</a> <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.codewithdan.com/adding-azure-active-directory-and-owin-code-into-an-angularjsasp-net-mvc-application-to-handle-user-authentication/&title=Adding%20Azure%20Active%20Directory%20and%20OWIN%20Code%20into%20an%20AngularJS%2FASP.NET%20MVC%20Application%20to%20Handle%20User%20Authentication" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">LinkedIn</a> </span> </div> </header>  <section class="entry-content">  <p>In a <a href="http://www.itunity.com/article/integrating-aad-services-angularjs-office-365-part-3-770">previous post</a> I discussed how to setup the necessary configuration code and assemblies in an AngularJS/ASP.NET MVC application in order to authenticate users against <a href="http://azure.microsoft.com/en-us/services/active-directory/">Azure Active Directory</a> (AAD). Once the initial configuration is complete you can write code to redirect users to the AAD login screen to retrieve an ID token.</p>
+<p>In Part 4 of an article series I’m writing for <a href="http://itunity.com">http://itunity.com</a> I discuss the necessary code that’s required to authenticate a user and retrieve the ID token. Additional topics covered include hooking AAD into the ASP.NET MVC pipeline, creating an Entity Framework token cache, triggering authentication against AAD in MVC controllers, and more. Here’s an excerpt from the article. The complete code for the application discussed in the article series can be found on the <a href="https://github.com/OfficeDev/SP-AngularJS-ExpenseManager-Code-Sample">OfficeDev Github site</a>.</p>
+<h2 id="adding-aad-configuration-and-assemblies-into-an-application"><a href="#adding-aad-configuration-and-assemblies-into-an-application">Adding AAD Configuration and Assemblies into an Application</a></h2>
+<p><a href="http://www.itunity.com/article/integrating-aad-services-angularjs-office-365-part-3-770">Part 3</a> of this series covered how to access the Client ID, Key, and Tenant ID values from Azure Active Directory (AAD) and add them into web.config. It also showed how to get the necessary AAD and OWIN NuGet packages in place and create a <em>SettingsHelper</em> class to simplify the process of accessing web.config values.</p>
+<p>In this article, you’ll see how the values defined in web.config can be used to associate a custom application with AAD. Topics covered include setting up a token storage cache, hooking AAD code into the OWIN startup process, and creating an ASP.NET MVC controller to display a login page to end users and handle directing them to the application upon successful authentication. All of the code that follows is from the <a href="https://github.com/OfficeDev/SP-AngularJS-ExpenseManager-Code-Sample">Expense Manager application</a> that’s available on the OfficeDev GitHub site.</p>
+<p>Let’s kick things off by looking at AAD token storage and the role it plays in applications.</p>
+<h3 id="aad-token-storage"><a href="#aad-token-storage">AAD Token Storage</a></h3>
+<p>The NuGet packages added into the application (see <a href="http://www.itunity.com/article/integrating-aad-services-angularjs-office-365-part-3-770">Part 3</a> of this series) provide the necessary functionality to authenticate a user with AAD. Once authenticated, AAD will return an ID token that can be stored by the application and used as secured resources such as Web API, Office 365 APIs, or other resources are accessed. The AAD documentation provides a diagram that sums up the overall authentication workflow well:</p>
+<p><a href="http://www.itunity.com/content/content/771/wahlin_fig1.png"></a></p>
+<p>Figure 1. The flow as a user logs into AAD, gets an ID token, and then accesses an application and additional resources. This image is from <a href="http://msdn.microsoft.com/en-us/library/azure/dn499820.aspx">http://msdn.microsoft.com/en-us/library/azure/dn499820.aspx</a>.</p>
+<p>While the token received by the application can be stored in memory during development, it’s recommended that a more robust token store be put in place to handle that task for production. You can find several sample applications that integrate with AAD and handle tokens on the <a href="https://github.com/AzureADSamples">Azure Active Directory Github samples site</a>. Some of the samples use an in-memory store while others rely on a database, which is recommended when an app is ready to move to production.</p>
+<p>In this part of the article, you’ll see the steps required to get an Entity Framework and SQL Server token store in place. If you don’t already have the Entity Framework NuGet package installed in your project you’ll need to install it.</p>
+<p>From a high level, the following tasks will be discussed:</p>
+<ol>
+<li>Create a model class named <em>PerWebUserCache</em> that’s used to define properties that are needed to store and retrieve AAD tokens.</li>
+<li>Create an Entity Framework DbContext class named <em>EFADALContext</em> that interacts with a SQL Server database.</li>
+<li>Create a token cache class named <em>EFADALTokenCache</em> that uses the context class to store and retrieve tokens from a SQL Server database.</li>
+<li>Add startup code that uses the previous classes and is responsible for handling authentication as a user requests a secure resource.</li>
+</ol>
+<p>To get started, add a new class named <em>PerWebUserCache.cs</em> into the <em>Models</em> folder of an ASP.NET MVC application. This code defines properties that will be used by the token store. Add the following code into the class:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>using System;</span></span>
+<span class="line"><span>using System.Collections.Generic;</span></span>
+<span class="line"><span>using System.ComponentModel.DataAnnotations;</span></span>
+<span class="line"><span>using System.Linq;</span></span>
+<span class="line"><span>using System.Web;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>namespace ExpenseManager.Models</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>   public class PerWebUserCache</span></span>
+<span class="line"><span>   {</span></span>
+<span class="line"><span>       [Key]</span></span>
+<span class="line"><span>       public int EntryId { get; set; }</span></span>
+<span class="line"><span>       public string webUserUniqueId { get; set; }</span></span>
+<span class="line"><span>       public byte[] cacheBits { get; set; }</span></span>
+<span class="line"><span>       public DateTime LastWrite { get; set; }</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<p>Listing 1. The PerWebUserCache model class defines properties that will be used by the token store.</p>
+<p>Now add a class named <em>EFADALContext.cs</em> into the <em>Utils</em> folder. This class will derive from Entity Framework’s <em>DbContext</em> class and handle mapping the <em>PerWebUserCache</em> object to the proper table in SQL Server. Add the following code into the <em>EFADALContext</em> class:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>using ExpenseManager.Models;</span></span>
+<span class="line"><span>using System;</span></span>
+<span class="line"><span>using System.Collections.Generic;</span></span>
+<span class="line"><span>using System.Data.Entity;</span></span>
+<span class="line"><span>using System.Data.Entity.ModelConfiguration.Conventions;</span></span>
+<span class="line"><span>using System.Linq;</span></span>
+<span class="line"><span>using System.Web;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>namespace ExpenseManager.Utils</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>   public class EFADALContext : DbContext</span></span>
+<span class="line"><span>   {</span></span>
+<span class="line"><span>       public EFADALContext() : base("EFADALContext")</span></span>
+<span class="line"><span>       {</span></span>
+<span class="line"><span>       }</span></span>
+<span class="line"><span>       public DbSet&#x3C;PerWebUserCache> PerUserCacheList { get; set; }</span></span>
+<span class="line"><span>       protected override void OnModelCreating(DbModelBuilder modelBuilder)</span></span>
+<span class="line"><span>       {</span></span>
+<span class="line"><span>           modelBuilder.Conventions.Remove&#x3C;PluralizingTableNameConvention>();</span></span>
+<span class="line"><span>       }</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<p>Listing 2. The EFADALContext class handles table creation and queries with SQL Server.</p>
+<p>Now that the model and database context classes have been created, a token cache class named <em>EFADALTokenCache</em> can be created that uses the context to store and retrieve AAD tokens. This is one of many <a href="https://github.com/AzureADSamples/WebApp-WebAPI-MultiTenant-OpenIdConnect-DotNet/blob/master/TodoListWebApp%2FDAL%2FEFADALTokenCache.cs">classes</a> provided by the AAD samples site on GitHub that was mentioned earlier.</p>
+<p>Add a class named _EFADALTokenCache.c_s into the <em>Utils</em> folder that has the following code in it:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>using Microsoft.IdentityModel.Clients.ActiveDirectory;</span></span>
+<span class="line"><span>using ExpenseManager.Models;</span></span>
+<span class="line"><span>using System;</span></span>
+<span class="line"><span>using System.Collections.Generic;</span></span>
+<span class="line"><span>using System.Data.Entity;</span></span>
+<span class="line"><span>using System.Linq;</span></span>
+<span class="line"><span>using System.Web;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>namespace ExpenseManager.Utils</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>   public class EFADALTokenCache : TokenCache</span></span>
+<span class="line"><span>   {</span></span>
+<span class="line"><span>       private EFADALContext _Context = new EFADALContext();</span></span>
+<span class="line"><span>       string User;</span></span>
+<span class="line"><span>       PerWebUserCache Cache;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>       // constructor</span></span>
+<span class="line"><span>       public EFADALTokenCache(string user)</span></span>
+<span class="line"><span>       {</span></span>
+<span class="line"><span>           // associate the cache to the current user of the web app</span></span>
+<span class="line"><span>           User = user;</span></span>
+<span class="line"><span>           this.AfterAccess = AfterAccessNotification;</span></span>
+<span class="line"><span>           this.BeforeAccess = BeforeAccessNotification;</span></span>
+<span class="line"><span>           this.BeforeWrite = BeforeWriteNotification;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>           // look up the entry in the DB</span></span>
+<span class="line"><span>           Cache = _Context.PerUserCacheList.FirstOrDefault(c => </span></span>
+<span class="line"><span>                    c.webUserUniqueId == User);</span></span>
+<span class="line"><span>           // place the entry in memory</span></span>
+<span class="line"><span>           this.Deserialize((Cache == null) ? null : Cache.cacheBits);</span></span>
+<span class="line"><span>       }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>       // clean up the DB</span></span>
+<span class="line"><span>       public override void Clear()</span></span>
+<span class="line"><span>       {</span></span>
+<span class="line"><span>           base.Clear();</span></span>
+<span class="line"><span>           foreach (var cacheEntry in _Context.PerUserCacheList)</span></span>
+<span class="line"><span>               _Context.PerUserCacheList.Remove(cacheEntry);</span></span>
+<span class="line"><span>           _Context.SaveChanges();</span></span>
+<span class="line"><span>       }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>       // Notification raised before ADAL accesses the cache.</span></span>
+<span class="line"><span>       // This is your chance to update the in-memory copy from the DB</span></span>
+<span class="line"><span>       // if the in-memory version is stale.</span></span>
+<span class="line"><span>       void BeforeAccessNotification(TokenCacheNotificationArgs args)</span></span>
+<span class="line"><span>       {</span></span>
+<span class="line"><span>           if (Cache == null)</span></span>
+<span class="line"><span>           {</span></span>
+<span class="line"><span>               // first time access</span></span>
+<span class="line"><span>               Cache = _Context.PerUserCacheList.FirstOrDefault(c => </span></span>
+<span class="line"><span>                        c.webUserUniqueId == User);</span></span>
+<span class="line"><span>           }</span></span>
+<span class="line"><span>           else</span></span>
+<span class="line"><span>           {   // retrieve last write from the DB</span></span>
+<span class="line"><span>               var status = from e in _Context.PerUserCacheList</span></span>
+<span class="line"><span>                            where (e.webUserUniqueId == User)</span></span>
+<span class="line"><span>                            select new</span></span>
+<span class="line"><span>                            {</span></span>
+<span class="line"><span>                                LastWrite = e.LastWrite</span></span>
+<span class="line"><span>                            };</span></span>
+<span class="line"><span>               // if the in-memory copy is older than the persistent copy</span></span>
+<span class="line"><span>               if (status.First().LastWrite > Cache.LastWrite)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>               // read from from storage, update in-memory copy</span></span>
+<span class="line"><span>               {</span></span>
+<span class="line"><span>                   Cache = _Context.PerUserCacheList.FirstOrDefault(</span></span>
+<span class="line"><span>                            c => c.webUserUniqueId == User);</span></span>
+<span class="line"><span>               }</span></span>
+<span class="line"><span>           }</span></span>
+<span class="line"><span>           this.Deserialize((Cache == null) ? null : Cache.cacheBits);</span></span>
+<span class="line"><span>       }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>       // Notification raised after ADAL accessed the cache.</span></span>
+<span class="line"><span>       // If the HasStateChanged flag is set, ADAL changed the content of the cache</span></span>
+<span class="line"><span>       void AfterAccessNotification(TokenCacheNotificationArgs args)</span></span>
+<span class="line"><span>       {</span></span>
+<span class="line"><span>           // if state changed</span></span>
+<span class="line"><span>           if (this.HasStateChanged)</span></span>
+<span class="line"><span>           {</span></span>
+<span class="line"><span>               Cache = new PerWebUserCache</span></span>
+<span class="line"><span>               {</span></span>
+<span class="line"><span>                   webUserUniqueId = User,</span></span>
+<span class="line"><span>                   cacheBits = this.Serialize(),</span></span>
+<span class="line"><span>                   LastWrite = DateTime.Now</span></span>
+<span class="line"><span>               };</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>               // update the DB and the lastwrite                </span></span>
+<span class="line"><span>               _Context.Entry(Cache).State = Cache.EntryId == 0 ? </span></span>
+<span class="line"><span>                  EntityState.Added : EntityState.Modified;</span></span>
+<span class="line"><span>               _Context.SaveChanges();</span></span>
+<span class="line"><span>               this.HasStateChanged = false;</span></span>
+<span class="line"><span>           }</span></span>
+<span class="line"><span>       }</span></span>
+<span class="line"><span>       void BeforeWriteNotification(TokenCacheNotificationArgs args)</span></span>
+<span class="line"><span>       {</span></span>
+<span class="line"><span>           // if you want to ensure that no concurrent write takes place, </span></span>
+<span class="line"><span>           // use this notification to place a lock on the entry</span></span>
+<span class="line"><span>       }</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<p>Listing 3. The EFADALTokenCache class is responsible for storing and retrieving AAD tokens used by the application.</p>
+<p>This code handles managing an in-memory store that is backed by a database. As changes are made or the local cache becomes stale, calls are made to update the proper fields in the database. With the EFADALTokenCache class in place along with the model and database context classes, it’s now time to add AAD code in the application to allow users to be authenticated. This code will tie AAD into OWIN so that any secured application resources trigger the authentication process.</p>
+<p>Read the full article at <a href="http://www.itunity.com/article/integrating-angularjs-azure-active-directory-services-office-365sharepoint-part-4-771" title="http://www.itunity.com/article/integrating-angularjs-azure-active-directory-services-office-365sharepoint-part-4-771">http://www.itunity.com/article/integrating-angularjs-azure-active-directory-services-office-365sharepoint-part-4-771</a>.</p>  </section>  </article> <aside class="related-posts"><h2 class="related-heading">Related Posts</h2><div class="related-grid"><a href="/adding-azure-active-directory-configuration-code-and-assemblies-into-an-angularjsasp-net-mvc-application/" class="related-card"><div class="related-body"><h3>Adding Azure Active Directory Configuration Code and Assemblies into an AngularJS/ASP.NET MVC Application</h3><div class="related-meta"><time datetime="2015-01-25T00:00:00.000Z"> Jan 25, 2015 </time> · 4 min read</div></div></a><a href="/building-applications-with-angularjs-azure-active-directory-and-office-365sharepoint/" class="related-card"><div class="related-body"><h3>Building Applications with AngularJS, Azure Active Directory, and Office 365/SharePoint</h3><div class="related-meta"><time datetime="2014-12-07T00:00:00.000Z"> Dec 7, 2014 </time> · 4 min read</div></div></a><a href="/registering-a-custom-angularjs-application-with-azure-active-directory/" class="related-card"><div class="related-body"><h3>Registering a Custom AngularJS Application with Azure Active Directory</h3><div class="related-meta"><time datetime="2014-12-07T00:00:00.000Z"> Dec 7, 2014 </time> · 5 min read</div></div></a></div></aside> </div> <footer id="footer"> <div class="colophon"> <div class="wrapper"> <div class="colophon-inner"> <div class="footer-social"> <a href="https://x.com/danwahlin" target="_blank" rel="noopener noreferrer" aria-label="Follow on X"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a> <a href="https://www.linkedin.com/in/danwahlin/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://github.com/danwahlin" target="_blank" rel="noopener noreferrer" aria-label="Follow on GitHub"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg> </a> <a href="https://www.youtube.com/channel/UCtbxTmNfHcXLV5nfpnQxFkw" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> <a href="/rss.xml" target="_blank" aria-label="Subscribe to RSS feed"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415a3.3 3.3 0 013.293 3.295A3.303 3.303 0 013.283 24C1.47 24 0 22.526 0 20.71s1.475-3.295 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"></path></svg> </a> </div> <div class="credits"> <p>&copy; 2026 <a href="https://codewithdan.com" title="Code with Dan">Wahlin Consulting</a></p> </div> </div> </div> </div> </footer> </body></html>

@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+import { getReadingTime } from '../utils/reading-time';
+import { getExcerpt, getCoverImagePath } from '../utils/blog-helpers';
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const coverImage = getCoverImagePath(post);
+const excerpt = getExcerpt(post.body || '');
+---
+
+<article>
+	<section class="post-content">
+		<header class="entry-header">
+			<h2 class="entry-title">
+				<a href={`/${post.id}/`}>{post.data.title}</a>
+			</h2>
+			<div class="entry-date">
+				<FormattedDate date={post.data.date} /> · {getReadingTime(post.body || '')}
+			</div>
+		</header>
+		<section class="entry-summary">
+			<p>{excerpt}</p>
+		</section>
+	</section>
+	{coverImage && (
+		<section class="tc-thumbnail">
+			<a href={`/${post.id}/`}>
+				<img src={coverImage} alt={`Cover image for: ${post.data.title}`} width="270" height="250" loading="lazy" />
+			</a>
+		</section>
+	)}
+</article>

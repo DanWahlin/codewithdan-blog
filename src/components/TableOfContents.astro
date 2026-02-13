@@ -1,0 +1,25 @@
+---
+interface Props {
+	headings: { depth: number; slug: string; text: string }[];
+}
+
+const { headings } = Astro.props;
+// Only show TOC for posts with 3+ headings
+const tocHeadings = headings.filter(h => h.depth <= 3);
+const showToc = tocHeadings.length >= 3;
+---
+
+{showToc && (
+	<nav class="toc">
+		<details open>
+			<summary class="toc-title">Table of Contents</summary>
+			<ul class="toc-list">
+				{tocHeadings.map(h => (
+					<li class={`toc-item toc-depth-${h.depth}`}>
+						<a href={`#${h.slug}`}>{h.text}</a>
+					</li>
+				))}
+			</ul>
+		</details>
+	</nav>
+)}

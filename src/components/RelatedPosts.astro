@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+import { getReadingTime } from '../utils/reading-time';
+import { getCoverImagePath } from '../utils/blog-helpers';
+
+interface Props {
+	currentId: string;
+	tags?: string[];
+	categories?: string[];
+}
+
+const { currentId, tags = [], categories = [] } = Astro.props;
+
+const allPosts = (await getCollection('blog'))
+	.filter(p => !p.data.draft)
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Score posts by matching tags and categories
+const scored = allPosts
+	.filter(p => p.id !== currentId)
+	.map(post => {
+		let score = 0;
+		const postTags = post.data.tags || [];
+		const postCats = post.data.categories || [];
+		for (const t of tags) {
+			if (postTags.includes(t)) score += 2;
+		}
+		for (const c of categories) {
+			if (postCats.includes(c)) score += 1;
+		}
+		return { post, score };
+	})
+	.filter(s => s.score > 0)
+	.sort((a, b) => b.score - a.score)
+	.slice(0, 3);
+
+---
+
+{scored.length > 0 && (
+	<aside class="related-posts">
+		<h2 class="related-heading">Related Posts</h2>
+		<div class="related-grid">
+			{scored.map(({ post }) => {
+				const img = getCoverImagePath(post);
+				return (
+					<a href={`/${post.id}/`} class="related-card">
+						{img && (
+							<div class="related-image">
+								<img src={img} alt={post.data.title} loading="lazy" />
+							</div>
+						)}
+						<div class="related-body">
+							<h3>{post.data.title}</h3>
+							<div class="related-meta">
+								<FormattedDate date={post.data.date} /> · {getReadingTime(post.body || '')}
+							</div>
+						</div>
+					</a>
+				);
+			})}
+		</div>
+	</aside>
+)}

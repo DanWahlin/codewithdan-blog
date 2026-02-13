@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/png" href="/favicon.png"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Code with Dan" href="https://blog.codewithdan.com/rss.xml"><meta name="generator" content="Astro v5.17.2"><!-- Google Fonts: Roboto --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900&display=swap"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CDGfc0hd.js"></script><!-- Pagefind Search --><link href="/pagefind/pagefind-ui.css" rel="stylesheet"><!-- Canonical URL --><link rel="canonical" href="https://blog.codewithdan.com/creating-custom-angularjs-directives-part-6-using-controllers/"><!-- Primary Meta Tags --><title>Creating Custom AngularJS Directives Part 6 - Using Controllers - Code with Dan Blog</title><meta name="title" content="Creating Custom AngularJS Directives Part 6 - Using Controllers - Code with Dan Blog"><meta name="description" content><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://blog.codewithdan.com/creating-custom-angularjs-directives-part-6-using-controllers/"><meta property="og:title" content="Creating Custom AngularJS Directives Part 6 - Using Controllers - Code with Dan Blog"><meta property="og:description" content><!-- Twitter --><meta property="twitter:card" content="summary"><meta property="twitter:site" content="@DanWahlin"><meta property="twitter:url" content="https://blog.codewithdan.com/creating-custom-angularjs-directives-part-6-using-controllers/"><meta property="twitter:title" content="Creating Custom AngularJS Directives Part 6 - Using Controllers - Code with Dan Blog"><meta property="twitter:description" content><link rel="stylesheet" href="/_astro/_slug_.DiafShDQ.css"></head> <body> <a href="#main-content" class="skip-to-content">Skip to main content</a> <header class="tc-header"> <div class="wrapper"> <div class="header-inner"> <a class="brand" href="/" title="Code with Dan | see it, learn it, code it"> <img src="/images/codeWithDanLogo.png" alt="Code with Dan" width="250" height="59"> </a> <div class="header-right"> <ul class="nav"> <li><a href="https://www.pluralsight.com/authors/dan-wahlin" target="_blank">Videos</a></li> </ul> <div class="header-social"> <a href="https://x.com/danwahlin" target="_blank" rel="noopener noreferrer" aria-label="Follow on X"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a> <a href="https://www.linkedin.com/in/danwahlin/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://github.com/danwahlin" target="_blank" rel="noopener noreferrer" aria-label="Follow on GitHub"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg> </a> <a href="https://www.youtube.com/channel/UCtbxTmNfHcXLV5nfpnQxFkw" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a>  </div> <div class="header-search" id="header-search"></div> <button class="dark-mode-toggle" id="dark-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"> <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21.752 15.002A9.72 9.72 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path></svg> <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zm4.5-6a6 6 0 100 12 6 6 0 000-12zm9.75 5.25a.75.75 0 010 1.5h-2.25a.75.75 0 010-1.5h2.25zM12 18.75a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25a.75.75 0 01.75-.75zm-7.28-2.03a.75.75 0 011.06 0l1.59 1.59a.75.75 0 01-1.06 1.06l-1.59-1.59a.75.75 0 010-1.06zm14.56-9.44a.75.75 0 010 1.06l-1.59 1.59a.75.75 0 01-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zM2.25 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zm16.03 4.72a.75.75 0 011.06 1.06l-1.59 1.59a.75.75 0 01-1.06-1.06l1.59-1.59zM7.28 5.69a.75.75 0 010 1.06L5.69 8.34a.75.75 0 01-1.06-1.06l1.59-1.59a.75.75 0 011.06 0z"></path></svg> </button> </div> </div> </div> </header> <script type="module" src="/_astro/Header.astro_astro_type_script_index_0_lang.DN2bt1Sc.js"></script> <div class="wrapper"> <article class="post-article" id="main-content" data-pagefind-body> <header class="entry-header"> <h1 class="entry-title">Creating Custom AngularJS Directives Part 6 - Using Controllers</h1> <div class="entry-meta"> <time datetime="2014-12-29T00:00:00.000Z"> Dec 29, 2014 </time> <span class="meta-sep">·</span> <span>10 min read</span><span class="meta-sep">·</span> <span>Dan Wahlin</span> <span class="meta-sep">·</span> <span class="share-links">
+Share on
+<a href="https://x.com/intent/tweet/?url=https://blog.codewithdan.com/creating-custom-angularjs-directives-part-6-using-controllers/&text=Creating%20Custom%20AngularJS%20Directives%20Part%206%20-%20Using%20Controllers" target="_blank" rel="noopener noreferrer" title="Share on X">X</a> <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.codewithdan.com/creating-custom-angularjs-directives-part-6-using-controllers/&title=Creating%20Custom%20AngularJS%20Directives%20Part%206%20-%20Using%20Controllers" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">LinkedIn</a> </span> </div> </header> <nav class="toc"><details open><summary class="toc-title">Table of Contents</summary><ul class="toc-list"><li class="toc-item toc-depth-2"><a href="#"></a></li><li class="toc-item toc-depth-2"><a href="#a-directive-without-a-controller">A Directive without a Controller</a></li><li class="toc-item toc-depth-2"><a href="#adding-a-controller-and-view-into-a-directive">Adding a Controller and View into a Directive</a></li><li class="toc-item toc-depth-2"><a href="#using-controlleras-in-a-directive">Using controllerAs in a Directive</a></li><li class="toc-item toc-depth-2"><a href="#conclusion">Conclusion</a></li></ul></details></nav> <section class="entry-content">  <p><img src="/images/blog/creating-custom-angularjs-directives-part-6-using-controllers/AngularJS_thumb_1008B166.jpg" alt=""></p>
+<script type="text/javascript">// <![CDATA[ document.write(getHtmlFragment('angularjsGetStarted')); // ]]></script>
+<h2 id=""></h2>
+<p>Creating Custom AngularJS Directives Series</p>
+<script type="text/javascript">// <![CDATA[ document.write(getHtmlFragment('customDirectivesLinks')); // ]]></script>
+<p>Up to this point in the AngularJS directives series you’ve learned about many key aspects of directives but haven’t seen anything about how controllers fit into the picture. Although controllers are typically associated with routes and views, they can also be embedded in AngularJS directives. In fact, there are many scenarios where custom directives can take advantage of controllers to minimize code and simplify maintenance. While using controllers in directives is certainly optional, if you’d prefer to build directives using similar techniques that you use now to build views then you’ll find controllers are essential in many cases. By using controllers, directives start to feel like “child views”.</p>
+<p>In this post I’ll walk through the process of integrating controllers into directives and show the role that they can play. Let’s start off by looking at a directive that doesn’t use a  controller and talk through the pros and cons of the approach.</p>
+<h2 id="a-directive-without-a-controller"><a href="#a-directive-without-a-controller">A Directive without a Controller</a></h2>
+<p>Directives provide several different ways to render HTML, collect data, and perform additional tasks. In situations where a directive is performing a lot of DOM manipulation, using the <strong>link</strong> function makes sense.  Here’s a simple example of the <strong>link</strong> function in action:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>(function() {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  var app = angular.module('directivesModule');</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  app.directive('domDirective', function () {</span></span>
+<span class="line"><span>      return {</span></span>
+<span class="line"><span>          restrict: 'A',</span></span>
+<span class="line"><span>          link: function ($scope, element, attrs) {</span></span>
+<span class="line"><span>              element.on('click', function () {</span></span>
+<span class="line"><span>                  element.html('You clicked me!');</span></span>
+<span class="line"><span>              });</span></span>
+<span class="line"><span>              element.on('mouseenter', function () {</span></span>
+<span class="line"><span>                  element.css('background-color', 'yellow');</span></span>
+<span class="line"><span>              });</span></span>
+<span class="line"><span>              element.on('mouseleave', function () {</span></span>
+<span class="line"><span>                  element.css('background-color', 'white');</span></span>
+<span class="line"><span>              });</span></span>
+<span class="line"><span>          }</span></span>
+<span class="line"><span>      };</span></span>
+<span class="line"><span>  });</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}());</span></span></code></pre>
+<p>Adding a controller into this directive doesn’t make much sense given that the goal is to handle events and manipulate the DOM. Although it would be possible to accomplish the same task using a view in the directive (along with built-in AngularJS directives such as ng-click) and controller there’s really no reason to add a controller into this directive if DOM manipulation is the overall end goal.</p>
+<p>In cases where you’re manipulating the DOM, integrating data into the generated HTML, handling events, and more, adding a controller can minimize the amount of code you write and simplify the overall process in some cases. To make this more clear, let’s look at an example of a directive then renders a list of items and provides a button that can be used to add items to the list. Here’s the simple output that the directive renders:</p>
+<p><a href="https://mscblogs.blob.core.windows.net/media/dwahlin/Windows-Live-Writer/Creating-Custom-AngularJS-Directives-Par_D3AB/image_thumb%5B2%5D_2.png"><img src="/images/blog/creating-custom-angularjs-directives-part-6-using-controllers/image_thumb%5B2%5D_thumb.png" alt="image_thumb[2]" title="image_thumb[2]"></a></p>
+<p>There are several different ways to handle rendering this type of UI. A typical DOM-centric approach would use the <strong>link</strong> function to handle everything as shown in the following directive. Keep in mind there are many ways to do this and the overall goal is to demonstrate DOM-centric code (as simply as possible):</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>(function() {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  var app = angular.module('directivesModule');</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  app.directive('isolateScopeWithoutController', function () {</span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>      var link = function (scope, element, attrs) {</span></span>
+<span class="line"><span>              </span></span>
+<span class="line"><span>              //Create a copy of the original data that’s passed in              </span></span>
+<span class="line"><span>              var items = angular.copy(scope.datasource);</span></span>
+<span class="line"><span>              </span></span>
+<span class="line"><span>              function init() {</span></span>
+<span class="line"><span>                  var html = '&#x3C;button id="addItem">Add Item&#x3C;/button>&#x3C;div>&#x3C;/div>';</span></span>
+<span class="line"><span>                  element.html(html);</span></span>
+<span class="line"><span>                  </span></span>
+<span class="line"><span>                  element.on('click', function(event) {</span></span>
+<span class="line"><span>                      if (event.srcElement.id === 'addItem') {</span></span>
+<span class="line"><span>                          addItem();</span></span>
+<span class="line"><span>                          event.preventDefault();</span></span>
+<span class="line"><span>                      }</span></span>
+<span class="line"><span>                  });</span></span>
+<span class="line"><span>              }</span></span>
+<span class="line"><span>              </span></span>
+<span class="line"><span>              function addItem() {</span></span>
+<span class="line"><span>                  //Call external function passed in with &#x26;</span></span>
+<span class="line"><span>                  scope.add();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>                  //Add new customer to the local collection</span></span>
+<span class="line"><span>                  items.push({</span></span>
+<span class="line"><span>                      name: 'New Directive Customer'</span></span>
+<span class="line"><span>                  });</span></span>
+<span class="line"><span>                  </span></span>
+<span class="line"><span>                  render();</span></span>
+<span class="line"><span>              }</span></span>
+<span class="line"><span>              </span></span>
+<span class="line"><span>              function render() {</span></span>
+<span class="line"><span>                  var html = '&#x3C;ul>';</span></span>
+<span class="line"><span>                  for (var i=0,len=items.length;i&#x3C;len;i++) {</span></span>
+<span class="line"><span>                      html += '&#x3C;li>' + items[i].name + '&#x3C;/li>'</span></span>
+<span class="line"><span>                  }</span></span>
+<span class="line"><span>                  html += '&#x3C;/ul>';                  </span></span>
+<span class="line"><span>                  </span></span>
+<span class="line"><span>                  element.find('div').html(html);</span></span>
+<span class="line"><span>              }</span></span>
+<span class="line"><span>              </span></span>
+<span class="line"><span>              init();</span></span>
+<span class="line"><span>              render();        </span></span>
+<span class="line"><span>      };</span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>      return {</span></span>
+<span class="line"><span>          restrict: 'EA',</span></span>
+<span class="line"><span>          scope: {</span></span>
+<span class="line"><span>              datasource: '=',</span></span>
+<span class="line"><span>              add: '&#x26;',</span></span>
+<span class="line"><span>          },</span></span>
+<span class="line"><span>          link: link</span></span>
+<span class="line"><span>      };</span></span>
+<span class="line"><span>  });</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}());</span></span></code></pre>
+<p>Although this code gets the job done, it’s more along the lines of a jQuery plugin and takes what I refer to as a “<a href="http://weblogs.asp.net/dwahlin/The-JavaScript-Cheese-is-Moving_3A00_-Data_2D00_Oriented-vs.-Control_2D00_Oriented-Programming">control-oriented</a>” approach where tag names and/or IDs are prevalent in the code. All of the DOM manipulation is handled manually which is fine and maybe even preferred in some cases (for performance reasons for example), but it’s definitely not the normal way we build Angular apps. The DOM manipulation code is mixed in with the scope which starts to get messy especially as the directive grows in size.</p>
+<p>As the button is clicked the <strong>addItem()</strong> function is called which handles calling an isolate scope property (<strong>add</strong>) and invoking the <strong>render()</strong> function which renders a </p><ul> tag and multiple <li> tags. There’s nothing wrong with this approach per se, but I’m not a fan of having a lot of separate strings embedded in the JavaScript since they can cause a maintenance nightmare over time. While a small directive like this is fairly easy to maintain, the code can get more challenging as the directive has additional features added.<p></p>
+<p>There’s also a more subtle issue at play in this code. When <strong>scope.add()</strong> is called the invoked parent scope function will need to use <strong>$scope.$apply()</strong> to update any properties in the parent scope since the call to <strong>add</strong> is being made from vanilla JavaScript rather than from within the context of AngularJS (something that’s outside the scope of this post, but definitely important to consider). Finally, the directive doesn’t resemble the “child view” concept that was mentioned at the beginning of the post – it’s just a bunch of code. How can a controller help out in this example? Let’s take a look.</p>
+<h2 id="adding-a-controller-and-view-into-a-directive"><a href="#adding-a-controller-and-view-into-a-directive">Adding a Controller and View into a Directive</a></h2>
+<p>The directive shown in the previous section gets the job done but what if you could write it much like you’d write a standard AngularJS view and use a more <a href="http://weblogs.asp.net/dwahlin/The-JavaScript-Cheese-is-Moving_3A00_-Data_2D00_Oriented-vs.-Control_2D00_Oriented-Programming">data-oriented</a> approach as opposed to the <a href="http://weblogs.asp.net/dwahlin/The-JavaScript-Cheese-is-Moving_3A00_-Data_2D00_Oriented-vs.-Control_2D00_Oriented-Programming">control-oriented</a> approach that the DOM takes? By using a controller and view in a directive the development process feel more along the lines of what you do everyday in AngularJS applications.</p>
+<p>Here’s an example of converting the directive shown earlier into a cleaner version (in my opinion anyway) that relies on a controller and a simple view:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>(function() {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  var app = angular.module('directivesModule');</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  app.directive('isolateScopeWithController', function () {</span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>    var controller = ['$scope', function ($scope) {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          function init() {</span></span>
+<span class="line"><span>              $scope.items = angular.copy($scope.datasource);</span></span>
+<span class="line"><span>          }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          init();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          $scope.addItem = function () {</span></span>
+<span class="line"><span>              $scope.add();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>              //Add new customer to directive scope</span></span>
+<span class="line"><span>              $scope.items.push({</span></span>
+<span class="line"><span>                  name: 'New Directive Controller Item'</span></span>
+<span class="line"><span>              });</span></span>
+<span class="line"><span>          };</span></span>
+<span class="line"><span>      }],</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>      template = '&#x3C;button ng-click="addItem()">Add Item&#x3C;/button>&#x3C;ul>' +</span></span>
+<span class="line"><span>                 '&#x3C;li ng-repeat="item in items">{{ ::item.name }}&#x3C;/li>&#x3C;/ul>';</span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>      return {</span></span>
+<span class="line"><span>          restrict: 'EA', //Default in 1.3+</span></span>
+<span class="line"><span>          scope: {</span></span>
+<span class="line"><span>              datasource: '=',</span></span>
+<span class="line"><span>              add: '&#x26;',</span></span>
+<span class="line"><span>          },</span></span>
+<span class="line"><span>          controller: controller,</span></span>
+<span class="line"><span>          template: template</span></span>
+<span class="line"><span>      };</span></span>
+<span class="line"><span>  });</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}());</span></span></code></pre>
+<p>The directive could be used in one of the following ways:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Attribute: &#x3C;div isolate-scope-with-controller datasource="customers" add="addCustomer()">&#x3C;/div></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Element: &#x3C;isolate-scope-with-controller datasource="customers" add="addCustomer()">         &#x3C;/isolate-scope-with-controller></span></span></code></pre>
+<p>Looking through the directive code you can see that it’s very similar to the approach you’d take for writing a normal view with a controller. I’d argue that it looks like you’re writing a “child view” as mentioned at the beginning of this post since the code is focused more on the data and less on the “controls” in the view. The view takes advantage of AngularJS directives to handle various control rendering tasks which eliminates all of the DOM code that had to be written before.</p>
+<p>The view is defined using the <strong>template</strong> property and the controller is defined using the <strong>controller</strong> property. Keep in mind that the view can be loaded from a file using the <strong><a href="https://docs.angularjs.org/api/ng/service/$compile">templateUrl</a></strong> property or from the <strong><a href="https://docs.angularjs.org/api/ng/service/$templateCache">$templateCache</a></strong> as well – it doesn’t have to be embedded directly in the directive. The <strong>templateUrl</strong> or <strong>$templateCache</strong> options are really useful when a view has a lot of HTML in it that you don’t want embedded in the directive.</p>
+<p>As mentioned, the code in the view leverages existing AngularJS directives such as <strong>ng-click</strong> and <strong>ng-repeat</strong> and also uses <strong>{{ … }}</strong> data binding expressions. This eliminates the DOM code shown earlier in the DOM-centric/control-oriented directive. The controller has the <strong>$scope</strong> injected as you’d expect and uses it to define an <strong>items</strong> property which is consumed by <strong>ng-repeat</strong> in the view to generate </p></li><li> tags. As the button in the view is clicked the <strong>addItem()</strong> function on the <strong>$scope</strong> is invoked which calls the <strong>add</strong> isolate scope property and adds a new item object into the local collection (since angular.copy() is used items added into the local collection won’t show up in the parent scope). Because <strong>addItem()</strong> is called using <strong>ng-click</strong>, the parent scope call that is made ($scope.add()) won’t need to worry about using <strong>$scope.$apply()</strong> as mentioned in the earlier section.<p></p>
+<p>In situations where a directive is being written with raw performance in mind then the DOM-centric approach shown earlier may be preferred I realize since you’d be purposely taking over control of the HTML that’s generated and avoiding the use of Angular directives. If you ever attend one of my conference sessions or training classes you’ll often hear me say, “Use the right tool for the right job”. I’ve never believed that “one size fits all” and know that each situation and application is unique.</p>
+<p>This thought process definitely applies to directives since there are many different ways to write them.  In many situations I’m happy with how AngularJS performs and know about the pitfalls to avoid so I prefer the controller/view type of directive whenever possible. It makes maintenance much easier down the road since you can leverage existing Angular directives in the directive’s view and modify the view using a controller and scope. If, however, I was trying to maximize performance and eliminate the use of directives such as ng-repeat then going the DOM-centric route with the <strong>link</strong> function might be a better choice. Again, choose the right tool for the right job.</p>
+<h2 id="using-controlleras-in-a-directive"><a href="#using-controlleras-in-a-directive">Using controllerAs in a Directive</a></h2>
+<p>If you’re a fan of the controllerAs syntax you may be wondering if the same style can be used inside of directives. The answer is “yes”! When you define a Directive Definition Object (DDO) in a directive you can add a <strong>controllerAs</strong> property. Starting with Angular 1.3 you’ll also need to add a <strong><a href="https://docs.angularjs.org/api/ng/service/$compile">bindToController</a></strong> property as well to ensure that properties are bound to the controller rather than to the scope. Here’s an example of the previous directive that has been converted to use the controllerAs syntax:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>(function() {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  var app = angular.module('directivesModule');</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  app.directive('isolateScopeWithControllerAs', function () {</span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>      var controller = function () {</span></span>
+<span class="line"><span>          </span></span>
+<span class="line"><span>              var vm = this;</span></span>
+<span class="line"><span>          </span></span>
+<span class="line"><span>              function init() {</span></span>
+<span class="line"><span>                  vm.items = angular.copy(vm.datasource);</span></span>
+<span class="line"><span>              }</span></span>
+<span class="line"><span>              </span></span>
+<span class="line"><span>              init();</span></span>
+<span class="line"><span>              </span></span>
+<span class="line"><span>              vm.addItem = function () {</span></span>
+<span class="line"><span>                  vm.add();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>                  //Add new customer to directive scope</span></span>
+<span class="line"><span>                  vm.items.push({</span></span>
+<span class="line"><span>                      name: 'New Directive Controller Item'</span></span>
+<span class="line"><span>                  });</span></span>
+<span class="line"><span>              };</span></span>
+<span class="line"><span>      };    </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>      var template = '&#x3C;button ng-click="vm.addItem()">Add Item&#x3C;/button>' +</span></span>
+<span class="line"><span>                     '&#x3C;ul>&#x3C;li ng-repeat="item in vm.items">{{ ::item.name }}&#x3C;/li>&#x3C;/ul>';</span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>      return {</span></span>
+<span class="line"><span>          restrict: 'EA', //Default for 1.3+</span></span>
+<span class="line"><span>          scope: {</span></span>
+<span class="line"><span>              datasource: '=',</span></span>
+<span class="line"><span>              add: '&#x26;',</span></span>
+<span class="line"><span>          },</span></span>
+<span class="line"><span>          controller: controller,</span></span>
+<span class="line"><span>          controllerAs: 'vm',</span></span>
+<span class="line"><span>          bindToController: true, //required in 1.3+ with controllerAs</span></span>
+<span class="line"><span>          template: template</span></span>
+<span class="line"><span>      };</span></span>
+<span class="line"><span>  });</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}());</span></span></code></pre>
+<p>Notice that a controller alias of <strong>vm</strong> (short for “ViewModel”) has been assigned to the <strong>controllerAs</strong> property and that the alias is used in the controller code and in the view. The <strong>bindToController</strong> property is set to <strong>true</strong> to ensure that properties are bound to the controller instead of the scope. While this code is very similar to the initial controller example shown earlier, it allows you to use “dot” syntax in the view (vm.customers for example) which is a recommended approach.</p>
+<h2 id="conclusion"><a href="#conclusion">Conclusion</a></h2>
+<p>Controllers can be used to cleanup directives in many scenarios. Although using a controller isn’t always necessary, you’ll find that by levering the “child view” concept in directives your code can be kept more maintainable and easier to work with. The next post in the series moves on to discuss additional features that can be used in directives such as $asyncValidators.</p></li></ul>  </section>  </article> <aside class="related-posts"><h2 class="related-heading">Related Posts</h2><div class="related-grid"><a href="/the-angularjs-custom-directives-video-training-course-has-been-released/" class="related-card"><div class="related-body"><h3>The AngularJS Custom Directives Video Training Course Has Been Released!</h3><div class="related-meta"><time datetime="2015-02-22T00:00:00.000Z"> Feb 22, 2015 </time> · 3 min read</div></div></a><a href="/choosing-the-right-javascript-library-framework-for-your-application/" class="related-card"><div class="related-image"><img src="/images/blog/choosing-the-right-javascript-library-framework-for-your-application/RightTool.jpg" alt="Choosing the &#34;Right&#34; JavaScript Library/Framework for Your Application" loading="lazy"></div><div class="related-body"><h3>Choosing the &quot;Right&quot; JavaScript Library/Framework for Your Application</h3><div class="related-meta"><time datetime="2017-11-24T00:00:00.000Z"> Nov 24, 2017 </time> · 15 min read</div></div></a><a href="/adding-azure-active-directory-configuration-code-and-assemblies-into-an-angularjsasp-net-mvc-application/" class="related-card"><div class="related-body"><h3>Adding Azure Active Directory Configuration Code and Assemblies into an AngularJS/ASP.NET MVC Application</h3><div class="related-meta"><time datetime="2015-01-25T00:00:00.000Z"> Jan 25, 2015 </time> · 4 min read</div></div></a></div></aside> </div> <footer id="footer"> <div class="colophon"> <div class="wrapper"> <div class="colophon-inner"> <div class="footer-social"> <a href="https://x.com/danwahlin" target="_blank" rel="noopener noreferrer" aria-label="Follow on X"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a> <a href="https://www.linkedin.com/in/danwahlin/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://github.com/danwahlin" target="_blank" rel="noopener noreferrer" aria-label="Follow on GitHub"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg> </a> <a href="https://www.youtube.com/channel/UCtbxTmNfHcXLV5nfpnQxFkw" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> <a href="/rss.xml" target="_blank" aria-label="Subscribe to RSS feed"> <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415a3.3 3.3 0 013.293 3.295A3.303 3.303 0 013.283 24C1.47 24 0 22.526 0 20.71s1.475-3.295 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"></path></svg> </a> </div> <div class="credits"> <p>&copy; 2026 <a href="https://codewithdan.com" title="Code with Dan">Wahlin Consulting</a></p> </div> </div> </div> </div> </footer> </body></html>

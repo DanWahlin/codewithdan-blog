@@ -1,0 +1,20 @@
+---
+import SocialLinks from './SocialLinks.astro';
+
+const today = new Date();
+---
+
+<footer id="footer">
+	<div class="colophon">
+		<div class="wrapper">
+			<div class="colophon-inner">
+				<div class="footer-social">
+					<SocialLinks showRss={true} />
+				</div>
+				<div class="credits">
+					<p>&copy; {today.getFullYear()} <a href="https://codewithdan.com" title="Code with Dan">Wahlin Consulting</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
