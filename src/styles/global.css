@@ -887,6 +887,125 @@ iframe {
 
 /* ===== Responsive ===== */
 
+/* ===== Hamburger Menu ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 8px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+html.dark .hamburger span {
+  background: #e0e0e0;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--color-border);
+  background: #fff;
+}
+
+html.dark .mobile-menu {
+  background: #1a1a2e;
+  border-top-color: #444;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.mobile-nav li a {
+  display: block;
+  padding: 10px 0;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+html.dark .mobile-nav li a {
+  color: #e0e0e0;
+  border-bottom-color: #444;
+}
+
+.mobile-social {
+  display: flex;
+  gap: 20px;
+  padding: 12px 0;
+}
+
+.mobile-social a {
+  color: var(--color-text-muted);
+  font-size: 20px;
+}
+
+.mobile-social a svg {
+  width: 20px;
+  height: 20px;
+}
+
+html.dark .mobile-social a {
+  color: #bbb;
+}
+
+.mobile-search {
+  margin-top: 12px;
+}
+
+.mobile-search .pagefind-ui__search-input {
+  width: 100%;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .site-header .brand img {
+    width: 180px;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .entry-title {
     font-size: 25px;
@@ -929,27 +1048,6 @@ iframe {
 
   code, .astro-code {
     font-size: 12px;
-  }
-
-  .site-header .brand img {
-    width: 50%;
-    height: auto;
-  }
-
-  .site-header .nav {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .site-header .nav li a {
-    padding: 0.5em 0;
-    font-size: 14px;
-  }
-
-  .header-social {
-    gap: 12px;
-    padding-left: 12px;
-    margin-left: 12px;
   }
 
   .hero-banner-title {

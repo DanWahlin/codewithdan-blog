@@ -22,7 +22,21 @@ import SocialLinks from './SocialLinks.astro';
 					<svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zm4.5-6a6 6 0 100 12 6 6 0 000-12zm9.75 5.25a.75.75 0 010 1.5h-2.25a.75.75 0 010-1.5h2.25zM12 18.75a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25a.75.75 0 01.75-.75zm-7.28-2.03a.75.75 0 011.06 0l1.59 1.59a.75.75 0 01-1.06 1.06l-1.59-1.59a.75.75 0 010-1.06zm14.56-9.44a.75.75 0 010 1.06l-1.59 1.59a.75.75 0 01-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zM2.25 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zm16.03 4.72a.75.75 0 011.06 1.06l-1.59 1.59a.75.75 0 01-1.06-1.06l1.59-1.59zM7.28 5.69a.75.75 0 010 1.06L5.69 8.34a.75.75 0 01-1.06-1.06l1.59-1.59a.75.75 0 011.06 0z"/></svg>
 				</button>
 			</div>
+			<button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</div>
+	</div>
+	<div class="mobile-menu" id="mobile-menu">
+		<ul class="mobile-nav">
+			<li><a href="https://www.pluralsight.com/authors/dan-wahlin" target="_blank">Videos</a></li>
+		</ul>
+		<div class="mobile-social">
+			<SocialLinks />
+		</div>
+		<div class="mobile-search" id="mobile-search"></div>
 	</div>
 </header>
 
@@ -35,6 +49,19 @@ import SocialLinks from './SocialLinks.astro';
 		showEmptyFilters: false,
 		excerptLength: 0,
 	});
+
+	function initMobileSearch() {
+		const el = document.getElementById('mobile-search');
+		if (el && !el.querySelector('.pagefind-ui')) {
+			new PagefindUI({
+				element: '#mobile-search',
+				showSubResults: false,
+				showImages: false,
+				showEmptyFilters: false,
+				excerptLength: 0,
+			});
+		}
+	}
 
 	function applyTheme() {
 		const saved = localStorage.getItem('theme');
@@ -55,7 +82,23 @@ import SocialLinks from './SocialLinks.astro';
 		}
 	}
 
+	function bindHamburger() {
+		const btn = document.getElementById('hamburger');
+		const menu = document.getElementById('mobile-menu');
+		const fresh = btn?.cloneNode(true) as HTMLElement | null;
+		if (btn && fresh && menu) {
+			btn.replaceWith(fresh);
+			fresh.addEventListener('click', () => {
+				const isOpen = menu.classList.toggle('open');
+				fresh.classList.toggle('active', isOpen);
+				fresh.setAttribute('aria-expanded', String(isOpen));
+				if (isOpen) initMobileSearch();
+			});
+		}
+	}
+
 	applyTheme();
 	bindToggle();
-	document.addEventListener('astro:after-swap', () => { applyTheme(); bindToggle(); });
+	bindHamburger();
+	document.addEventListener('astro:after-swap', () => { applyTheme(); bindToggle(); bindHamburger(); });
 </script>
