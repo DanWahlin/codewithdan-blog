@@ -8,19 +8,19 @@ const allPosts = (await getCollection('blog'))
 const recentPosts = allPosts.slice(0, 10);
 ---
 
-<div class="tc-sidebar">
-	<div class="widget-area">
+<div class="sidebar">
+	<div class="sidebar-content">
 		<!-- Pluralsight Video Courses -->
-		<aside class="widget widget_video">
-			<h3 class="widget-title">Pluralsight Video Courses</h3>
+		<aside class="sidebar-section sidebar-video">
+			<h3 class="sidebar-heading">Pluralsight Video Courses</h3>
 			<ul>
 				<li><a href="https://www.pluralsight.com/authors/dan-wahlin" target="_blank">View Dan's Video Courses</a></li>
 			</ul>
 		</aside>
 
 		<!-- Recent Posts -->
-		<aside class="widget widget_recent_entries">
-			<h3 class="widget-title">Recent Posts</h3>
+		<aside class="sidebar-section sidebar-recent">
+			<h3 class="sidebar-heading">Recent Posts</h3>
 			<ul>
 				{recentPosts.map((post) => (
 					<li>

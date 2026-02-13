@@ -28,7 +28,7 @@ const excerpt = getExcerpt(post.body || '');
 		</section>
 	</section>
 	{coverImage && (
-		<section class="tc-thumbnail">
+		<section class="post-thumbnail">
 			<a href={`/${post.id}/`}>
 				<img src={coverImage} alt={`Cover image for: ${post.data.title}`} width="270" height="250" loading="lazy" />
 			</a>

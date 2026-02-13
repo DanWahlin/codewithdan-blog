@@ -121,13 +121,13 @@ img {
 
 /* ===== Header ===== */
 
-.tc-header {
+.site-header {
   border-bottom: 1px solid var(--color-border);
   margin-bottom: 0;
   background-color: #fff;
 }
 
-.tc-header .header-inner {
+.site-header .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -140,7 +140,7 @@ img {
   gap: 0;
 }
 
-.tc-header .nav li:last-child a {
+.site-header .nav li:last-child a {
   padding-right: 0;
 }
 
@@ -219,7 +219,7 @@ html.dark .dark-mode-toggle .icon-sun {
   --pagefind-ui-border-radius: 4px;
 }
 
-.tc-header .header-search .pagefind-ui__search-input {
+.site-header .header-search .pagefind-ui__search-input {
   font-size: 13px;
   padding: 4px 10px 4px 28px;
   height: 28px;
@@ -228,11 +228,11 @@ html.dark .dark-mode-toggle .icon-sun {
   border-radius: 4px;
 }
 
-.tc-header .header-search .pagefind-ui__search-clear {
+.site-header .header-search .pagefind-ui__search-clear {
   padding: 4px 8px;
 }
 
-.tc-header .header-search .pagefind-ui__form::before {
+.site-header .header-search .pagefind-ui__form::before {
   top: 50%;
   transform: translateY(-50%);
 }
@@ -257,24 +257,24 @@ html.dark .dark-mode-toggle .icon-sun {
   overflow: visible;
 }
 
-.tc-header .header-search .pagefind-ui__message {
+.site-header .header-search .pagefind-ui__message {
   font-size: 15px;
   color: var(--color-text);
   font-weight: 500;
   margin-bottom: 12px;
 }
 
-.tc-header .brand {
+.site-header .brand {
   text-align: left;
   text-decoration: none;
 }
 
-.tc-header .brand img {
+.site-header .brand img {
   height: 59px;
   width: auto;
 }
 
-.tc-header .nav {
+.site-header .nav {
   display: flex;
   list-style: none;
   margin: 0;
@@ -282,7 +282,7 @@ html.dark .dark-mode-toggle .icon-sun {
   gap: 0;
 }
 
-.tc-header .nav li a {
+.site-header .nav li a {
   color: #000;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -292,8 +292,8 @@ html.dark .dark-mode-toggle .icon-sun {
   display: block;
 }
 
-.tc-header .nav li a:hover,
-.tc-header .nav li a.active {
+.site-header .nav li a:hover,
+.site-header .nav li a.active {
   color: #0073cc;
   text-decoration: none;
 }
@@ -441,13 +441,13 @@ html.dark .dark-mode-toggle .icon-sun {
   margin: 0;
 }
 
-.post-list .tc-thumbnail {
+.post-list .post-thumbnail {
   width: 270px;
   flex-shrink: 0;
   margin-top: 0;
 }
 
-.post-list .tc-thumbnail img {
+.post-list .post-thumbnail img {
   width: 270px;
   height: 250px;
   object-fit: cover;
@@ -537,12 +537,12 @@ footer#footer {
   border-top: 1px solid var(--color-border);
 }
 
-footer#footer .colophon {
+footer#footer .site-footer-content {
   background-color: #2a2a2a;
   padding: 24px 0;
 }
 
-footer#footer .colophon-inner {
+footer#footer .site-footer-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -892,7 +892,7 @@ iframe {
     font-size: 25px;
   }
 
-  .post-list .tc-thumbnail {
+  .post-list .post-thumbnail {
     display: none;
   }
 
@@ -919,7 +919,7 @@ iframe {
     font-size: 14px;
   }
 
-  .post-list .tc-thumbnail {
+  .post-list .post-thumbnail {
     display: none;
   }
 
@@ -931,17 +931,17 @@ iframe {
     font-size: 12px;
   }
 
-  .tc-header .brand img {
+  .site-header .brand img {
     width: 50%;
     height: auto;
   }
 
-  .tc-header .nav {
+  .site-header .nav {
     flex-direction: column;
     gap: 0;
   }
 
-  .tc-header .nav li a {
+  .site-header .nav li a {
     padding: 0.5em 0;
     font-size: 14px;
   }
@@ -984,17 +984,17 @@ html.dark body {
   color: var(--color-text);
 }
 
-html.dark .tc-header {
+html.dark .site-header {
   background: #222;
   border-bottom-color: var(--color-border);
 }
 
-html.dark .tc-header .nav li a {
+html.dark .site-header .nav li a {
   color: #ccc;
 }
 
-html.dark .tc-header .nav li a:hover,
-html.dark .tc-header .nav li a.active {
+html.dark .site-header .nav li a:hover,
+html.dark .site-header .nav li a.active {
   color: var(--color-primary);
 }
 
@@ -1122,13 +1122,13 @@ html.dark .navigation a {
   color: var(--color-primary);
 }
 
-html.dark .tc-header .header-search .pagefind-ui__search-input {
+html.dark .site-header .header-search .pagefind-ui__search-input {
   background: #2a2a2a;
   color: #ddd;
   border-color: var(--color-border);
 }
 
-html.dark footer#footer .colophon {
+html.dark footer#footer .site-footer-content {
   background: #111;
 }
 
