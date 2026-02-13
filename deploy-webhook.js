@@ -36,6 +36,7 @@ function deploy() {
   const child = spawn('bash', ['-c', `
     cd ${REPO_DIR} &&
     git pull origin ${BRANCH} --ff-only 2>&1 &&
+    npm install --production=false 2>&1 &&
     npm run build 2>&1 &&
     echo "DEPLOY_SUCCESS"
   `]);
