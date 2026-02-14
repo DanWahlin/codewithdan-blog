@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+  namespace: blog
+data:
+  nginx.conf: |
+    worker_processes 4;
+
+    events { worker_connections 1024; }
+
+    http {
+        include                 mime.types;
+        default_type            application/octet-stream;
+        sendfile                on;
+        keepalive_timeout       65;
+
+        gzip                    on;
+        gzip_comp_level         6;
+        gzip_vary               on;
+        gzip_min_length         1000;
+        gzip_proxied            any;
+        gzip_types              text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+        gzip_buffers            16 8k;
+
+        server {
+            listen 0.0.0.0:80 default_server;
+            listen [::]:80 default_server;
+
+            server_name test-blog.codewithdan.com blog.codewithdan.com;
+            root /var/www/blog;
+            index index.html;
+
+            location / {
+                try_files $uri $uri/ $uri/index.html =404;
+            }
+
+            location ~* \.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot)$ {
+                expires 30d;
+                add_header Cache-Control "public, immutable";
+            }
+
+            location /healthz {
+                access_log off;
+                return 200 "ok";
+                add_header Content-Type text/plain;
+            }
+        }
+    }

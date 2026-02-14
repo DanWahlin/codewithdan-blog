@@ -1103,19 +1103,19 @@ html.dark .mobile-social a {
 /* ===== Dark Mode ===== */
 
 html.dark body {
-  background: #1a1a1a;
+  background: #0f1520;
   color: var(--color-text);
 }
 
 html.dark .post-article {
-  background: #242424;
-  border-color: #333;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  background: #1a2235;
+  border-color: #243049;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 html.dark .site-header {
-  background: #222;
-  border-bottom-color: var(--color-border);
+  background: #141b2d;
+  border-bottom-color: #1e2a3a;
 }
 
 html.dark .site-header .nav li a {
@@ -1149,8 +1149,8 @@ html.dark .dark-mode-toggle:hover {
 }
 
 html.dark .hero-card {
-  background: #252525;
-  border-color: var(--color-border);
+  background: #1a2235;
+  border-color: #243049;
 }
 
 html.dark .hero-card-title {
