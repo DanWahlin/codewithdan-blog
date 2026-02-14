@@ -6,7 +6,7 @@ categories:
 coverImage: "2017-10-27_20-17-22.png"
 ---
 
-![](/images/blog/tech-5-tutorial-getting-started-with-docker/2017-10-27_20-03-24.png)
+![](/images/blog/tech-5-tutorial-getting-started-with-docker/2017-10-27_20-03-24.webp)
 
 In this Tech 5 tutorial, I'll walk you through the core concepts of Docker and how you can get started with Docker Community Edition, images, and containers.
 

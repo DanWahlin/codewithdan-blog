@@ -18,7 +18,7 @@ categories:
 
  
 
-[![](/images/blog/new-pluralsight-course-integrating-angular-with-node-js-restful-services/pluralsight-integrating-angular-node.png)](https://blog.codewithdan.com/wp-content/uploads/2017/01/pluralsight-integrating-angular-node.png)
+[![](/images/blog/new-pluralsight-course-integrating-angular-with-node-js-restful-services/pluralsight-integrating-angular-node.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/01/pluralsight-integrating-angular-node.png)
 
 I'm excited to announce the release of a new course on [Pluralsight](https://www.pluralsight.com/courses/angular-nodejs-restful-services) titled **Integrating Angular with Node.js RESTful Services**! This covers Node.js 6.10 or higher and Angular 4 or higher.
 

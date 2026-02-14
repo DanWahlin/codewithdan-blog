@@ -10,7 +10,7 @@ tags:
   - "microsoft365"
 ---
 
-![](/images/blog/its-time-for-a-change/timeForAChange-1024x683.jpeg)
+![](/images/blog/its-time-for-a-change/timeForAChange-1024x683.webp)
 
 You've probably heard the old adage, "Change is good" at some point in your life. Although change can be hard, I've found that for me personally, it's the only way to grow and move forward in life. It was a big (and hard) change starting my own company 20 years ago but I wouldn't trade the experience I've gained for anything.
 
@@ -20,7 +20,7 @@ While running a company is something I can continue doing as long as I'd like, o
 
 ## Pros and Cons - Is it all Roses?
 
-![](/images/blog/its-time-for-a-change/roses-1024x678.jpg)
+![](/images/blog/its-time-for-a-change/roses-1024x678.webp)
 
 The pros of running your own company far outweigh the cons I've found but it's not all roses. There's one aspect of my job that I've liked less and less over the years - business travel. There have been many years throughout my career where I've been gone 2 - 3 weeks per month. Many times I'd head to the airport Sunday morning, fly to some location around the world, and then get back late Friday night. The next Sunday would roll around and I'd do it all over again. Although my family would come along when I went to "fun" places in the summer, most of the weeks I was away from them and on my own.
 
@@ -42,4 +42,4 @@ In this new role I'll have the opportunity to do a lot of the same things I've b
 
 I'll admit that this type of change is a little scary and intimidating especially since I'm giving up something stable that my wife and I built up over 20 years, but I do believe that "Change is good" and I'm ready for a change. I'm looking forward to working with the Fluid, Microsoft 365, and Azure teams and to the challenges and new experiences that lie ahead!
 
-![](/images/blog/its-time-for-a-change/Microsoft-logo-1024x459.png)
+![](/images/blog/its-time-for-a-change/Microsoft-logo-1024x459.webp)

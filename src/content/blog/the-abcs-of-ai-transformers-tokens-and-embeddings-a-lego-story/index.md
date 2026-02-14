@@ -23,23 +23,23 @@ Let's get started by talking about the role of tokens.
 
 Before diving into transformers, let’s talk about a key aspect of AI and transfomers: the token. You can think of sentences and words as molecules, whereas tokens are the atoms that make them up. Just like molecules are built from atoms, sentences are built from smaller token units.
 
-[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/image-17-1024x852.png)](https://blog.codewithdan.com/wp-content/uploads/2023/08/image-17.png)
+[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/image-17-1024x852.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/08/image-17.png)
 
 Ever thought of language as a complex LEGO masterpiece? Imagine words, sentences, and paragraphs as an intricate LEGO creation composed of many tokens.
 
-[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/image-18.png)](https://blog.codewithdan.com/wp-content/uploads/2023/08/image-18.png)
+[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/image-18.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/08/image-18.png)
 
 While not as robust as the previous image, the following sentence will be converted into 5 tokens (or LEGO bricks if you'd like to think of it that way):
 
 > She ate the pizza.
 
-[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/ai-tokens-she-ate-pizza.png)](https://blog.codewithdan.com/wp-content/uploads/2023/08/ai-tokens-she-ate-pizza.png)
+[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/ai-tokens-she-ate-pizza.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/08/ai-tokens-she-ate-pizza.png)
 
 Note: You can use [OpenAI's online tokenizer](https://platform.openai.com/tokenizer) tool to see how words are converted into tokens. Additional information about tokens can be found in their [documentation](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them).
 
 Here's another example of how words map to tokens:
 
-[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/2023-08-10_16-38-34-1024x857.png)](https://blog.codewithdan.com/wp-content/uploads/2023/08/2023-08-10_16-38-34.png)
+[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/2023-08-10_16-38-34-1024x857.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/08/2023-08-10_16-38-34.png)
 
 By converting language into tokens, AI transformers can build meaning from language. But, there's more to the token story.
 
@@ -90,7 +90,7 @@ Imagine sharing a memory with a group of friends: "She ate the pizza." But you'r
 3. **The Decoder**: Building upon this input, it selects Spanish tokens: "Ella comió la pizza." Something called "attention" guides each token into place (more on this in a moment).  
     
 
-[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/image-19.png)](https://blog.codewithdan.com/wp-content/uploads/2023/08/image-19.png)
+[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/image-19.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/08/image-19.png)
 
 Say we want to automatically translate the sentence "She ate the pizza" from English into Spanish. Here are the general transformer steps:
 
@@ -106,7 +106,7 @@ Say we want to automatically translate the sentence "She ate the pizza" from Eng
 
 Picture the encoder and decoder modules as being like towering, multilayer LEGO creations. Each layer incrementally processes the input tokens in a more complex way. Both the encoder and decoder are composed of smaller building blocks stacked on top of each other. Each block applies layers of multi-headed self-attention and feedforward neural networks to the data.
 
-[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/image-14.png)](https://blog.codewithdan.com/wp-content/uploads/2023/08/image-14.png)
+[![](/images/blog/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/image-14.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/08/image-14.png)
 
 Here's what's inside these LEGO layers:
 

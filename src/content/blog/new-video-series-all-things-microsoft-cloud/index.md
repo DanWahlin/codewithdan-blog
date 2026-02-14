@@ -8,7 +8,7 @@ tags:
   - "power-platform"
 ---
 
-[![All Things Microsoft Cloud - Ayca Bas and Dan Wahlin](/images/blog/new-video-series-all-things-microsoft-cloud/2022-08-24_11-23-45-1024x528.png)](https://blog.codewithdan.com/wp-content/uploads/2022/08/2022-08-24_11-23-45.png)
+[![All Things Microsoft Cloud - Ayca Bas and Dan Wahlin](/images/blog/new-video-series-all-things-microsoft-cloud/2022-08-24_11-23-45-1024x528.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/08/2022-08-24_11-23-45.png)
 
 I had a chance to sit down with my colleague [Ayça Baş](https://twitter.com/aycabs) as well as several special guests to talk about how different technologies across the Microsoft Cloud can be integrated together to build a variety of applications. Check out the different interviews in the video series below.
 

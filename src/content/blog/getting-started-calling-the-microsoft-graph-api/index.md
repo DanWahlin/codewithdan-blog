@@ -21,7 +21,7 @@ In a nutshell, you can use Microsoft Graph to retrieve information about users, 
 
 <figure>
 
-[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_10-37-20-1024x948.png)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_10-37-20.png)
+[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_10-37-20-1024x948.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_10-37-20.png)
 
 <figcaption>
 
@@ -39,7 +39,7 @@ To get started with Microsoft Graph you can use the [Microsoft Graph Explorer](h
 
 <figure>
 
-[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-31-15-1024x563.png)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-31-15.png)
+[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-31-15-1024x563.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-31-15.png)
 
 <figcaption>
 
@@ -51,7 +51,7 @@ Microsoft Graph explorer sample queries
 
 <figure>
 
-[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-32-44-1024x563.png)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-32-44.png)
+[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-32-44-1024x563.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-32-44.png)
 
 <figcaption>
 
@@ -71,7 +71,7 @@ When you first go to the Microsoft Graph Explorer you won't be logged in. That m
 
 <figure>
 
-[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-35-40-1024x563.png)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-35-40.png)
+[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-35-40-1024x563.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-35-40.png)
 
 <figcaption>
 
@@ -93,7 +93,7 @@ If you delete **$value**, you'll get back JSON data about the image. Notice that
 
 <figure>
 
-[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-46-06-1024x563.png)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-46-06.png)
+[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-46-06-1024x563.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-46-06.png)
 
 <figcaption>
 
@@ -113,7 +113,7 @@ If you only want the **subject**, **body**, and maybe the **start** and the **en
 
 <figure>
 
-[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-52-27-1024x563.png)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-52-27.png)
+[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-52-27-1024x563.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-52-27.png)
 
 <figcaption>
 
@@ -127,7 +127,7 @@ Now run the query and you'll notice that only those properties are returned. You
 
 <figure>
 
-[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-57-09-1024x85.png)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-57-09.png)
+[![](/images/blog/getting-started-calling-the-microsoft-graph-api/2021-04-29_13-57-09-1024x85.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/04/2021-04-29_13-57-09.png)
 
 <figcaption>
 

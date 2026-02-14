@@ -15,7 +15,7 @@ tags:
 coverImage: "mastering-the-subject-talk-ng-conf-2019.png"
 ---
 
-![](/images/blog/ng-conf-talk-mastering-the-subject-communication-options-in-rxjs/2019-05-08_23-01-01-1024x574.png)
+![](/images/blog/ng-conf-talk-mastering-the-subject-communication-options-in-rxjs/2019-05-08_23-01-01-1024x574.webp)
 
 If you ever get a chance to attend the **[ng-conf conference](https://ng-conf.org)** in Salt Lake City, Utah I highly recommend it. It's one of my favorite conferences to attend and speak at due to the great content, huge community of developers, and many fun events throughout the week. The conference organizers do a great job putting on the event.
 

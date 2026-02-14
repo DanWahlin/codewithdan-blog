@@ -12,7 +12,7 @@ tags:
 coverImage: "docker-small.png"
 ---
 
-[![](/images/blog/docker-for-developers-understanding-the-core-concepts/Docker-Logo-1024x576.png)](https://blog.codewithdan.com/wp-content/uploads/2023/06/Docker-Logo.png)
+[![](/images/blog/docker-for-developers-understanding-the-core-concepts/Docker-Logo-1024x576.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/06/Docker-Logo.png)
 
 This post is based on a section from my [Docker for Web Developers course](https://app.pluralsight.com/library/courses/docker-web-development/table-of-contents) on Pluralsight.
 
@@ -34,7 +34,7 @@ So, what exactly does Docker include? The primary components are images, contain
 
 Back in the old days, there was less standardization for loading and shipping products on ships (you've likely seen pictures of the old ships with crates and barrels). It was time intensive and not very productive to get products on and off a ship.
 
-![Schooner, Vintage, Sailing, Sail, Ship, Boat, Sea](/images/blog/docker-for-developers-understanding-the-core-concepts/schooner-487800_960_720.jpg)
+![Schooner, Vintage, Sailing, Sail, Ship, Boat, Sea](/images/blog/docker-for-developers-understanding-the-core-concepts/schooner-487800_960_720.webp)
 
 Today, the major shipping companies have very standardized shipping containers. As a crane positions itself over a ship when it docks, it's very quick, efficient, and productive to get those containers on and off the ship. If you're interested, you can read about the [history of shipping containers](https://www.freightos.com/the-history-of-the-shipping-container/) and how [Malcom McLean](https://en.wikipedia.org/wiki/Malcom_McLean) revolutionized the shipping industry.
 
@@ -46,7 +46,7 @@ Docker provides a consistent way to ship code around to different environments. 
 
 Docker relies on images and containers:
 
-[![](/images/blog/docker-for-developers-understanding-the-core-concepts/2022-01-11_00-07-11-1024x564.png)](https://blog.codewithdan.com/wp-content/uploads/2022/01/2022-01-11_00-07-11.png)
+[![](/images/blog/docker-for-developers-understanding-the-core-concepts/2022-01-11_00-07-11-1024x564.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/01/2022-01-11_00-07-11.png)
 
 An image has the necessary files to run something on an operating system like Ubuntu or Windows. It'll have your application framework or database, files that support the application, environment variables, security settings, and more. If you're doing Node.js, ASP.NET Core, PHP, Python, Java, or something else, you'll have that framework built into the image as well as your application code. You can think of the image as a blueprint that's used to get a container up and running.
 
@@ -54,11 +54,11 @@ To draw a parallel with shipping, imagine a person creating CAD drawings or blue
 
 Specifically, an image is a read-only template with a layered file system. It consists of files specific to the underlying Linux or Windows operating system, framework files, configuration files, and more. All these files are stacked in layers, collectively forming an image.
 
-[![](/images/blog/docker-for-developers-understanding-the-core-concepts/image-1024x332.png)](https://blog.codewithdan.com/wp-content/uploads/2022/03/image.png)
+[![](/images/blog/docker-for-developers-understanding-the-core-concepts/image-1024x332.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/03/image.png)
 
 Once you have an image, you can build a container from it. Returning to the shipping analogy, each container on a ship is isolated from the others. The contents of one container are unknown to the others. Similarly, when an image is created, you can start, stop, and delete containers based on that image. This technology offers the advantage of quickly and easily managing containers in various environments such as development, staging, and production.
 
-[![](/images/blog/docker-for-developers-understanding-the-core-concepts/image-1-1024x253.png)](https://blog.codewithdan.com/wp-content/uploads/2022/03/image-1.png)
+[![](/images/blog/docker-for-developers-understanding-the-core-concepts/image-1-1024x253.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/03/image-1.png)
 
 ## Where Does Docker Run?
 
@@ -66,13 +66,13 @@ Where does Docker run then? Docker can run natively on Linux or Windows. Linux c
 
 Fortunately, Docker services can easily be run on Mac, Windows, or Linux machines using [Docker Desktop](https://www.docker.com/get-started) or another tool such as [Rancher Desktop](https://rancherdesktop.io/). They both provide container management clients (an "engine" if you will) that can be used to work with images and containers.
 
-[![](/images/blog/docker-for-developers-understanding-the-core-concepts/image-2.png)](https://blog.codewithdan.com/wp-content/uploads/2022/03/image-2.png)
+[![](/images/blog/docker-for-developers-understanding-the-core-concepts/image-2.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/03/image-2.png)
 
 ## Docker Containers versus Virtual Machines
 
 You may be wondering about the differences between Docker containers and virtual machines. Virtual machines always run on top of a host operating system. This means that if you have a host running Linux or Windows, you can run a guest operating system on it using a hypervisor. The following image illustrates this:
 
-[![](/images/blog/docker-for-developers-understanding-the-core-concepts/image-3-1024x572.png)](https://blog.codewithdan.com/wp-content/uploads/2022/03/image-3.png)
+[![](/images/blog/docker-for-developers-understanding-the-core-concepts/image-3-1024x572.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/03/image-3.png)
 
 On the left side of the image, there's App 1, an ASP.NET Core app with its binaries and libraries. You'll also see App 2 running a different guest operating system and a different application. Let's assume the guest OS on the left is Windows, and the one on the right is Linux. In this setup, each virtual machine contains a complete copy of the operating system, resulting in significant overhead in terms of storage and memory. Starting and stopping a virtual machine can also be time-consuming, depending on the available server resources.
 
@@ -164,7 +164,7 @@ docker
 
 This will output a list of different commands that can be run:
 
-[![Docker commands](/images/blog/docker-for-developers-understanding-the-core-concepts/image-1024x641.png)](https://blog.codewithdan.com/wp-content/uploads/2023/06/image.png)
+[![Docker commands](/images/blog/docker-for-developers-understanding-the-core-concepts/image-1024x641.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/06/image.png)
 
 While a complete discussion of available commands is outside the scope of this post, here are a few core commands to know about. It's important to note that there are "management commands" that can be used as well as "core commands" in some cases. I tend to go with the core commands (old habits die hard), but some people prefer the management commands. You can learn more about the available commands at [https://docs.docker.com/engine/reference/commandline/cli/](https://docs.docker.com/engine/reference/commandline/cli/).
 

@@ -10,7 +10,7 @@ tags:
 coverImage: "aspnetcore-containers.png"
 ---
 
-![](/images/blog/video-building-and-running-custom-asp-net-core-containers/2020-04-26_14-10-30-1024x576.png)
+![](/images/blog/video-building-and-running-custom-asp-net-core-containers/2020-04-26_14-10-30-1024x576.webp)
 
 I recently had the opportunity to do a webinar for Pluralsight where I talked about how you can use Docker to build and run custom ASP.NET Core containers. The containers can be run locally on your machine, on a company server within an on-prem data center, or even in the cloud. Here are the specific topics that I covered in this session:
 
@@ -28,4 +28,4 @@ https://www.youtube.com/watch?v=Tfng7tKs2kc
 
 If you'd like to learn more about containers, Kubernetes, and much more [check out my courses on Pluralsight.com](https://pluralsight.pxf.io/KL0Ov).
 
-[![](/images/blog/video-building-and-running-custom-asp-net-core-containers/my-ps-courses.png)](https://pluralsight.pxf.io/KL0Ov)
+[![](/images/blog/video-building-and-running-custom-asp-net-core-containers/my-ps-courses.webp)](https://pluralsight.pxf.io/KL0Ov)

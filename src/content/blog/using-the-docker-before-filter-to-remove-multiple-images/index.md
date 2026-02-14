@@ -11,7 +11,7 @@ tags:
 coverImage: "docker_logo.png"
 ---
 
-![](/images/blog/using-the-docker-before-filter-to-remove-multiple-images/docker_logo.png)
+![](/images/blog/using-the-docker-before-filter-to-remove-multiple-images/docker_logo.webp)
 
 I recently needed to cleanup a bunch of old Docker images on a VM that I run in Azure. While I could remove each image one by one using the standard **docker rmi \[IMAGE IDS\]** command, removing multiple images all at once as a batch was preferable.
 

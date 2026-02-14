@@ -13,7 +13,7 @@ coverImage: "5-key-benefits-angular-typescript.jpg"
 
  
 
-[![](/images/blog/5-key-benefits-of-angular-and-typescript/5-key-benefits-angular-typescript.jpg)](https://blog.codewithdan.com/wp-content/uploads/2017/08/5-key-benefits-angular-typescript.jpg)Over the past few months, I've been asked the same general question about Angular multiple times in [onsite training classes](https://www.codewithdan.com/products/angular-programming), while helping customers with their architecture, or when talking with company leaders about the direction web technologies are heading. Here's the general question:
+[![](/images/blog/5-key-benefits-of-angular-and-typescript/5-key-benefits-angular-typescript.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/08/5-key-benefits-angular-typescript.jpg)Over the past few months, I've been asked the same general question about Angular multiple times in [onsite training classes](https://www.codewithdan.com/products/angular-programming), while helping customers with their architecture, or when talking with company leaders about the direction web technologies are heading. Here's the general question:
 
 ### **"What are the key benefits that Angular and TypeScript can offer our development teams?"**
 
@@ -43,7 +43,7 @@ Code consistency is an important goal to strive for in any code base. If you or 
 
 Here's a visual showing how that works:
 
-![](/images/blog/5-key-benefits-of-angular-and-typescript/2017-08-26_13-28-38.png)
+![](/images/blog/5-key-benefits-of-angular-and-typescript/2017-08-26_13-28-38.webp)
 
 Regardless of what component you're writing, this overall structure is always followed. Sure, there are additional things you can add (implement an interface such as OnInit or others if using TypeScript, put templates inline versus in a separate file, and many others), but the overall structure of a component always looks the same. That's a good start and provides consistency as team members start out building components.
 
@@ -76,7 +76,7 @@ Consistency brings productivity into the picture as well. Developers don't have 
 
 With greater consistency, you get the added benefit of productivity. When you learn how to write one component you can write another following the same general guidelines and code structure. Once you learn how to create a service class it's easy to create another one. It's like a broken record consistently spinning round and round that feels like many other frameworks you may have used in the past. Combine all of this with the [Angular CLI](https://cli.angular.io/), code snippets that the team creates ([or use mine](https://blog.codewithdan.com/2016/08/30/angular-2-typescript-and-html-snippets-for-vs-code/) if you use [VS Code](http://code.visualstudio.com)) and you're consistent and productive.
 
-![](/images/blog/5-key-benefits-of-angular-and-typescript/2017-08-26_19-34-18.png)
+![](/images/blog/5-key-benefits-of-angular-and-typescript/2017-08-26_19-34-18.webp)
 
 If you use TypeScript to build your Angular applications then you also get several productivity benefits. In editors like [VS Code](https://code.visualstudio.com/) and [WebStorm](https://www.jetbrains.com/webstorm/specials/webstorm/webstorm.html) , you have access to robust code help(intellisense) as you type making it easier to discover types and the features they offer. If you use TypeScript interfaces, you can even get code help against the JSON data that comes back from calls to a back-end service. This is extremely helpful when various data/model objects are being used and manipulated by developers. TypeScript isn't only for Angular of course (you can use it with React, AngularJS, Vue.js, Node.js and any other JavaScript libraries/frameworks), but it integrates with Angular quite well.
 
@@ -96,7 +96,7 @@ Whether your team does your own production support or hands it off to another gr
 
 ## Modularity
 
-![](/images/blog/5-key-benefits-of-angular-and-typescript/bucket.png)
+![](/images/blog/5-key-benefits-of-angular-and-typescript/bucket.webp)
 
 Angular is all about organizing code into "buckets". Everything you create whether it's components, services, pipes, or directives has to be organized into one or more buckets. If you come from a  "function spaghetti code" background in your organization, the sanity that Angular and TypeScript bring to the table can be quite refreshing. The "buckets" I refer to are called "modules" in the Angular world. They provide a way to organize application functionality and divide it up into features and reusable chunks. Modules also offer many other benefits such as lazy loading as well where one or more application features are loaded in the background or on-demand.
 
@@ -104,7 +104,7 @@ Enterprise applications can grow quite large and the ability to divide the labor
 
 ## Catch Errors Early
 
-[![](/images/blog/5-key-benefits-of-angular-and-typescript/oops-sign.jpg)](https://blog.codewithdan.com/wp-content/uploads/2017/08/oops-sign.jpg)Angular is built using TypeScript which brings many benefits to the table such as:
+[![](/images/blog/5-key-benefits-of-angular-and-typescript/oops-sign.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/08/oops-sign.jpg)Angular is built using TypeScript which brings many benefits to the table such as:
 
 - TypeScript is a **superset** **of JavaScrip**t.TypeScript is not its own stand-alone language like CoffeeScript, Dart or others and that's super powerful. That means I can take existing ES5 or ES2015+ JavaScript code, plug it into a TypeScript .ts file (or even work with the .js file directly) and the code will work fine. TypeScript simply compiles/transpiles code down to ES5 or ES2015 depending on what you configure.
 - TypeScript supports core ES2015 features as well as ES2016/ES2017 features like decorators, async/await and others. I like to think of it as ES2015++. See supported features at [http://kangax.github.io/compat-table/es6](http://kangax.github.io/compat-table/es6).

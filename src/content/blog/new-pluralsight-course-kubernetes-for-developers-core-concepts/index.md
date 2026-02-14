@@ -17,7 +17,7 @@ tags:
 coverImage: "2019-03-10_16-06-42.png"
 ---
 
-[![](/images/blog/new-pluralsight-course-kubernetes-for-developers-core-concepts/2019-10-13_11-12-05-1-1024x236.png)](https://pluralsight.pxf.io/R9W2N)
+[![](/images/blog/new-pluralsight-course-kubernetes-for-developers-core-concepts/2019-10-13_11-12-05-1-1024x236.webp)](https://pluralsight.pxf.io/R9W2N)
 
 I’m excited to announce the release of my next course on Pluralsight titled [Kubernetes for Developers: Core Concepts](https://pluralsight.pxf.io/R9W2N)! Since creating the [Docker for Web Developers](https://pluralsight.pxf.io/Nqm2V) course I've been wanting to create a course that takes developers to the "next level" with containers and the new Kubernetes for Developers course does that!
 

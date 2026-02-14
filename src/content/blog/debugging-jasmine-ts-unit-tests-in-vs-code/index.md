@@ -11,7 +11,7 @@ coverImage: "debugging.jpg"
 
 <figure>
 
-![](/images/blog/debugging-jasmine-ts-unit-tests-in-vs-code/debugging-1024x594.jpg)
+![](/images/blog/debugging-jasmine-ts-unit-tests-in-vs-code/debugging-1024x594.webp)
 
 <figcaption>
 

@@ -14,7 +14,7 @@ tags:
 coverImage: "acs-featured-image.jpg"
 ---
 
-[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-20-1024x609.png)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-20.png)
+[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-20-1024x609.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-20.png)
 
 How many times have you tried to contact a company's customer service department only to waste time looking up the phone number or trying to find the \*right\* phone number to ask a simple question? Once you finally get through to someone you typically end up switching between the phone app and the company's website or app to pass along required information to the customer service representative. It can be frustrating.
 
@@ -45,19 +45,19 @@ To get started visit [https://portal.azure.com](https://portal.azure.com?WT.mc_i
 
 **NOTE:** If you don't have an Azure account you can [get a free one here](https://azure.microsoft.com/en-us/free/?WT.mc_id=m365-19559-dwahlin).
 
-[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-19-719x1024.png)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-19.png)
+[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-19-719x1024.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-19.png)
 
 You'll be taken to the ACS resource page where you can select the **Create** button to get started.
 
 To create an ACS resource you'll select your subscription and resource group names, enter the ACS resource name you'd like to use, and select your data location:
 
-[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-18-1024x675.png)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-18.png)
+[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-18-1024x675.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-18.png)
 
 Select the **Review + Create** button, review your details, and then select the **Create** button to get started.
 
 After the ACS resource is created you'll see the standard overview page with information about your new ACS resources. Select the **Keys** option in the navigation menu to the left to view the keys and connection strings that can be used to authorize API calls from your client to ACS.
 
-[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-21.png)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-21.png)
+[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-21.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-21.png)
 
 Note the Primary key connection string that is listed. You'll use it in the next step.
 
@@ -107,25 +107,25 @@ This will startup the app server and expose port 5001. Visit **https://localhost
 
 **NOTE:** If you haven't created a developer certificate on your machine you may receive a certificate error when first viewing the page in the browser. If that's the case, stop the server in the terminal window and run **dotnet dev-certs https -t** to add and trust a developer certificate on your machine. Once the cert is created run **dotnet run** again to start the server.
 
-[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-16-1024x605.png)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-16.png)
+[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-16-1024x605.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-16.png)
 
 Click the **Start a call** button to initiate a call and you'll be taken to another screen that prompts you to allow access to your microphone and camera:
 
-[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-14-1024x607.png)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-14.png)
+[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-14-1024x607.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-14.png)
 
 After allowing access, select the appropriate devices you want to use in the drop-down boxes to the right. After selecting them, toggle your camera and microphone to test things out:
 
-[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-13-1024x609.png)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-13.png)
+[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-13-1024x609.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-13.png)
 
 Once you're ready, click the **Start call** button.
 
 It takes at least two people to talk of course, but since you're on localhost you can only invite yourself to a call. It works though for testing purposes. If you click the invite people icon (see below), select the **Copy join info**, paste the link in another tab, and then choose a different camera/mic (if you have one available), you can see how it works.
 
-[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-12-1024x601.png)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-12.png)
+[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-12-1024x601.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-12.png)
 
 Here's an example of what a call looks like. This call was between myself and some imposter version of myself:
 
-[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-11-1024x609.png)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-11.png)
+[![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-11-1024x609.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-11.png)
 
 If you deploy the app to Azure or use a tool like [ngrok](https://ngrok.com) to expose it publicly (for testing purposes) you can invite others to join and have a call directly in the web application. This same type of functionality can be added to your mobile and desktop apps as well!
 

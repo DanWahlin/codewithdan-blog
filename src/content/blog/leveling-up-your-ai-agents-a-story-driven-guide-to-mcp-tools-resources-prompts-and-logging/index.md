@@ -10,7 +10,7 @@ tags:
 coverImage: "mcp-capabilities-2.jpg"
 ---
 
-[![](/images/blog/leveling-up-your-ai-agents-a-story-driven-guide-to-mcp-tools-resources-prompts-and-logging/mcp-capabilities-2-1024x683.jpg)](https://blog.codewithdan.com/wp-content/uploads/2025/07/mcp-capabilities-2.jpg)
+[![](/images/blog/leveling-up-your-ai-agents-a-story-driven-guide-to-mcp-tools-resources-prompts-and-logging/mcp-capabilities-2-1024x683.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/07/mcp-capabilities-2.jpg)
 
 AI copilots are getting smarter. They can chat, reason, and even follow complex instructions. But if you want your AI to actually do something useful, like trigger a function, fetch some data, or keep a log of what happened, you need more than just prompts. You need structure and you need context. You need something like the **Model Context Protocol (MCP)**.
 

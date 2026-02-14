@@ -13,7 +13,7 @@ tags:
 
 I'm excited to announce that John Papa and I will be giving a full-day Angular 2 workshop in the beautiful city of Barcelona on July 31st, 2016! John and I are both really excited about the opportunity to come visit Spain and look forward to sharing our knowledge, expertise and passion with everyone. Read on to learn more about the workshop and what we'll be covering.
 
-[![barcelona-workshop2016](/images/blog/angular-2-workshop-in-barcelona-july-31st-2016/barcelona-workshop2016.png)](https://ti.to/angularcamp/angularcamp-ng2workshop/discount/NG100)
+[![barcelona-workshop2016](/images/blog/angular-2-workshop-in-barcelona-july-31st-2016/barcelona-workshop2016.webp)](https://ti.to/angularcamp/angularcamp-ng2workshop/discount/NG100)
 
  
 
@@ -41,7 +41,7 @@ If you're not able to make it to the Ultimate Angular 2 workshop, John and I wi
 
 ## **The Ultimate Angular 2 Workshop**
 
-![ng-conf-11-sharper](/images/blog/angular-2-workshop-in-barcelona-july-31st-2016/ng-conf-11-sharper-1024x302.jpg)
+![ng-conf-11-sharper](/images/blog/angular-2-workshop-in-barcelona-july-31st-2016/ng-conf-11-sharper-1024x302.webp)
 
 Interested in spending a fun-filled day learning how to build **Single Page Applications** (SPAs) with **Angular 2** and [Google Developer Experts](https://developers.google.com/experts/all/technology/web-technologies) **John Papa** and **Dan Wahlin**? John and Dan will be in Barcelona for a full day of Angular 2 and look forward to sharing their knowledge, expertise and passion with everyone.
 
@@ -89,4 +89,4 @@ John Papa is a Microsoft Regional Director, MVP, and Google Developer Expert for
 
 Special thanks to [Angular Beers](https://twitter.com/AngularBeers), for sponsoring us!
 
-[![angular-beers](/images/blog/angular-2-workshop-in-barcelona-july-31st-2016/angular-beers.png)](https://twitter.com/AngularBeers)
+[![angular-beers](/images/blog/angular-2-workshop-in-barcelona-july-31st-2016/angular-beers.webp)](https://twitter.com/AngularBeers)

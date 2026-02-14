@@ -6,7 +6,7 @@ categories:
 coverImage: "angular-playground-featured.png"
 ---
 
-[![](/images/blog/angular-playground-developing-and-running-components-in-a-sandbox/Angular-Playground.png)](http://www.angularplayground.it/)
+[![](/images/blog/angular-playground-developing-and-running-components-in-a-sandbox/Angular-Playground.webp)](http://www.angularplayground.it/)
 
 Scenario-Driven Development (SDD) - a term I'd heard little about until my friend [Justin Couto](https://twitter.com/JustinCouto) encouraged me to check out his team's [Angular Playground](http://www.angularplayground.it/) tool. SDD didn't mean much to me when I first heard about it, but I decided to look into Angular Playground more and had one of those "light bulb" moments after I got it up and running. SDD was extremely cool....once I understood what it was all about!
 

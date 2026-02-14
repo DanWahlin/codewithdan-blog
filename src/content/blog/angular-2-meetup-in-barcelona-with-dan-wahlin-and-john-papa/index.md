@@ -6,7 +6,7 @@ categories:
   - "javascript"
 ---
 
-[![barcelonaMeetup](/images/blog/angular-2-meetup-in-barcelona-with-dan-wahlin-and-john-papa/barcelonaMeetup.jpg)](https://blog.codewithdan.com/wp-content/uploads/2016/07/barcelonaMeetup.jpg)I'm excited to announce that John Papa and I will be presenting at an Angular 2 meetup on July 31st, 2016 at 19:00 in Barcelona! We're going to be there doing a full-day [Ultimate Angular 2 Workshop](https://blog.codewithdan.com/2016/05/14/angular-2-workshop-in-barcelona-july-31st-2016/) and wanted to organize a meetup for people who aren't able to attend.
+[![barcelonaMeetup](/images/blog/angular-2-meetup-in-barcelona-with-dan-wahlin-and-john-papa/barcelonaMeetup.webp)](https://blog.codewithdan.com/wp-content/uploads/2016/07/barcelonaMeetup.jpg)I'm excited to announce that John Papa and I will be presenting at an Angular 2 meetup on July 31st, 2016 at 19:00 in Barcelona! We're going to be there doing a full-day [Ultimate Angular 2 Workshop](https://blog.codewithdan.com/2016/05/14/angular-2-workshop-in-barcelona-july-31st-2016/) and wanted to organize a meetup for people who aren't able to attend.
 
 ### Event Details
 

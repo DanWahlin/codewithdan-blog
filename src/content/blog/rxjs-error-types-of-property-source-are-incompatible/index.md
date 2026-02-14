@@ -12,7 +12,7 @@ tags:
 coverImage: "wrenches.jpg"
 ---
 
-![](/images/blog/rxjs-error-types-of-property-source-are-incompatible/wrenches-1024x768.jpg)
+![](/images/blog/rxjs-error-types-of-property-source-are-incompatible/wrenches-1024x768.webp)
 
 I'm working on an npm package that requires RxJS as a peerDependency which means that whatever app uses the package must also install RxJS. Since my npm package project needs RxJS to build, I add it as a **devDependency** which of course adds it into the node\_modules folder of the project.
 

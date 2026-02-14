@@ -16,7 +16,7 @@ coverImage: "2019-03-10_16-06-42.png"
 
 <figure>
 
-![mac command by Hannah Joshua](/images/blog/4-kubectl-commands-to-help-debug-pod-issues-in-kubernetes/46T6nVjRc2w.jpg)
+![mac command by Hannah Joshua](/images/blog/4-kubectl-commands-to-help-debug-pod-issues-in-kubernetes/46T6nVjRc2w.webp)
 
 <figcaption>
 
@@ -26,7 +26,7 @@ mac command by Hannah Joshua
 
 </figure>
 
-![](/images/blog/4-kubectl-commands-to-help-debug-pod-issues-in-kubernetes/2019-03-10_16-06-42.png)If you've worked with containers a lot you're probably good at commands like **docker logs** and **docker exec** to retrieve information about containers that may be having problems. One of the challenges that comes up as people move to Kubernetes is understanding how to get similar details about Pods and any containers running within them. I've had several people ask me about this recently in my instructor-led [Kubernetes course](https://codewithdan.com/products/docker-kubernetes) as well as online with my [Docker for Web Developers](https://app.pluralsight.com/library/courses/docker-web-development/table-of-contents) course (which has a module on Kubernetes) so I decided to post a few of the initial commands you can use to get started resolving Pod and container issues.
+![](/images/blog/4-kubectl-commands-to-help-debug-pod-issues-in-kubernetes/2019-03-10_16-06-42.webp)If you've worked with containers a lot you're probably good at commands like **docker logs** and **docker exec** to retrieve information about containers that may be having problems. One of the challenges that comes up as people move to Kubernetes is understanding how to get similar details about Pods and any containers running within them. I've had several people ask me about this recently in my instructor-led [Kubernetes course](https://codewithdan.com/products/docker-kubernetes) as well as online with my [Docker for Web Developers](https://app.pluralsight.com/library/courses/docker-web-development/table-of-contents) course (which has a module on Kubernetes) so I decided to post a few of the initial commands you can use to get started resolving Pod and container issues.
 
 ## Checking Pod Logs with kubectl logs
 

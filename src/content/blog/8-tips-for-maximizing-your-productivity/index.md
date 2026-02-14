@@ -7,7 +7,7 @@ categories:
   - "productivity"
 ---
 
-[![](/images/blog/8-tips-for-maximizing-your-productivity/productive-1.jpg)](https://blog.codewithdan.com/wp-content/uploads/2018/06/productive-1.jpg)
+[![](/images/blog/8-tips-for-maximizing-your-productivity/productive-1.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/06/productive-1.jpg)
 
 Getting things done has always been a challenge for most people - and I include myself - regardless of where you work or what you do. No matter how hard some people try, they end up procrastinating tasks until the last minute. Some people simply focus better when they know they’re out of time and can’t procrastinate any longer. How many times have you put off working on a term paper in school until the very last minute? With only a few hours left your mental energy and focus seem to kick in to high gear especially as you realize that you either get the paper done now or risk failing. It’s amazing how a little pressure can turn into a motivator and allow our minds to focus on a given task.
 
@@ -19,7 +19,7 @@ In this post I’m going to list a few of the techniques and processes I follow 
 
 ## 1\. Start Each Day with a (realistic) List
 
-[![](/images/blog/8-tips-for-maximizing-your-productivity/task_list.jpg)](https://blog.codewithdan.com/wp-content/uploads/2018/06/task_list.jpg)
+[![](/images/blog/8-tips-for-maximizing-your-productivity/task_list.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/06/task_list.jpg)
 
 What are you planning to get done today? Do you keep track of everything in your head or rely on your calendar? While most of us think that we’re pretty good at managing “to do” lists strictly in our head you might be surprised at how effective writing out lists can be. By writing out tasks you’re forced to focus on the most important tasks to accomplish that day, commit yourself to those tasks, and have an easy way to track what was supposed to get done and what actually got done.
 
@@ -27,7 +27,7 @@ What are you planning to get done today? Do you keep track of everything in your
 
 I’m not a big fan of using paper since I type a lot faster than I write (plus I write like a 3rd grader according to my wife), so I use the sticky notes feature available in Windows and Mac. Here’s an example of today's sticky note:
 
-[![](/images/blog/8-tips-for-maximizing-your-productivity/2018-06-15_06-34-42.png)](https://blog.codewithdan.com/wp-content/uploads/2018/06/2018-06-15_06-34-42.png)
+[![](/images/blog/8-tips-for-maximizing-your-productivity/2018-06-15_06-34-42.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/06/2018-06-15_06-34-42.png)
 
 If you prefer "to do" lists instead of sticky notes, there are a ton of apps out there to help with that. One of my favorites is [Any.do](https://www.any.do/). What do you add to your list? That’s the subject of the next tip.
 
@@ -39,7 +39,7 @@ In addition to keeping my tasks focused and small, I also make a conscious effor
 
 ## 3\. Getting Started is the Hardest (Yet Easiest) Part
 
-[![](/images/blog/8-tips-for-maximizing-your-productivity/get_started.jpg)](https://blog.codewithdan.com/wp-content/uploads/2018/06/get_started.jpg)
+[![](/images/blog/8-tips-for-maximizing-your-productivity/get_started.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/06/get_started.jpg)
 
 I’ve always found that getting started is the hardest part and one of the biggest contributors to procrastination. Getting started working on tasks is a lot like getting a large rock pushed up and over a hill. It’s difficult to get the rock rolling at first, but once you manage to get it rocking some it’s really easy to get it rolling on its way to the bottom. As an example, I’ve written 100s of articles for technical magazines over the years and have really struggled with the initial introductory paragraphs. Keep in mind that these are the paragraphs that don’t really add that much value (in my opinion anyway). They introduce the reader to the subject matter and nothing more. What a waste of time for me to sit there stressing about how to start the article. On more than one occasion I’ve spent more than an hour trying to come up with 2-3 paragraphs of text. Talk about a productivity killer!
 
@@ -69,7 +69,7 @@ There are certainly many other productivity techniques and processes out there (
 
 ## 5\. Persistence is Key
 
-[![](/images/blog/8-tips-for-maximizing-your-productivity/persistence.jpg)](https://blog.codewithdan.com/wp-content/uploads/2018/06/persistence.jpg)
+[![](/images/blog/8-tips-for-maximizing-your-productivity/persistence.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/06/persistence.jpg)
 
 Getting things done is great but one of the biggest lessons I’ve learned in life is that persistence is key especially when you’re trying to get something done that at times seems insurmountable. Small tasks ultimately lead to larger tasks getting accomplished, however, it’s not all roses along the way as some of the smaller tasks may come with their own share of bumps and bruises that lead to discouragement about the end goal and whether or not it is worth achieving at all.
 
@@ -77,7 +77,7 @@ I’ve been on several long-term projects over my career as a software developer
 
 ## 6\. Track Your Time
 
-[![](/images/blog/8-tips-for-maximizing-your-productivity/time_management.jpg)](https://blog.codewithdan.com/wp-content/uploads/2018/06/time_management.jpg)
+[![](/images/blog/8-tips-for-maximizing-your-productivity/time_management.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/06/time_management.jpg)
 
 How much time do you actually spend working on various tasks? If you don’t currently track time spent answering emails, on phone calls, browsing the Internet, and working on various tasks then you might be surprised to find out that a task that you thought was going to take you 30 minutes ultimately ended up taking 2 hours. If you don’t track the time you spend working on tasks how can you expect to learn from your mistakes, optimize your time better, and become more productive? That’s another reason why I like the Pomodoro Technique – it makes it easy to stay focused on tasks while also tracking how much time I’m working on a given task.
 
@@ -89,13 +89,13 @@ I’ll admit that eliminating distractions is still tough for me personally and 
 
 Ultimately it comes down to self-discipline and how badly you want to be productive and successful in your career, life goals, hobbies, or whatever you’re working on. Rather than having your homepage take you to a time wasting news site, game site, social site, or others, how about adding something like the following as your homepage? Every time your browser opens you’ll see a personal message which helps keep you on the right track. You can [download my ubber-sophisticated homepage here](https://www.dropbox.com/s/5jsro0gfag5q89s/Dont_Waste_Time.zip?dl=0) if interested.
 
-![Don't Waste Time Clock Image](/images/blog/8-tips-for-maximizing-your-productivity/2018-06-15_06-22-33.png)
+![Don't Waste Time Clock Image](/images/blog/8-tips-for-maximizing-your-productivity/2018-06-15_06-22-33.webp)
 
 If you want a tool to help eliminate distractions (while also helping you stay focused for a set period of time) check out [Forest: stay focused, be present](https://forestapp.cc/en/). You can use it with iOS, Android or as a Chrome extension. There are a lot of [additional tools out there](https://www.google.com/search?source=hp&ei=7uYiW-WSDqb_0gLCorewBg&q=focus+block+sites&oq=focus+block+sites) to block you from going to time wasting sites while you're trying to focus as well.
 
 ## 8\. Learn to Relax
 
-[![](/images/blog/8-tips-for-maximizing-your-productivity/meditation.jpg)](https://blog.codewithdan.com/wp-content/uploads/2018/06/meditation.jpg)
+[![](/images/blog/8-tips-for-maximizing-your-productivity/meditation.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/06/meditation.jpg)
 
 This final tip is arguably one of the most important to maximize your productivity in my opinion. There are [many studies](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=relaxation%2C+stress+and+work+productivity+and+creativity&btnG=) out there touting the benefits of stress and anxiety reduction on productivity and creativity. We all know that unhealthy stress and anxiety can reduce our productivity but how many of us take action? In today's stressed-out world it's more important than ever to work on this skill. It's something that takes practice for many of us and requires a lot of effort, but it's totally worth the time investment in my experience. It may sound a bit "out there", but **learning to quiet your mind might be one of the best things you'll ever do for yourself.**
 
@@ -115,7 +115,7 @@ While learning to be more mindful is a big topic that many [articles](https://fl
 2. To get better at mindfulness and controlling my thoughts I started actively quieting my mind by [meditating](https://en.wikipedia.org/wiki/Meditation) on a consistent basis. I'll have to admit that I laughed at the concept of meditation earlier in life and thought it was for monks (no offense to any monks out there - I now have a ton of respect for the skills you've learned :-)). In hindsight, I just didn't know what I didn't know when it came to meditation.Meditation was extremely hard for me at first. Try sitting in a quiet room for 60 seconds and keeping your mind clear of any thoughts - don't think anything! For newbies, within a few seconds your mind will start thinking about something and you won't even realize it. By learning to quiet your mind you can relax and develop greater productivity and creativity as a result. You'll also learn to be more mindful about what you're thinking and feeling. This doesn't mean you ignore any thoughts that come up while meditating. Instead you note them and go back to focusing on something else like your breathing, a mantra, etc. You can find a list of meditation techniques [here](https://liveanddare.com/types-of-meditation).
 3. Use an app to get started with meditation rather than trying to go it alone. There are [many meditation techniques](https://liveanddare.com/types-of-meditation) out there as mentioned earlier, but if you're interested in getting started meditating I recommend apps such as [Insight Timer](https://insighttimer.com/), [Welzen](https://welzen.org/), [Headspace](https://www.headspace.com/), or [Aware](https://awaremeditationapp.com/). I alternate between several apps and even use breathing apps like [Pranayama](https://itunes.apple.com/us/app/health-through-breath-pranayama/id341935130?mt=8). Here are some of the apps I have loaded on my phone:
 
-[![](/images/blog/8-tips-for-maximizing-your-productivity/2018-06-15_07-25-45-576x1024.png)](https://blog.codewithdan.com/wp-content/uploads/2018/06/2018-06-15_07-25-45.png)
+[![](/images/blog/8-tips-for-maximizing-your-productivity/2018-06-15_07-25-45-576x1024.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/06/2018-06-15_07-25-45.png)
 
 So has meditating and being more mindful helped my productivity? I can say "Yes" with 100% confidence. It's helped me eliminate a ton of stress, anxiety, and worry and made me much more productive (especially in stressful situations) and more creative overall. When I'm stuck on something, I recognize how I'm feeling and what I'm thinking and typically step away for a few minutes (I used to suffer through the problem until it was solved which wasn't very efficient). I've seen many other benefits as well in my life but that's a topic for another blog post.
 

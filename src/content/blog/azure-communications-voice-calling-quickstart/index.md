@@ -38,17 +38,17 @@ Creating an ACS resource in the portal is straightforward and quick. You do the 
 - Enter a resource name
 - Select your data location
 
-[![](/images/blog/azure-communications-voice-calling-quickstart/image-2-1024x678.png)](https://blog.codewithdan.com/wp-content/uploads/2021/03/image-2.png)
+[![](/images/blog/azure-communications-voice-calling-quickstart/image-2-1024x678.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/03/image-2.png)
 
 Once you've done that select the **Review + Create** button followed by **Create**. Simple right!?
 
 After creating the ACS resource you'll notice a **View and generate access keys** section on the **Overview** page.
 
-[![](/images/blog/azure-communications-voice-calling-quickstart/image-3.png)](https://blog.codewithdan.com/wp-content/uploads/2021/03/image-3.png)
+[![](/images/blog/azure-communications-voice-calling-quickstart/image-3.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/03/image-3.png)
 
 Select that and you'll be taken to a page where you can get information about a connection string. Locate the **first connection string shown** and copy it to your clipboard. You'll need it later.
 
-[![](/images/blog/azure-communications-voice-calling-quickstart/image-4-915x1024.png)](https://blog.codewithdan.com/wp-content/uploads/2021/03/image-4.png)
+[![](/images/blog/azure-communications-voice-calling-quickstart/image-4-915x1024.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/03/image-4.png)
 
 ## Step 3: Install Packages
 
@@ -160,7 +160,7 @@ npx webpack-dev-server
 
 Once the webpack server starts and the bundles are built you can visit http://localhost:8080 in the browser.
 
-[![](/images/blog/azure-communications-voice-calling-quickstart/image-7.png)](https://blog.codewithdan.com/wp-content/uploads/2021/03/image-7.png)
+[![](/images/blog/azure-communications-voice-calling-quickstart/image-7.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/03/image-7.png)
 
 Enter **8:echo123** in the textbox and start the call. A bot will answer and tell you to record a message. After the beep, say whatever you'd like and once it's done recording your message will be played back to you. Hangup on the call whenever you're done.
 

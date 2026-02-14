@@ -9,7 +9,7 @@ tags:
 coverImage: "mongodb.png"
 ---
 
-![](/images/blog/installing-mongodb-on-mac-catalina-using-homebrew/mongodb.png)
+![](/images/blog/installing-mongodb-on-mac-catalina-using-homebrew/mongodb.webp)
 
 I recently bought a new iMac and moved all of my files over using Time Machine. The migration went really well overall and within a few hours I had my development machine up and running. After starting an application I'm building I quickly realized that I couldn't get MongoDB to start. Running the following command resulted in an error about the **data/db** directory being read-only:
 

@@ -9,7 +9,7 @@ categories:
 coverImage: "2018-05-03_11-24-40.png"
 ---
 
-![](/images/blog/getting-started-with-machine-learning-using-tensorflow-and-docker/2018-05-03_11-24-40-1024x1016.png)Machine Learning (ML) gets a lot of press now days and for good reason. It can be used to gain insight into areas that were difficult to tap into even a few years ago. Want to know what type of object is shown in a picture? [Machine learning](https://en.wikipedia.org/wiki/Machine_learning) can tell you. Need help predicting the next big stock to buy based on historical trends? Machine learning can help out there as well. The sky is the limit! Machine Learning (and more specifically a technique for implementing it called [Deep Learning (DL)](https://en.wikipedia.org/wiki/Deep_learning)) can help analyze financial information, filter spam, examine healthcare records, assess security exploits, perform face recognition, enable driver-less cars, and much more. It's one of the key drivers moving artificial intelligence (AI) forward.
+![](/images/blog/getting-started-with-machine-learning-using-tensorflow-and-docker/2018-05-03_11-24-40-1024x1016.webp)Machine Learning (ML) gets a lot of press now days and for good reason. It can be used to gain insight into areas that were difficult to tap into even a few years ago. Want to know what type of object is shown in a picture? [Machine learning](https://en.wikipedia.org/wiki/Machine_learning) can tell you. Need help predicting the next big stock to buy based on historical trends? Machine learning can help out there as well. The sky is the limit! Machine Learning (and more specifically a technique for implementing it called [Deep Learning (DL)](https://en.wikipedia.org/wiki/Deep_learning)) can help analyze financial information, filter spam, examine healthcare records, assess security exploits, perform face recognition, enable driver-less cars, and much more. It's one of the key drivers moving artificial intelligence (AI) forward.
 
 Although I spend most of my time in the web development arena, I've been dedicating a lot of time over the past few months researching machine learning concepts. It's required me to refresh my linear algebra, matrix operations, and stats knowledge some, but it's been a fun ride overall. What's been really fun is researching [TensorFlow](https://www.tensorflow.org/) (an open source machine learning framework) and related frameworks. It's a big learning curve, but ML/DL frameworks can abstract away a lot of the math and algorithms and let you do some amazing things with a minimal amount of code.
 
@@ -59,7 +59,7 @@ cd tensorflow-for-poets-2
 
 8\. Type the **ls** command in the terminal window to list what's in the folder. Note that there are **scripts** and **ts\_files** folders.
 
-[![](/images/blog/getting-started-with-machine-learning-using-tensorflow-and-docker/2018-05-03_12-08-20-1024x125.png)](https://blog.codewithdan.com/wp-content/uploads/2018/05/2018-05-03_12-08-20.png)
+[![](/images/blog/getting-started-with-machine-learning-using-tensorflow-and-docker/2018-05-03_12-08-20-1024x125.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/05/2018-05-03_12-08-20.png)
 
 9\. Download some training images and place them in the **tensorflow-for-poets-2** folder by running the following command (make sure you copy the entire command....you might have to scroll right to see it all). These images are provided by the TensorFlow project and include images of various flowers.
 
@@ -103,7 +103,7 @@ python classify_image.py tf_files/flower_photos/roses/17051448596_69348f7fce_m.j
 
 15\. Once it's done you should see information about what the image is:
 
-[![](/images/blog/getting-started-with-machine-learning-using-tensorflow-and-docker/2018-05-03_12-45-41-1024x187.png)](https://blog.codewithdan.com/wp-content/uploads/2018/05/2018-05-03_12-45-41.png)
+[![](/images/blog/getting-started-with-machine-learning-using-tensorflow-and-docker/2018-05-03_12-45-41-1024x187.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/05/2018-05-03_12-45-41.png)
 
 In this example it detected a rose (which is correct) with 82% accuracy. With additional training images the accuracy goes up.
 
@@ -149,6 +149,6 @@ docker rmi [image_id]
 
 This simple example only scratches the surface of what Machine Learning can do but provides a fairly straightforward example of getting started. While this type of Machine Learning can be done more easily using some of the Machine Learning cloud services available (such as [Azure's Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/directory/vision/), [Google Cloud's AutoML](https://cloud.google.com/automl/), and [Amazon's Rekognition](https://aws.amazon.com/rekognition/) to name a few), I always enjoy learning more about how a process works before jumping into other options.
 
-[![](/images/blog/getting-started-with-machine-learning-using-tensorflow-and-docker/guage.jpg)](https://blog.codewithdan.com/wp-content/uploads/2018/05/guage.jpg)While you may not be interested in classifying flowers (unless that's your thing :-)), there are a lot of great uses for image classification that can help with automation. For example, I've seen an example of an app that can convert pictures taken from industrial gauges out in the field into actual numbers that are reported on a dashboard without installing any new equipment (aside from a camera that points at the gauges of course). Images from the field are run through an ML process that then converts the gauge positions to numbers. It's amazingly powerful and as mentioned....the sky's the limit!
+[![](/images/blog/getting-started-with-machine-learning-using-tensorflow-and-docker/guage.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/05/guage.jpg)While you may not be interested in classifying flowers (unless that's your thing :-)), there are a lot of great uses for image classification that can help with automation. For example, I've seen an example of an app that can convert pictures taken from industrial gauges out in the field into actual numbers that are reported on a dashboard without installing any new equipment (aside from a camera that points at the gauges of course). Images from the field are run through an ML process that then converts the gauge positions to numbers. It's amazingly powerful and as mentioned....the sky's the limit!
 
 If you're interested in learning more about Machine Learning and AI, check out the new [Flipboard Magazine](https://flipboard.com/@dwahlin/artificial-intelligence-and-machine-learning-j55khak1y) I started (it's free to access). As I find new articles on the subject I add them to the magazine.

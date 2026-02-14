@@ -10,7 +10,7 @@ tags:
 coverImage: "image-5.png"
 ---
 
-[![](/images/blog/ai-repo-of-the-week-mcp-for-beginners/image-5.png)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-5.png)
+[![](/images/blog/ai-repo-of-the-week-mcp-for-beginners/image-5.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-5.png)
 
 ## **Introduction**
 
@@ -98,7 +98,7 @@ In addition to covering MCP fundamentals, the course will also walk you through 
 
 The course also walks you through an [Azure AI Travel Agents](https://github.com/Azure-Samples/azure-ai-travel-agents) case study that demonstrates using MCP in an AI agents scenario.
 
-[![](/images/blog/ai-repo-of-the-week-mcp-for-beginners/image-6-1024x682.png)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-6-scaled.png)
+[![](/images/blog/ai-repo-of-the-week-mcp-for-beginners/image-6-1024x682.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-6-scaled.png)
 
 ## **Conclusion**
 

@@ -44,11 +44,11 @@ The **[RealTime AI App](https://github.com/DanWahlin/RealtimeAIApp-JS)** is a we
 
 - **Language Coach**: Speak a phrase like “Hola, ¿cómo te llamas?” and it’ll chime in with, “Nice, but emphasize the ‘c’ more in 'cómo'!” It’s your patient and kind language and pronunciation tutor.
 
-[![](/images/blog/using-realtime-ai-part-1-getting-started-with-the-fundamentals-of-low-latency-ai-magic/image-9-1024x847.png)](https://blog.codewithdan.com/wp-content/uploads/2025/03/image-9.png)
+[![](/images/blog/using-realtime-ai-part-1-getting-started-with-the-fundamentals-of-low-latency-ai-magic/image-9-1024x847.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/03/image-9.png)
 
 - **Medical Form Assistant**: Say “Patient John Smith, 42 years old, history of pneumonia” and it returns a JSON object like { "name": "John Smith", "age": "42", "notes": "pneumonia" } and fills in a form for you. Medical assistants, nurses, and doctors can speak directly to a form (no keyboard required) as they're busily hurrying around a hospital environment and have the form automatically filled in with patient details.
 
-[![](/images/blog/using-realtime-ai-part-1-getting-started-with-the-fundamentals-of-low-latency-ai-magic/image-10-1024x916.png)](https://blog.codewithdan.com/wp-content/uploads/2025/03/image-10.png)
+[![](/images/blog/using-realtime-ai-part-1-getting-started-with-the-fundamentals-of-low-latency-ai-magic/image-10-1024x916.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/03/image-10.png)
 
 Since there are several parts to the RealTime AI App, I'll break it down into individual pieces for you through a series of posts that follow. In the meantime, here's a high-level overview of the key parts of the app.
 
@@ -58,7 +58,7 @@ Since there are several parts to the RealTime AI App, I'll break it down into in
 
 - **OpenAI RealTime API**: This is the brains of the operation. It receives audio/text from the Realtime Session, processes it with the gpt-4o-realtime model, and sends back audio/text responses. The app supports calling OpenAI or Azure OpenAI.
 
-[![RealTime AI App diagram showing the client, realtime session, and OpenAI realtime interaction.](/images/blog/using-realtime-ai-part-1-getting-started-with-the-fundamentals-of-low-latency-ai-magic/image-8-559x1024.png)](https://blog.codewithdan.com/wp-content/uploads/2025/03/image-8.png)
+[![RealTime AI App diagram showing the client, realtime session, and OpenAI realtime interaction.](/images/blog/using-realtime-ai-part-1-getting-started-with-the-fundamentals-of-low-latency-ai-magic/image-8-559x1024.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/03/image-8.png)
 
 ## What’s Next?
 

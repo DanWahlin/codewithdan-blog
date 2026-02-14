@@ -13,7 +13,7 @@ tags:
 coverImage: "captain-america.jpg"
 ---
 
-[![](/images/blog/integrating-ai-with-external-apis-building-a-marvel-mcp-server/captain-america.jpg)](https://blog.codewithdan.com/wp-content/uploads/2025/03/captain-america.jpg)
+[![](/images/blog/integrating-ai-with-external-apis-building-a-marvel-mcp-server/captain-america.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/03/captain-america.jpg)
 
 _Image from the Marvel Developers API_  
   
@@ -418,7 +418,7 @@ What if you don't want to store keys directly in the file? With VS Code you can 
 
 Once the configuration is in place and the MCP server is started by selecting the Start option above "marvel-mcp" in the file, the **@codewithdan/marvel-mcp** package will be downloaded from npm and the server will be run locally. From there, a user can interact with the MCP host and ask questions about Marvel characters and comics. Here's an example of doing that from GitHub Copilot.
 
-[![Example of a prompt in GitHub Copilot in VS Code that triggers a Marvel MCP server tool.](/images/blog/integrating-ai-with-external-apis-building-a-marvel-mcp-server/2025-03-30_00-57-50.png)](https://blog.codewithdan.com/wp-content/uploads/2025/04/2025-03-30_00-57-50.png)
+[![Example of a prompt in GitHub Copilot in VS Code that triggers a Marvel MCP server tool.](/images/blog/integrating-ai-with-external-apis-building-a-marvel-mcp-server/2025-03-30_00-57-50.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/04/2025-03-30_00-57-50.png)
 
 Examples of additional prompts could include:
 

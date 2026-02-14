@@ -12,7 +12,7 @@ categories:
 coverImage: "ContainerizingAngularApps250.png"
 ---
 
-[![](/images/blog/new-pluralsight-course-containerizing-angular-applications-with-docker/containerizing_angular_docker.png)](https://pluralsight.pxf.io/c/1191765/424552/7490?u=https://www.pluralsight.com/courses/containerizing-angular-apps-docker)
+[![](/images/blog/new-pluralsight-course-containerizing-angular-applications-with-docker/containerizing_angular_docker.webp)](https://pluralsight.pxf.io/c/1191765/424552/7490?u=https://www.pluralsight.com/courses/containerizing-angular-apps-docker)
 
 I’m excited to announce the release of my next course on Pluralsight titled Containerizing Angular Applications with Docker! This course walks you through the process of containerizing front-end applications (with a focus on Angular) using Docker images and containers.
 

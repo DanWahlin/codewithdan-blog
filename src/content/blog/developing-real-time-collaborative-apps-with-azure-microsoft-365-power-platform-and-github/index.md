@@ -17,7 +17,7 @@ tags:
 
 <figure>
 
-[![](/images/blog/developing-real-time-collaborative-apps-with-azure-microsoft-365-power-platform-and-github/2021-11-09_10-31-05.png)](https://blog.codewithdan.com/wp-content/uploads/2021/11/2021-11-09_10-31-05.png)
+[![](/images/blog/developing-real-time-collaborative-apps-with-azure-microsoft-365-power-platform-and-github/2021-11-09_10-31-05.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/11/2021-11-09_10-31-05.png)
 
 <figcaption>
 

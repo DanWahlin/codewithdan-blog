@@ -10,7 +10,7 @@ tags:
 coverImage: "framework.jpg"
 ---
 
-![](/images/blog/data-oriented-vs-control-oriented-programming/framework-1024x682.jpg)
+![](/images/blog/data-oriented-vs-control-oriented-programming/framework-1024x682.webp)
 
 I recently had someone ask me a question on Twitter about moving to Single Page Application frameworks and why they'd do that over choosing vanilla JavaScript or jQuery. It's a great question but tough to question on Twitter with the limited amount of characters. So, I thought I'd dust off an old post I wrote many years ago to address the subject. I also wrote a post titled [Choosing the "Right" JavaScript Library/Framework for Your Application](https://blog.codewithdan.com/choosing-the-right-javascript-library-framework-for-your-application/) that has some additional ideas to consider as well.
 

@@ -17,7 +17,7 @@ tags:
 coverImage: "realtalkjs270X250.png"
 ---
 
-[![](/images/blog/real-talk-js-podcast-end-to-end-testing-with-cypress-io/realtalkjs.jpg)](http://realtalkjs.com)
+[![](/images/blog/real-talk-js-podcast-end-to-end-testing-with-cypress-io/realtalkjs.webp)](http://realtalkjs.com)
 
 I had the opportunity to talk with my good friends [John Papa](https://twitter.com/john_papa) and [Ward Bell](https://twitter.com/wardbell) about [Cypress.io](https://cypress.io) and end to end testing on the [Real Talk JavaScript](http://realtalkjs.com) podcast.  We talked about why I think end to end testing should get more attention, how I'm using it in a current project, as well as the benefits it can offer developers.
 

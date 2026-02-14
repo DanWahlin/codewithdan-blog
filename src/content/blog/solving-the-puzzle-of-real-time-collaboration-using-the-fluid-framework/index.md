@@ -11,7 +11,7 @@ tags:
 coverImage: "2023-01-27_12-58-07.png"
 ---
 
-[![](/images/blog/solving-the-puzzle-of-real-time-collaboration-using-the-fluid-framework/2023-01-27_12-58-07-1024x523.png)](https://blog.codewithdan.com/wp-content/uploads/2023/01/2023-01-27_12-58-07.png)
+[![](/images/blog/solving-the-puzzle-of-real-time-collaboration-using-the-fluid-framework/2023-01-27_12-58-07-1024x523.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/01/2023-01-27_12-58-07.png)
 
 I had the opportunity to talk at [ng-conf](https://ng-conf.org/) (one of my favorite conferences of all time!) about how the [Fluid Framework](https://fluidframework.com) can be used to add real-time collaboration into your custom apps. In the talk I cover:
 

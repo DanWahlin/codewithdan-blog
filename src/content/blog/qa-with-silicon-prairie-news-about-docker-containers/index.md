@@ -7,7 +7,7 @@ categories:
   - "docker"
 ---
 
-[![](/images/blog/qa-with-silicon-prairie-news-about-docker-containers/2017-07-14_10-59-58.png)](https://blog.codewithdan.com/wp-content/uploads/2017/07/2017-07-14_10-59-58.png)
+[![](/images/blog/qa-with-silicon-prairie-news-about-docker-containers/2017-07-14_10-59-58.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/07/2017-07-14_10-59-58.png)
 
 I had the opportunity to talk with Silicon Prairie News about Docker and some of the key benefits it offers. They interviewed me ahead of the [Heartland Developer Conference (HDC) event](http://heartlanddc.com) where I'll be giving a keynote titled "Docker Containers: What Every Developer Should Know". The questions they asked in the interview included:
 
@@ -19,6 +19,6 @@ I had the opportunity to talk with Silicon Prairie News about Docker and some of
 6. What systems do Docker containers run on?
 7. Are there any resources for someone to get a basic understanding of Docker before HDC (Heartland Developers Conference)?
 
-[![](/images/blog/qa-with-silicon-prairie-news-about-docker-containers/2017-07-14_09-43-39.png)](https://blog.codewithdan.com/wp-content/uploads/2017/07/2017-07-14_09-43-39.png)
+[![](/images/blog/qa-with-silicon-prairie-news-about-docker-containers/2017-07-14_09-43-39.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/07/2017-07-14_09-43-39.png)
 
 You can read the full Silicon Prairie News interview at [http://siliconprairienews.com/2017/07/qa-hdc-keynote-speaker-docker-captain-dan-wahlin](http://siliconprairienews.com/2017/07/qa-hdc-keynote-speaker-docker-captain-dan-wahlin).

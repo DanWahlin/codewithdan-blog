@@ -10,7 +10,7 @@ tags:
 coverImage: "image.png"
 ---
 
-[![](/images/blog/what-are-some-good-generative-ai-prompt-engineering-resources/image-2-1024x585.png)](https://blog.codewithdan.com/wp-content/uploads/2023/12/image-2.png)
+[![](/images/blog/what-are-some-good-generative-ai-prompt-engineering-resources/image-2-1024x585.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/12/image-2.png)
 
 One AI question I get a lot is, "What are some good prompt engineering resources?". Here are a few I've found useful:
 
@@ -32,7 +32,7 @@ If you want to start using prompts in different Generative AI scenarios and lear
 
 Finally, prompts can be used with various Copilot scenarios too (GitHub Copilot, Microsoft Copilot, Copilot for Microsoft 365, and many more). If you want to learn about Copilot options and even go through some fun coding "adventures", check out these resources:
 
-[![](/images/blog/what-are-some-good-generative-ai-prompt-engineering-resources/image-1-1024x585.png)](https://blog.codewithdan.com/wp-content/uploads/2023/12/image-1.png)
+[![](/images/blog/what-are-some-good-generative-ai-prompt-engineering-resources/image-1-1024x585.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/12/image-1.png)
 
 ✅ [Adopt, Extend and Build Copilot Experiences Across the Microsoft Cloud](https://aka.ms/MicrosoftCopilots) (roadmap for key copilots across Microsoft)  
 ✅ [Copilot Adventures](https://github.com/microsoft/CopilotAdventures) (coding challenges to help you learn how GitHub Copilot can help)  

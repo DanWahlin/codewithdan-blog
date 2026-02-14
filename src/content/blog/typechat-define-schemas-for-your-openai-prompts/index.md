@@ -14,7 +14,7 @@ tags:
 coverImage: "2023-07-31_00-29-32.png"
 ---
 
-[![](/images/blog/typechat-define-schemas-for-your-openai-prompts/2023-07-31_00-28-24.png)](https://blog.codewithdan.com/wp-content/uploads/2023/07/2023-07-31_00-28-24.png)
+[![](/images/blog/typechat-define-schemas-for-your-openai-prompts/2023-07-31_00-28-24.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/07/2023-07-31_00-28-24.png)
 
 Have you ever spent hours carefully crafting the perfect OpenAI prompt, trying to coax your AI model into generating just the right response? As an AI developer, I know that struggle all too well especially when it comes to returning structured JSON. What if there was an easier way to retrieve JSON responses from OpenAI and Azure OpenAI models?
 

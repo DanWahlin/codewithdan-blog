@@ -8,7 +8,7 @@ categories:
 coverImage: "2017-10-27_20-17-22.png"
 ---
 
-[![](/images/blog/node-js-express-convention-based-routes/2017-10-27_20-17-22.png)](https://blog.codewithdan.com/wp-content/uploads/2017/11/2017-10-27_20-17-22.png)I've always been a fan of convention-based routing so I converted a local route generation script I've been using with Node.js/Express applications into an npm package called [express-convention-routes](https://www.npmjs.com/package/express-convention-routes). The package can be used to automate the creation of Express routes based on a directory structure.
+[![](/images/blog/node-js-express-convention-based-routes/2017-10-27_20-17-22.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/11/2017-10-27_20-17-22.png)I've always been a fan of convention-based routing so I converted a local route generation script I've been using with Node.js/Express applications into an npm package called [express-convention-routes](https://www.npmjs.com/package/express-convention-routes). The package can be used to automate the creation of Express routes based on a directory structure.
 
 What's a convention-based Express route? It's a route that is dynamically generated and associated with a "controller" function without having to explicitly code the route yourself (i.e. you don't write code such as app.use('/foo', router)). express-convention-routes creates routes automatically by parsing a convention-based folder structure such as the one below when the server first starts.
 

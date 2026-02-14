@@ -13,7 +13,7 @@ tags:
 coverImage: "OSS-AI-Summit-LangChain-small.jpg"
 ---
 
-[![](/images/blog/oss-ai-summit-building-with-langchain/image-1024x400.png)](https://blog.codewithdan.com/wp-content/uploads/2025/12/image.png)
+[![](/images/blog/oss-ai-summit-building-with-langchain/image-1024x400.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/12/image.png)
 
 Most AI demos look impressive in a notebook, but they fall apart the moment they touch real data, real users, or real scale. The companies that will win in 2026 aren’t the ones with the flashiest prototypes, they’re the ones who can reliably design, debug, and deploy agent-powered AI applications.
 

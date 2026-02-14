@@ -11,7 +11,7 @@ tags:
   - "microservices"
 ---
 
-![](/images/blog/deploying-your-angular-apps-using-containers-ngvikings-talk/2019-06-06_08-43-25-1024x525.png)
+![](/images/blog/deploying-your-angular-apps-using-containers-ngvikings-talk/2019-06-06_08-43-25-1024x525.webp)
 
 I had the opportunity to attend and speak at [ngVikings](https://ngvikings.org/) this year in Copenhagen, Denmark which was a lot of fun. Copenhagen is a beautiful city and the conference organizers did a great job putting the event together. One of the talks I gave at the conference covered deploying Angular applications using containers. While the focus was on Angular and any services it may call, the concepts can really be applied to any front-end back-end application or service.
 

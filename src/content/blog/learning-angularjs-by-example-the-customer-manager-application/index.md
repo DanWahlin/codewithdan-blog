@@ -208,7 +208,7 @@ Three custom directives are currently included in the application:
     
 2. Angular Overlay directive (**app/wc.directives/directives/wcOverlay.js**) – This directive intercepts XmlHttpRequest calls and displays a custom overlay (tracks AngularJS calls as well as jQuery). The directive is available in the application or as a [stand-alone directive on Github](https://github.com/DanWahlin/AngularOverlay).
     
-    > ![AngularOverlay Directive Example](/images/blog/learning-angularjs-by-example-the-customer-manager-application/appExample.png)
+    > ![AngularOverlay Directive Example](/images/blog/learning-angularjs-by-example-the-customer-manager-application/appExample.webp)
     
 3. Menu highlighter directive (**app/wc.directives/menuHighlighter.js**). This directive is responsible for highlighting menu items as a user clicks on them.  
       

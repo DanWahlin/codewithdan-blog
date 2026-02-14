@@ -16,7 +16,7 @@ tags:
 coverImage: "stones-270x250.png"
 ---
 
-![](/images/blog/simplifying-front-end-state-management-with-observable-store/stones-1280-1024x576.jpg)
+![](/images/blog/simplifying-front-end-state-management-with-observable-store/stones-1280-1024x576.webp)
 
 I admit it - I think the use of some front-end JavaScript state management patterns has gotten out of control. When you're spending a significant amount of time writing code (and often a lot of it) to handle application state or relying on a scaffolding tool that generates 100s or even 1000s of lines of code then it's time to take a step back and ask, "Do I really need all of this?". While you're at it you might also ask, "What can I do to simplify my code and bring some sanity back to it?".
 

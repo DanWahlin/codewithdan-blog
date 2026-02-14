@@ -14,7 +14,7 @@ tags:
 coverImage: "genai-thumb.png"
 ---
 
-[![](/images/blog/ai-repo-of-the-week-generative-ai-for-beginners-with-javascript/image-1024x576.png)](https://blog.codewithdan.com/wp-content/uploads/2025/03/image.png)
+[![](/images/blog/ai-repo-of-the-week-generative-ai-for-beginners-with-javascript/image-1024x576.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/03/image.png)
 
 _A fun, hands-on learning journey that teaches JavaScript developers how to build AI-powered apps using generative AI and large language models._
 
@@ -24,7 +24,7 @@ Ready to explore the fascinating world of Generative AI using your JavaScript sk
 
 Each chapter combines narrative-driven learning with practical exercises, helping you understand foundational AI concepts and apply them directly in code. It’s immersive, educational, and genuinely fun.  
 
-[![](/images/blog/ai-repo-of-the-week-generative-ai-for-beginners-with-javascript/rome.png)](https://blog.codewithdan.com/wp-content/uploads/2025/07/rome.png)
+[![](/images/blog/ai-repo-of-the-week-generative-ai-for-beginners-with-javascript/rome.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/07/rome.png)
 
 ## What You'll Learn
 
@@ -66,7 +66,7 @@ _More chapters coming soon—watch the [repo](https://github.com/microsoft/gene
 
 Experience the power of generative AI in action through the companion web app—where you can chat with historical figures and witness how JavaScript brings AI to life in real time.
 
-[![](/images/blog/ai-repo-of-the-week-generative-ai-for-beginners-with-javascript/dinocrates-1024x755.png)](https://blog.codewithdan.com/wp-content/uploads/2025/07/dinocrates.png)
+[![](/images/blog/ai-repo-of-the-week-generative-ai-for-beginners-with-javascript/dinocrates-1024x755.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/07/dinocrates.png)
 
 _Talk with Dinocrates and other historical characters using a custom AI app!_
 

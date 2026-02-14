@@ -5,7 +5,7 @@ categories:
   - "docker"
 ---
 
-[![](/images/blog/docker-volumes-and-print-working-directory-pwd/docker_logo.png)](https://blog.codewithdan.com/wp-content/uploads/2017/10/docker_logo.png)I often use Docker to run an application in a container as I'm writing and testing code. That involves creating a volume that points the container to a path on my machine. The challenge with setting up volumes is that the "print working directory" command that is often used to easily identify the location of your source code on the host machine is different depending on what command terminal you're using (especially on Windows).
+[![](/images/blog/docker-volumes-and-print-working-directory-pwd/docker_logo.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/10/docker_logo.png)I often use Docker to run an application in a container as I'm writing and testing code. That involves creating a volume that points the container to a path on my machine. The challenge with setting up volumes is that the "print working directory" command that is often used to easily identify the location of your source code on the host machine is different depending on what command terminal you're using (especially on Windows).
 
 Here's a quick summary that shows the syntax for "print working directory" in different command terminals when using volumes (if you're new to volumes you can [read more about them here](https://docs.docker.com/engine/admin/volumes/volumes/)). An [nginx container](https://hub.docker.com/_/nginx/) path is shown to provide a simple example of a volume pointing to the current working directory on the host machine.
 

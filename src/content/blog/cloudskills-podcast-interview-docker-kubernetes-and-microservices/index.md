@@ -20,7 +20,7 @@ We discussed the benefits of containers, the role of Kubernetes, and how both ca
 
 Listen to the podcast here:
 
-[![](/images/blog/cloudskills-podcast-interview-docker-kubernetes-and-microservices/2019-03-09_10-19-07.png)](https://cloudskills.fm/009)
+[![](/images/blog/cloudskills-podcast-interview-docker-kubernetes-and-microservices/2019-03-09_10-19-07.webp)](https://cloudskills.fm/009)
 
 - [CloudSkills.fm Website](https://cloudskills.fm/009)[](http://realtalkjs.com﻿)
 

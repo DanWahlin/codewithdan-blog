@@ -14,7 +14,7 @@ tags:
   - "vue"
 ---
 
-![](/images/blog/getting-started-with-azure-static-web-apps/azure-static-web-apps.png)
+![](/images/blog/getting-started-with-azure-static-web-apps/azure-static-web-apps.webp)
 
 What does it take to deploy a modern JavaScript web app? Your initial response might be, "Copy the files up to the server - how hard could it be?".
 
@@ -55,7 +55,7 @@ https://www.youtube.com/watch?v=oPqBuLfIXII
 
 Microsoft announced the Azure Static Web Apps service at their [Build 2020 conference](https://register.build.microsoft.com/?WT.mc_id=m365-28924-dwahlin). I was fortunate to get early access and have been really impressed with the functionality they're providing. Since then, they've made the service "GA" (generally available) and currently support 2 plans. The free plan allows you to get started absolutely free while the standard plan includes all of the free features as well as the ability to customize functionality such as authentication and APIs.
 
-[![](/images/blog/getting-started-with-azure-static-web-apps/swa-plans.png)](https://blog.codewithdan.com/wp-content/uploads/2021/05/swa-plans.png)
+[![](/images/blog/getting-started-with-azure-static-web-apps/swa-plans.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/05/swa-plans.png)
 
 You can view pricing details for the standard plan at [https://azure.microsoft.com/en-us/pricing/details/app-service/static](https://azure.microsoft.com/en-us/pricing/details/app-service/static?WT.mc_id=m365-28924-dwahlin).
 
@@ -72,7 +72,7 @@ Before going through these steps you’ll need to have an Azure account. If you 
 
 ## Step 1. Push Your App Code to Github
 
-![](/images/blog/getting-started-with-azure-static-web-apps/github_logo-300x64.png)
+![](/images/blog/getting-started-with-azure-static-web-apps/github_logo-300x64.webp)
 
 If you're already using Github to store your code then this first step is the easiest of all. If you're new to Github check out [how to started using it.](https://help.github.com/en/github/getting-started-with-github/?WT.mc_id=m365-28924-dwahlin) Believe it or not, once your static web app is on Github and your app is ready to try out, the hard part is done!
 
@@ -125,7 +125,7 @@ Once your static web app and Azure Functions APIs are up on Github, you're ready
 
 <figure>
 
-![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-15_22-35-39.png)
+![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-15_22-35-39.webp)
 
 <figcaption>
 
@@ -154,7 +154,7 @@ Once you're done filling out the form click the **Next: Build >** button.
 
 <figure>
 
-[![](/images/blog/getting-started-with-azure-static-web-apps/create-swa-app-portal.png)](https://blog.codewithdan.com/wp-content/uploads/2021/05/create-swa-app-portal.png)
+[![](/images/blog/getting-started-with-azure-static-web-apps/create-swa-app-portal.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/05/create-swa-app-portal.png)
 
 <figcaption>
 
@@ -166,7 +166,7 @@ Create a Static Web App
 
 The next step is to define where your app is located in the repository, where your Azure Functions APIs are located, and the directory where your build artifacts (your bundles) are located. You can even preview the workflow file that will be added to your Github repository.
 
-[![](/images/blog/getting-started-with-azure-static-web-apps/swa-build-details.png)](https://blog.codewithdan.com/wp-content/uploads/2021/05/swa-build-details.png)
+[![](/images/blog/getting-started-with-azure-static-web-apps/swa-build-details.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/05/swa-build-details.png)
 
 After entering that information click the **Review + create** button.
 
@@ -174,31 +174,31 @@ After entering that information click the **Review + create** button.
 
 ## 5\. Click the Create Button and Watch the Magic Happen!
 
-![](/images/blog/getting-started-with-azure-static-web-apps/coffee-1024x684.jpeg)
+![](/images/blog/getting-started-with-azure-static-web-apps/coffee-1024x684.webp)
 
 It's time to launch your static web app! Review the summary information provided and then click the **Create** button. Go grab a coffee, kick back, relax, and watch a (super short) YouTube video while a [Github Action](https://github.com/features/actions/?WT.mc_id=m365-28924-dwahlin) builds your code and deploys it to Azure automatically.
 
-[![](/images/blog/getting-started-with-azure-static-web-apps/swa-review-portal-2.png)](https://blog.codewithdan.com/wp-content/uploads/2021/05/swa-review-portal-2.png)
+[![](/images/blog/getting-started-with-azure-static-web-apps/swa-review-portal-2.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/05/swa-review-portal-2.png)
 
 ## Step 6: View Your Static Web App
 
 OK - coffee time's over! Once your static web app is created, click the **Go to resource** button.
 
-![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-14_18-41-25.png)
+![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-14_18-41-25.webp)
 
 Go to your newly created static web app and click the site's URL to view it.
 
-![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-14_18-43-41-2-1024x560.png)
+![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-14_18-43-41-2-1024x560.webp)
 
 If you'd like to see the build in action on Github, click the **blue arrow** above the site's URL (note that this will disappear after a while) or the **GitHub Action runs** link: 
 
-![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-14_18-43-41-1-1024x560.png)
+![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-14_18-43-41-1-1024x560.webp)
 
 Here's an example of what the Github Action build created in your repository by Azure Static Web App looks like. This repository is located at [https://github.com/DanWahlin/Angular-JumpStart](https://github.com/DanWahlin/Angular-JumpStart) if you want to try one out that already has an app and functions available. Every time you push code to your chosen repository branch the Github Action build process kicks off automatically.
 
-![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-14_22-23-29-1024x624.png)
+![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-14_22-23-29-1024x624.webp)
 
-![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-14_22-27-48-1024x664.png)
+![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-14_22-27-48-1024x664.webp)
 
 Let's look at an app that was deployed to Azure Static Web Apps.
 
@@ -228,7 +228,7 @@ You can add a **staticwebapp.config.json** file into the root of your project to
 
 Once I added the **staticwebapp.config.json** file the site was rebuilt/redeployed and everything worked as expected. You can get more information about routing, handling client-side redirects, and even securing server-side APIs using authentication/authorization [in the Azure Static Web Apps docs](https://aka.ms/swadocs).
 
-![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-16_11-53-37-1024x713.png)
+![](/images/blog/getting-started-with-azure-static-web-apps/2020-05-16_11-53-37-1024x713.webp)
 
 Now any time I want to make a change I simply push it up to Github, that kicks off the Github Action build process and deployment, and the change is in production on Azure within a few minutes. Pretty amazing! Feel free to clone the [Angular Jumpstart](https://github.com/DanWahlin/Angular-JumpStart) project and try out the steps shown earlier on your own.
 

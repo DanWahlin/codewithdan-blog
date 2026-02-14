@@ -14,7 +14,7 @@ coverImage: "serenity.jpg"
 
 <figure>
 
-![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/serenity-1024x463.jpg)
+![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/serenity-1024x463.webp)
 
 <figcaption>
 
@@ -52,7 +52,7 @@ Although I've talked with a few close family members and friends about what I've
 
 With all of the seemingly non-stop negative events going on in the world I put out this tweet recently to provide some simple guidance to people who may be struggling with stress and anxiety:
 
-[![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/2020-03-10_09-41-09-812x1024.png)](https://twitter.com/DanWahlin/status/1237098133877747712)
+[![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/2020-03-10_09-41-09-812x1024.webp)](https://twitter.com/DanWahlin/status/1237098133877747712)
 
 Here's more information about these 5 actions and why I chose them.
 
@@ -70,11 +70,11 @@ Go look at the website for your favorite news network when a crisis is happening
 
 This is the biggest change I made in my life by far. It was a lot harder than simply turning off the TV, but it's worth it. I mentioned earlier that the younger me didn't have the necessary tools and skills to deal with anxiety, stress, and fear. My mind was like a stormy ocean with huge waves coming and going depending on the situation. Sometimes I'd ruminate as a mental wave hit and it'd go from being a smaller 5 foot wave to over 100 feet in a matter of minutes.
 
-![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/storm-1024x597.jpg)
+![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/storm-1024x597.webp)
 
 If I had a mental surfboard maybe that'd be fun, but I definitely didn't have one. I wanted calm seas and it was rare to have them with everything going on in life. For me personally, that's where meditation helps. With enough practice you can learn how to "calm the seas of your mind".
 
-![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/calm_seas-1024x676.jpg)
+![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/calm_seas-1024x676.webp)
 
 Sound a bit "hippie" or something only monks would do? I thought that at first but quickly realized I was wrong. I didn't know what I didn't know (yet again). Meditation turned out to be extremely helpful and worthwhile.
 
@@ -94,7 +94,7 @@ If you'd like official guidance, information about [research studies](https://nc
 
 I think using an app, audio recording, or video is the best way to get started initially. Once you get more experience you can do various meditation practices on your own. Here are a few of the apps on my phone that I use:
 
-![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/2020-03-09_15-45-53.png)
+![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/2020-03-09_15-45-53.webp)
 
 Set aside 60 seconds a day to start, then move up to 5 minutes, 30 minutes, and so on to practice. You can do it on the bus or riding the subway or train on the way to work (please don't do it while driving :-)). It made a huge difference in my life for "calming the seas". A nice side effect is by practicing meditation and learning to focus on calming my mind I became more focused during work and in other areas of life as well.
 
@@ -118,13 +118,13 @@ For example, when I get allergies or if I'm really tired I tend to be pretty cra
 
 Someone's rude to you in a meeting, online, or on a call? If you're mindful you'll be able to notice your emotions, feel anger building up, feel your pulse increasing, feel a hotness in your body (or whatever feeling you get), and then quickly counter with a thought like, "Relax and calm the mental waves before responding."
 
-![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/angry-1024x683.jpeg)
+![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/angry-1024x683.webp)
 
 I came up with a term I call the "golden pause" which is the ability to have someone talk rudely to me, catch how I'm feeling about it, pause for a few seconds to calm the waves, and then respond (hopefully) with more control. No, I still have my moments but I'm much better than I used to be and I'm confident in saying that you will be too if you consistently practice and work at it. It's important to note that "mindfulness" isn't necessarily the same thing as "meditation". You can be mindful at any moment and at any time whether it's a good or bad situation.
 
 ## 4\. Exercise
 
-![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/walking-e1583804774396-1024x872.jpeg)
+![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/walking-e1583804774396-1024x872.webp)
 
 I'll have to admit that exercising was a lot easier when I was playing sports in high school and college. As I've gotten older and traveled a lot for business, I've come up with plenty of excuses to avoid exercising. However, what I've found is that exercise is extremely critical to calm the mental waves and help reduce anxiety. I definitely notice a change when I don't do enough exercise. The topic has been covered so much in the media, [research reports](https://adaa.org/living-with-anxiety/managing-anxiety/exercise-stress-and-anxiety), magazine articles, blog posts, etc. that I won't bore you with more details here because everyone knows they should exercise more.
 
@@ -138,7 +138,7 @@ When was the last time you expressed gratitude for all of the things you have in
 
 Someone will always be doing "better" than you and have something you want. That's a simple fact of life. It's unfortunate that social media tends to switch our focus to what we don't have, how we compare with others, and forget all of the good things we have going in life.
 
-![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/gratitude-1024x768.jpg)
+![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/gratitude-1024x768.webp)
 
 One of the single biggest changes I've made in my daily routine is to wake up and take a few moments to express gratitude for what I have in life. I have a phenomenal wife and kids, the best parents a person could ask for, a job I enjoy doing, no major health issues, great friends, and more "stuff" than I actually need. I make it a point to show gratitude and acknowledge the things I do have in the morning to start my day off. It's amazing how this one simple action can affect your whole day.
 
@@ -150,7 +150,7 @@ For example, I like to do something called [Box Breathing](https://www.medicalne
 
 I use an app called [Pranayama](https://saagara.com/apps/breathing/health-through-breath-pranayama) on my phone that helps me time these exercises and provides additional breathing exercises:
 
-![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/breathing-473x1024.jpg)
+![](/images/blog/5-actions-you-can-take-to-reduce-anxiety-stress-and-increase-overall-wellbeing/breathing-473x1024.webp)
 
 ## Additional Actions
 

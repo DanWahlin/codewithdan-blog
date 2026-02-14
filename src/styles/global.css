@@ -885,7 +885,7 @@ iframe {
   display: flex;
   align-items: center;
   position: relative;
-  background-image: url('/images/codewithdan_orbit.png');
+  background-image: url('/images/codewithdan_orbit.webp');
   background-position: 85% 80%;
   background-repeat: no-repeat;
   background-size: cover;

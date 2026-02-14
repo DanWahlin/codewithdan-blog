@@ -10,7 +10,7 @@ tags:
 coverImage: "image-1.png"
 ---
 
-[![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-1024x264.png)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image.png)
+[![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-1024x264.webp)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image.png)
 
 Have you ever tried to describe a UI bug to someone? “See that button… no, the OTHER button… the one with the blue border… well, it’s kind of blue… anyway, make it bigger.” It’s painful. Screenshots help, but then you’re copying and pasting them into chat windows and hoping your AI assistant understands which pixel you’re pointing at.
 
@@ -32,7 +32,7 @@ The idea is simple, you’re running your app locally in development. You spot s
 
 9. Watch the AI find the code and make the change
 
-[![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-1-1024x878.png)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image-1.png)
+[![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-1-1024x878.webp)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image-1.png)
 
 _Using ZingIt to select the element you'd like to change._ You'll see the ZingIt toolbar at the bottom of the page.
 
@@ -40,7 +40,7 @@ That’s it. The AI gets the CSS selector, the HTML context, a screenshot of the
 
 All you have to do is select the element, type in what you want to do, take an optional screenshot of the element by checking a checkbox, saving the "marker", and then clicking the ✨ icon to kick off the AI process.
 
-[![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-2-1024x878.png)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image-2.png)
+[![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-2-1024x878.webp)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image-2.png)
 
 _Adding a marker with notes and screenshot preview_
 
@@ -56,7 +56,7 @@ ZingIt doesn’t lock you into one AI assistant. It supports three major coding 
 
 You pick your agent when you connect, and ZingIt handles the rest. This type of choice was important to me because different developers have different AI subscriptions, and I didn’t want to force anyone into a specific ecosystem (although I highly recommend you check out [GitHub Copilot CLI](https://github.com/features/copilot/cli/)!). While it currently support the 3 AI assistants mentioned above, it's certainly possible to extend it even further and add more in the future.
 
-[![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-3-1024x790.png)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image-3.png)
+[![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-3-1024x790.webp)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image-3.png)
 
 _Choose your AI agent: Claude Code, GitHub Copilot CLI, or OpenAI Codex_
 
@@ -64,7 +64,7 @@ _Choose your AI agent: Claude Code, GitHub Copilot CLI, or OpenAI Codex_
 
 I’d been thinking about this problem for quite a while. Over the 2025 holiday break I was asked to help review a new commercial that was being created and used frame.io to add "markers" and comments. Then video editors would act upon those and update the video.
 
-[![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-4.png)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image-4.png)
+[![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-4.webp)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image-4.png)
 
 That got me thinking, "What if we could do something similar for the UI, but then have AI kick in and help?".  
   

@@ -7,7 +7,7 @@ categories:
   - "spa"
 ---
 
-![](/images/blog/cancelling-route-navigation-in-angularjs/AngularJS_thumb_1008B166.jpg)
+![](/images/blog/cancelling-route-navigation-in-angularjs/AngularJS_thumb_1008B166.webp)
 
 <script type="text/javascript">// <![CDATA[ document.write(getHtmlFragment('angularjsGetStarted')); // ]]></script>
 

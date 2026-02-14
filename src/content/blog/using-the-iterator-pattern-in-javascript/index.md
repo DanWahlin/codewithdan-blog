@@ -11,7 +11,7 @@ tags:
 
 <figure>
 
-![Roller coaster in a park by Priscilla Du Preez](/images/blog/using-the-iterator-pattern-in-javascript/FOsina4f7qM.jpg)
+![Roller coaster in a park by Priscilla Du Preez](/images/blog/using-the-iterator-pattern-in-javascript/FOsina4f7qM.webp)
 
 <figcaption>
 

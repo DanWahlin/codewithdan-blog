@@ -8,7 +8,7 @@ categories:
   - "spa"
 ---
 
-![](/images/blog/creating-custom-angularjs-directives-part-6-using-controllers/AngularJS_thumb_1008B166.jpg) 
+![](/images/blog/creating-custom-angularjs-directives-part-6-using-controllers/AngularJS_thumb_1008B166.webp) 
 
 <script type="text/javascript">// <![CDATA[ document.write(getHtmlFragment('angularjsGetStarted')); // ]]></script>
 

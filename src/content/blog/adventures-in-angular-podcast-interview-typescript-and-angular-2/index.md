@@ -6,10 +6,10 @@ categories:
   - "typescript"
 ---
 
-![aialogo](/images/blog/adventures-in-angular-podcast-interview-typescript-and-angular-2/aialogo.png)
+![aialogo](/images/blog/adventures-in-angular-podcast-interview-typescript-and-angular-2/aialogo.webp)
 
  
 
 I always enjoy talking with the [Adventures in Angular](https://devchat.tv/adv-in-angular/096-aia-angular-2-and-typescript-with-dan-wahlin) podcast hosts - great group of guys. In my latest interview on the show I talk about TypeScript and Angular 2 and our favorite features. Check out the podcast below.
 
-[![aia](/images/blog/adventures-in-angular-podcast-interview-typescript-and-angular-2/aia.png)](https://devchat.tv/adv-in-angular/096-aia-angular-2-and-typescript-with-dan-wahlin)
+[![aia](/images/blog/adventures-in-angular-podcast-interview-typescript-and-angular-2/aia.webp)](https://devchat.tv/adv-in-angular/096-aia-angular-2-and-typescript-with-dan-wahlin)

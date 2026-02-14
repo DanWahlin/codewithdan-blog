@@ -10,7 +10,7 @@ tags:
   - "state-management"
 ---
 
-![](/images/blog/angular-architecture-concepts-ngvikings-keynote/2019-06-06_08-55-35-1024x544.png)
+![](/images/blog/angular-architecture-concepts-ngvikings-keynote/2019-06-06_08-55-35-1024x544.webp)
 
 The [ngVikings](https://ngvikings.org/) conference was held in Copenhagen, Denmark this year and I had a great time speaking at it and talking with the people that attended. One of the more fun aspects of attending any conference is listening to and learning from what others are doing, hearing about problems they're trying to solve, helping out where possible, and making new friends along the way.
 
@@ -18,7 +18,7 @@ I had the opportunity to give one of the keynote talks this year and focused on 
 
 I had to fight through these guys to get to the stage, but after some negotiating they let me pass. :-)
 
-![](/images/blog/angular-architecture-concepts-ngvikings-keynote/2019-05-28-09.08.33-vikings-1024x768.jpg)
+![](/images/blog/angular-architecture-concepts-ngvikings-keynote/2019-05-28-09.08.33-vikings-1024x768.webp)
 
 Topics covered in the talk include:
 

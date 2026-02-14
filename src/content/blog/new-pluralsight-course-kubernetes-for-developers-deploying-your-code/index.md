@@ -18,7 +18,7 @@ tags:
 coverImage: "2019-03-10_16-06-42.png"
 ---
 
-[![](/images/blog/new-pluralsight-course-kubernetes-for-developers-deploying-your-code/2020-02-29_18-54-59-1024x272.png)](https://pluralsight.pxf.io/bo0jv)
+[![](/images/blog/new-pluralsight-course-kubernetes-for-developers-deploying-your-code/2020-02-29_18-54-59-1024x272.webp)](https://pluralsight.pxf.io/bo0jv)
 
 I’m excited to announce the release of my next course on Pluralsight titled [Kubernetes for Developers: Deploying Your Code](https://pluralsight.pxf.io/bo0jv)! This course is the next in the Kubernetes for Developers learning path and focuses on different techniques that can be used to deploy your containerized applications to Kubernetes. It follows the [Kubernetes for Developers: Core Concepts](https://pluralsight.pxf.io/R9W2N) course.
 

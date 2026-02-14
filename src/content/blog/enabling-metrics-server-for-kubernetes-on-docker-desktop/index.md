@@ -11,7 +11,7 @@ tags:
 coverImage: "2019-03-10_16-06-42.png"
 ---
 
-![](/images/blog/enabling-metrics-server-for-kubernetes-on-docker-desktop/2019-03-10_15-40-57-1.png)
+![](/images/blog/enabling-metrics-server-for-kubernetes-on-docker-desktop/2019-03-10_15-40-57-1.webp)
 
 Lately we've been working on a new [Docker and Kubernetes](https://codewithdan.com/products/docker-kubernetes) instructor-led training class that we'll be running onsite at several companies this year. The class uses [Docker Desktop](https://www.docker.com/products/docker-desktop) and the [Kubernetes](https://kubernetes.io) features it provides for several of the chapters. We needed to get the local cluster students will use to match as closely as possible to a cloud-based Kubernetes cluster that would be found on Azure, AWS, or GCP. The class covers using AKS as well, but most of the lab exercises rely on Kubernetes in Docker Desktop so running key features like the dashboard and Metrics API was important.
 
@@ -60,9 +60,9 @@ kubectl logs [metrics-server-pod-name] -n kube-system
 
 7\. Give it a little time and you should now be able to run **kubectl top** commands!
 
-![View of kubectl node command.](/images/blog/enabling-metrics-server-for-kubernetes-on-docker-desktop/2019-03-10_15-32-44.png)
+![View of kubectl node command.](/images/blog/enabling-metrics-server-for-kubernetes-on-docker-desktop/2019-03-10_15-32-44.webp)
 
-![](/images/blog/enabling-metrics-server-for-kubernetes-on-docker-desktop/2019-03-10_15-40-57.png)
+![](/images/blog/enabling-metrics-server-for-kubernetes-on-docker-desktop/2019-03-10_15-40-57.webp)
 
 There are almost always multiple ways to accomplish the same goal so if you know of an alternate technique for getting Metrics Server going on Docker Desktop Kubernetes please leave a comment!
 

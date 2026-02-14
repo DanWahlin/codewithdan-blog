@@ -14,7 +14,7 @@ tags:
 coverImage: "image.png"
 ---
 
-[![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-1024x585.png)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image.png)
+[![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-1024x585.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image.png)
 
 Welcome to the AI Repo of the Week series! In this first post we're going to look at the [GitHub Copilot Adventures repo](https://github.com/microsoft/CopilotAdventures). Stay tuned for additional posts that cover AI-related repos across multiple languages and technologies.  
 
@@ -32,7 +32,7 @@ Several "adventures" are provided in the repo from beginner to advanced. Brand n
 
 **Warm-Up Adventure**
 
-[![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-1-1024x585.png)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-1.png)
+[![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-1-1024x585.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-1.png)
 
 Start here if need a quick introduction to GitHub Copilot, what it is, and how you can get started using it.
 
@@ -40,7 +40,7 @@ Start here if need a quick introduction to GitHub Copilot, what it is, and how y
 
 **Beginner Adventures**  
 
-[![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-2-1024x585.png)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-2.png)
+[![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-2-1024x585.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-2.png)
 
 - **The Clockwork Town of Tempora**: Calculate clock drift in minutes.
 
@@ -48,7 +48,7 @@ Start here if need a quick introduction to GitHub Copilot, what it is, and how y
 
 **Intermediate Adventures**
 
-[![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-3-1024x585.png)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-3.png)
+[![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-3-1024x585.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-3.png)
 
 - **The Celestial Alignment of Lumoria**: Determine planetary light intensity based on shadows.
 
@@ -58,7 +58,7 @@ Start here if need a quick introduction to GitHub Copilot, what it is, and how y
 
 **Advanced Adventures**
 
-[![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-4-1024x585.png)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-4.png)
+[![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-4-1024x585.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-4.png)
 
 - **The Gridlock Arena of Mythos**: Build a turn-based grid battle with overlapping moves and score tracking.
 

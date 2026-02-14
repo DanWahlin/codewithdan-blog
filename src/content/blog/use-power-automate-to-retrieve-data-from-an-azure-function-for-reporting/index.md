@@ -22,7 +22,7 @@ The final version of the automation flow I created looks like the following:
 
 <figure>
 
-[![Power Automate flow](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-2-516x1024.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-2.png)
+[![Power Automate flow](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-2-516x1024.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-2.png)
 
 <figcaption>
 
@@ -54,7 +54,7 @@ From there I chose **Scheduled cloud flow** from the available templates:
 
 <figure>
 
-[![Scheduled flow template](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-3.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-3.png)
+[![Scheduled flow template](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-3.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-3.png)
 
 <figcaption>
 
@@ -68,7 +68,7 @@ In the dialog that appeared I named my flow, defined how often it would run, and
 
 <figure>
 
-[![Building a flow based on a schedule](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-4.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-4.png)
+[![Building a flow based on a schedule](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-4.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-4.png)
 
 <figcaption>
 
@@ -84,7 +84,7 @@ After selecting the **Create** button, Power Automate automatically added the fi
 
 <figure>
 
-[![The Recurrence action automatically added by Power Automate](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-5.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-5.png)
+[![The Recurrence action automatically added by Power Automate](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-5.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-5.png)
 
 <figcaption>
 
@@ -98,7 +98,7 @@ The next step in the flow involves calling the Azure Function to retrieve the da
 
 <figure>
 
-[![Selecting the HTTP action](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-6.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-6.png)
+[![Selecting the HTTP action](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-6.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-6.png)
 
 <figcaption>
 
@@ -124,7 +124,7 @@ After entering my method and URI into the HTTP action, I needed a way to access 
 
 <figure>
 
-[![Selecting the Parse JSON action](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-7.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-7.png)
+[![Selecting the Parse JSON action](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-7.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-7.png)
 
 <figcaption>
 
@@ -142,7 +142,7 @@ Once the Parse JSON action dialog appeared I performed the following tasks:
 
 <figure>
 
-[![Generating a schema from JSON data in the Parse JSON action](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-8.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-8.png)
+[![Generating a schema from JSON data in the Parse JSON action](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-8.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-8.png)
 
 <figcaption>
 
@@ -166,7 +166,7 @@ I initially wanted to store my data in something called [Dataverse](https://lear
 
 <figure>
 
-[![Selecting the Excel Online connector](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-9.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-9.png)
+[![Selecting the Excel Online connector](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-9.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-9.png)
 
 <figcaption>
 
@@ -180,7 +180,7 @@ Next, I entered the following values:
 
 <figure>
 
-[![Entering information for the Excel Online connector](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-10.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-10.png)
+[![Entering information for the Excel Online connector](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-10.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-10.png)
 
 <figcaption>
 
@@ -196,13 +196,13 @@ This uses **OneDrive for Business** so I selected a spreadsheet that I created t
 
 All of the steps needed for my particular scenario are now defined and we're ready to validate the flow and test it. That can be done by selecting the **Flow checker** (to validate) and **Test** (to try it out) options respectively in the upper-right toolbar:
 
-[![](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-11.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-11.png)
+[![](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-11.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-11.png)
 
 The **Flow checker** will display any errors or warnings in the flow so that you can fix them. The **Test** option allows you to manually start the flow to try it out.
 
 <figure>
 
-[![Testing a flow](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-12.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-12.png)
+[![Testing a flow](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-12.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-12.png)
 
 <figcaption>
 
@@ -216,7 +216,7 @@ After testing it, you can go to the test run and if the flow ran successfully yo
 
 <figure>
 
-[![View the result of a flow run](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-13.png)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-13.png)
+[![View the result of a flow run](/images/blog/use-power-automate-to-retrieve-data-from-an-azure-function-for-reporting/image-13.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/10/image-13.png)
 
 <figcaption>
 

@@ -7,7 +7,7 @@ categories:
 coverImage: "2017-10-27_20-17-22.png"
 ---
 
-[![](/images/blog/tech-5-tutorial-getting-started-with-the-angular-cli/2017-10-27_20-03-24.png)](https://blog.codewithdan.com/wp-content/uploads/2017/10/2017-10-27_20-03-24.png)
+[![](/images/blog/tech-5-tutorial-getting-started-with-the-angular-cli/2017-10-27_20-03-24.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/10/2017-10-27_20-03-24.png)
 
 I'm starting a new tutorial series called "Tech 5" (think "Take 5"...but for tech) that features short, focused, approximately 5-minute videos. Here's the first one which covers getting started with the Angular CLI.
 

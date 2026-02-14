@@ -15,7 +15,7 @@ coverImage: "reduxDevTools.png"
 
 The first built-in extension adds [Redux DevTools](https://github.com/reduxjs/redux-devtools) integration into applications that use Observable Store. The extension can be found in the **@codewithdan/observable-store-extensions package**.
 
-![](/images/blog/observable-store-now-with-support-for-the-redux-devtools/reduxDevTools-1024x624.png)
+![](/images/blog/observable-store-now-with-support-for-the-redux-devtools/reduxDevTools-1024x624.webp)
 
 If you're new to the Redux DevTools, they can be used to "time travel" through your application to see what happened at particular times. This feature is extremely useful when you're trying to track down a problem or simply want to see what state flows through your application. You can get more details on the various [Redux DevTools extension features here](https://github.com/reduxjs/redux-devtools#documentation).
 

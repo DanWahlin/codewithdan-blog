@@ -11,7 +11,7 @@ tags:
   - "vs-code"
 ---
 
-[![](/images/blog/angular-2-typescript-and-html-snippets-for-vs-code/angular-e1459634290861.png)](https://blog.codewithdan.com/wp-content/uploads/2016/03/angular-e1459634290861.png)I use [VS Code](http://code.visualstudio.com) a lot in my development projects and recently put together a set of [Angular (v2 or higher) TypeScript and HTML snippets](https://marketplace.visualstudio.com/items?itemName=danwahlin.angular2-snippets) that can be used to enhance productivity when building Single Page Applications.  By typing the snippet prefix (which is “ag-”) in a TypeScript or HTML file you can quickly add the associated code into your file.
+[![](/images/blog/angular-2-typescript-and-html-snippets-for-vs-code/angular-e1459634290861.webp)](https://blog.codewithdan.com/wp-content/uploads/2016/03/angular-e1459634290861.png)I use [VS Code](http://code.visualstudio.com) a lot in my development projects and recently put together a set of [Angular (v2 or higher) TypeScript and HTML snippets](https://marketplace.visualstudio.com/items?itemName=danwahlin.angular2-snippets) that can be used to enhance productivity when building Single Page Applications.  By typing the snippet prefix (which is “ag-”) in a TypeScript or HTML file you can quickly add the associated code into your file.
 
 Here’s a list of the supported snippets:
 

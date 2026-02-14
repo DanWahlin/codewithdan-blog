@@ -11,7 +11,7 @@ tags:
 coverImage: "ObservableStore.png"
 ---
 
-![](/images/blog/observable-store-2-0-released-on-npm/ObservableStore-1024x499.png)
+![](/images/blog/observable-store-2-0-released-on-npm/ObservableStore-1024x499.webp)
 
 I'm excited to announce the release of [Observable Store 2.0 on npm](https://www.npmjs.com/package/@codewithdan/observable-store)! You can get started using it with the standard **npm install** command:
 
@@ -84,7 +84,7 @@ Finally, additional [unit tests](http://tore/blob/master/src/observable-store.sp
 
 Observable Store state can now be viewed using the Redux DevTools! If you've used these tools with Redux, NgRx, or another option, you can now access the same functionality. Check-out [this blog post on the topic](/observable-store-now-with-support-for-the-redux-devtools/).
 
-![](/images/blog/observable-store-2-0-released-on-npm/reduxDevTools-1024x624.png)
+![](/images/blog/observable-store-2-0-released-on-npm/reduxDevTools-1024x624.webp)
 
 ## Summary
 

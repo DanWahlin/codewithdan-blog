@@ -14,7 +14,7 @@ tags:
   - "real-time-communication"
 ---
 
-[![Two people collaborating together. This is much more challenging with employees (and customers) working remotely.](/images/blog/maximize-your-companys-productivity-and-potential-with-the-power-of-real-time-collaboration-communication/image-1024x683.png)](https://blog.codewithdan.com/wp-content/uploads/2023/01/image.png)
+[![Two people collaborating together. This is much more challenging with employees (and customers) working remotely.](/images/blog/maximize-your-companys-productivity-and-potential-with-the-power-of-real-time-collaboration-communication/image-1024x683.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/01/image.png)
 
 If you're like most people, you use several custom applications every day at work to get things done. You're entering data, viewing issues, editing and checking in code, making calls to others to verify process rules, and more. When was the last time you sat down and gave some serious thought to how these applications could be taken to the "next level" though? For example, what if team members could collaborate on the same content and communicate with each other in real-time **directly from your app** (using chat, audio and/or video) without having to switch to another app? Could this same overall concept be applied to applications your customers use to enhance their interactions with your company?
 
@@ -34,7 +34,7 @@ So where do you get started? Here are a few solutions I've been working with lat
 
 If you're interested in adding real-time data collaboration into your apps, check out the Fluid Framework at [https://fluidframework.com](https://fluidframework.com). It provides a robust option for embedding real-time data collaboration functionality into apps.
 
-[![](/images/blog/maximize-your-companys-productivity-and-potential-with-the-power-of-real-time-collaboration-communication/image-3-1024x560.png)](https://blog.codewithdan.com/wp-content/uploads/2023/01/image-3.png)
+[![](/images/blog/maximize-your-companys-productivity-and-potential-with-the-power-of-real-time-collaboration-communication/image-3-1024x560.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/01/image-3.png)
 
 Their [Quick Start app](https://fluidframework.com/docs/start/quick-start/) provides a simple way to get started and learn the basics.
 
@@ -54,7 +54,7 @@ A hands-on tutorial that shows how to use ACS to make an audio/video call from a
 
 [https://microsoft.github.io/MicrosoftCloud/tutorials/docs/ACS-to-Teams-Meeting/](https://microsoft.github.io/MicrosoftCloud/tutorials/docs/ACS-to-Teams-Meeting/)
 
-[![](/images/blog/maximize-your-companys-productivity-and-potential-with-the-power-of-real-time-collaboration-communication/image-2-1024x479.png)](https://blog.codewithdan.com/wp-content/uploads/2023/01/image-2.png)
+[![](/images/blog/maximize-your-companys-productivity-and-potential-with-the-power-of-real-time-collaboration-communication/image-2-1024x479.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/01/image-2.png)
 
 ## Conclusion
 

@@ -22,7 +22,7 @@ tags:
 coverImage: "AngularArchitecture270x250.png"
 ---
 
-[![Angular Architecture](/images/blog/new-pluralsight-course-angular-architecture-and-best-practices/AngularArchitecture-850x506.png)](https://pluralsight.pxf.io/c/1191765/424552/7490?u=https://www.pluralsight.com/courses/angular-architecture-best-practices)
+[![Angular Architecture](/images/blog/new-pluralsight-course-angular-architecture-and-best-practices/AngularArchitecture-850x506.webp)](https://pluralsight.pxf.io/c/1191765/424552/7490?u=https://www.pluralsight.com/courses/angular-architecture-best-practices)
 
 I’m excited to announce the release of my next course on Pluralsight titled [Angular Architecture and Best Practices](https://pluralsight.pxf.io/c/1191765/424552/7490?u=https://www.pluralsight.com/courses/angular-architecture-best-practices)! The goal of this course is to provide you with solid, proven guidance to plan out your Angular application architecture, address various challenges that typically come up, and ultimately create a more maintainable and flexible application.
 

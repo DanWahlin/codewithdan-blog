@@ -24,7 +24,7 @@ Here's the process I went through to convert my local script to an [Azure Functi
 
 <figure>
 
-[![](/images/blog/migrating-a-local-node-script-to-azure-functions-using-vs-code/image-1024x606.png)](https://blog.codewithdan.com/wp-content/uploads/2022/08/image.png)
+[![](/images/blog/migrating-a-local-node-script-to-azure-functions-using-vs-code/image-1024x606.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/08/image.png)
 
 <figcaption>
 
@@ -52,7 +52,7 @@ Since I only had a simple Node project at this point, I received the following p
 
 <figure>
 
-[![](/images/blog/migrating-a-local-node-script-to-azure-functions-using-vs-code/image-1.png)](https://blog.codewithdan.com/wp-content/uploads/2022/08/image-1.png)
+[![](/images/blog/migrating-a-local-node-script-to-azure-functions-using-vs-code/image-1.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/08/image-1.png)
 
 <figcaption>
 
@@ -76,7 +76,7 @@ I was prompted to overwrite my existing **.gitignore** and **package.json** file
 
 <figure>
 
-[![](/images/blog/migrating-a-local-node-script-to-azure-functions-using-vs-code/image-2.png)](https://blog.codewithdan.com/wp-content/uploads/2022/08/image-2.png)
+[![](/images/blog/migrating-a-local-node-script-to-azure-functions-using-vs-code/image-2.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/08/image-2.png)
 
 <figcaption>
 
@@ -373,7 +373,7 @@ Now that the function was working locally it was time to deploy it to Azure. I s
 
 <figure>
 
-[![](/images/blog/migrating-a-local-node-script-to-azure-functions-using-vs-code/image.png)](https://blog.codewithdan.com/wp-content/uploads/2022/09/image.png)
+[![](/images/blog/migrating-a-local-node-script-to-azure-functions-using-vs-code/image.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/09/image.png)
 
 <figcaption>
 
@@ -401,7 +401,7 @@ Once the function is created in Azure you can go to the Azure extension in VS Co
 
 <figure>
 
-[![](/images/blog/migrating-a-local-node-script-to-azure-functions-using-vs-code/image-2.png)](https://blog.codewithdan.com/wp-content/uploads/2022/09/image-2.png)
+[![](/images/blog/migrating-a-local-node-script-to-azure-functions-using-vs-code/image-2.webp)](https://blog.codewithdan.com/wp-content/uploads/2022/09/image-2.png)
 
 <figcaption>
 

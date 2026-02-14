@@ -15,7 +15,7 @@ tags:
 coverImage: "ts.png"
 ---
 
-[![](/images/blog/new-pluralsight-course-creating-object-oriented-typescript-code/2020-02-29_14-13-17-1024x180.png)](https://pluralsight.pxf.io/ZAVoz)
+[![](/images/blog/new-pluralsight-course-creating-object-oriented-typescript-code/2020-02-29_14-13-17-1024x180.webp)](https://pluralsight.pxf.io/ZAVoz)
 
 I’m excited to announce the release of another course on Pluralsight titled [Creating Object-oriented TypeScript Code](https://pluralsight.pxf.io/ZAVoz)! If you've been wanting to learn more about ES2015 features as well as object-oriented features available in TypeScript then this this is the class for you!
 

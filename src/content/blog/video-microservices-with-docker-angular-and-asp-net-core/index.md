@@ -13,7 +13,7 @@ categories:
   - "node-js"
 ---
 
-[![](/images/blog/video-microservices-with-docker-angular-and-asp-net-core/2018-04-05-21.52.32-300x225.jpg)](https://blog.codewithdan.com/wp-content/uploads/2018/05/2018-04-05-21.52.32.jpg)I recently had the opportunity to speak to a group in Denver, Colorado about Microservices, Docker, Angular, and ASP.NET Core which was a lot of fun. [Briebug](https://twitter.com/BrieBugSoftware) sponsored the event at [Alamo Drafthouse](https://drafthouse.com/) and we had a great turnout!  Thanks to Briebug for organizing the event (really appreciate Anne, Jesse, and Bill for everything they did) and for everyone that came out to see the talk.
+[![](/images/blog/video-microservices-with-docker-angular-and-asp-net-core/2018-04-05-21.52.32-300x225.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/05/2018-04-05-21.52.32.jpg)I recently had the opportunity to speak to a group in Denver, Colorado about Microservices, Docker, Angular, and ASP.NET Core which was a lot of fun. [Briebug](https://twitter.com/BrieBugSoftware) sponsored the event at [Alamo Drafthouse](https://drafthouse.com/) and we had a great turnout!  Thanks to Briebug for organizing the event (really appreciate Anne, Jesse, and Bill for everything they did) and for everyone that came out to see the talk.
 
 Here's an overview of what the talk was all about:
 

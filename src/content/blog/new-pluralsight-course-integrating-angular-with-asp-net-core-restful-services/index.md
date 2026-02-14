@@ -22,7 +22,7 @@ categories:
   - "typescript"
 ---
 
-[![](/images/blog/new-pluralsight-course-integrating-angular-with-asp-net-core-restful-services/integrating-angular-aspnet-core.jpg)](https://www.pluralsight.com/courses/angular-aspnetcore-restful-services?utm_medium=affiliate&utm_source=1457843)
+[![](/images/blog/new-pluralsight-course-integrating-angular-with-asp-net-core-restful-services/integrating-angular-aspnet-core.webp)](https://www.pluralsight.com/courses/angular-aspnetcore-restful-services?utm_medium=affiliate&utm_source=1457843)
 
 I'm excited to announce the release of my new course on [Pluralsight](https://www.pluralsight.com/courses/angular-aspnetcore-restful-services?utm_medium=affiliate&utm_source=1457843) titled [**Integrating Angular with ASP.NET Core RESTful Services**](https://www.pluralsight.com/courses/angular-aspnetcore-restful-services?utm_medium=affiliate&utm_source=1457843)! This course follows up my previous course which focused on [Angular and Node.js](https://www.pluralsight.com/courses/angular-nodejs-restful-services?utm_medium=affiliate&utm_source=1457843). The code in this new class covers ASP.NET Core 2.0 or higher and Angular 4 or higher.
 

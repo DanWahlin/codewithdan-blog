@@ -11,7 +11,7 @@ tags:
 coverImage: "container-ship.jpeg"
 ---
 
-![](/images/blog/docker-for-web-developers-now-with-kubernetes/container-ship-1024x690.jpeg)
+![](/images/blog/docker-for-web-developers-now-with-kubernetes/container-ship-1024x690.webp)
 
 Over the past year I've done several big updates to my [Docker for Web Developers](https://pluralsight.pxf.io/c/1191765/424552/7490?u=https://www.pluralsight.com/courses/docker-web-development) course on Pluralsight that I wanted to mention. First, all of the code samples have been updated and Docker Desktop (formerly called Community Edition) is now covered in addition to Docker Toolbox.
 
@@ -43,7 +43,7 @@ Here’s the official course table of contents…
 
 ## Docker for Web Developers Course Outline
 
-![](/images/blog/docker-for-web-developers-now-with-kubernetes/2019-04-26_14-47-00.png)
+![](/images/blog/docker-for-web-developers-now-with-kubernetes/2019-04-26_14-47-00.webp)
 
 Docker's open app-building platform can give any web developer a boost in productivity. You'll learn how to use the Docker, how to work with images and containers, how to orchestrate containers, how to work with volumes, and much more. [View the course here.](https://pluralsight.pxf.io/c/1191765/424552/7490?u=https://www.pluralsight.com/courses/docker-web-development)
 
