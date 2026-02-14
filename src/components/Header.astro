@@ -42,13 +42,19 @@ import SocialLinks from './SocialLinks.astro';
 
 <script>
 	import { PagefindUI } from '@pagefind/default-ui';
-	new PagefindUI({
-		element: '#header-search',
-		showSubResults: false,
-		showImages: false,
-		showEmptyFilters: false,
-		excerptLength: 0,
-	});
+
+	function initSearch() {
+		const headerEl = document.getElementById('header-search');
+		if (headerEl && !headerEl.querySelector('.pagefind-ui')) {
+			new PagefindUI({
+				element: '#header-search',
+				showSubResults: false,
+				showImages: false,
+				showEmptyFilters: false,
+				excerptLength: 0,
+			});
+		}
+	}
 
 	function initMobileSearch() {
 		const el = document.getElementById('mobile-search');
@@ -100,5 +106,6 @@ import SocialLinks from './SocialLinks.astro';
 	applyTheme();
 	bindToggle();
 	bindHamburger();
-	document.addEventListener('astro:after-swap', () => { applyTheme(); bindToggle(); bindHamburger(); });
+	initSearch();
+	document.addEventListener('astro:after-swap', () => { applyTheme(); bindToggle(); bindHamburger(); initSearch(); });
 </script>

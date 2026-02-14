@@ -26,6 +26,23 @@ const heroExcerpt = getExcerpt(heroPost.body || '', 250);
 <html lang="en">
 	<head>
 		<BaseHead title={`${SITE_TITLE} Blog`} description={SITE_DESCRIPTION} />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Code with Dan Blog",
+			"url": "https://blog.codewithdan.com",
+			"description": SITE_DESCRIPTION,
+			"author": {
+				"@type": "Person",
+				"name": "Dan Wahlin",
+				"url": "https://codewithdan.com"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://blog.codewithdan.com/?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			}
+		})} />
 	</head>
 	<body>
 		<Header />
@@ -42,7 +59,7 @@ const heroExcerpt = getExcerpt(heroPost.body || '', 250);
 			<a href={`/${heroPost.id}/`} class="hero-card">
 				{heroImage && (
 					<div class="hero-card-image">
-						<img src={heroImage} alt={`Cover image for: ${heroPost.data.title}`} loading="eager" />
+						<img src={heroImage} alt={`Cover image for: ${heroPost.data.title}`} loading="eager" decoding="async" />
 					</div>
 				)}
 				<div class="hero-card-body">

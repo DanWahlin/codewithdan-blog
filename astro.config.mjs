@@ -8,6 +8,9 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
 	site: 'https://blog.codewithdan.com',
 	integrations: [mdx(), sitemap()],
+	prefetch: {
+		defaultStrategy: 'hover',
+	},
 	markdown: {
 		shikiConfig: {
 			themes: {

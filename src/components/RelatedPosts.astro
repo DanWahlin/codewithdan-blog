@@ -47,7 +47,7 @@ const scored = allPosts
 					<a href={`/${post.id}/`} class="related-card">
 						{img && (
 							<div class="related-image">
-								<img src={img} alt={post.data.title} loading="lazy" />
+								<img src={img} alt={post.data.title} loading="lazy" decoding="async" />
 							</div>
 						)}
 						<div class="related-body">

@@ -8,7 +8,7 @@ import { execSync, spawn } from 'node:child_process';
 
 const PORT = 9876;
 const SECRET = process.env.WEBHOOK_SECRET;
-const REPO_DIR = '/root/projects/codewithdan-blog';
+const REPO_DIR = '/root/production/codewithdan-blog';
 const BRANCH = 'main';
 
 let deploying = false;

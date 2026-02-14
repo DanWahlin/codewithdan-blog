@@ -23,6 +23,22 @@
             }
           ]
         },
+        "lastModified": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
         "categories": {
           "type": "array",
           "items": {
@@ -40,6 +56,12 @@
         },
         "draft": {
           "type": "boolean"
+        },
+        "series": {
+          "type": "string"
+        },
+        "seriesOrder": {
+          "type": "number"
         },
         "$schema": {
           "type": "string"
