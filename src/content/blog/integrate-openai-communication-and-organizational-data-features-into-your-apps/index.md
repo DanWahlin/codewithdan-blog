@@ -12,7 +12,7 @@ tags:
   - "microsoft-graph"
   - "openai"
   - "organizational-data"
-coverImage: "small-overview-ai-acs-graph.png"
+coverImage: "small-overview-ai-acs-graph.webp"
 ---
 
 Artificial intelligence, communication, and organizational data are three pillars that can help take your custom Line of Business (LOB) applications to the next level. Each pillar brings unique capabilities to the table and enhances the functionality, usability, and productivity of applications and users. In this post you'll learn more about these three pillars and how they can be integrated into apps using Microsoft Cloud services such as Azure OpenAI, Azure Communication Services (ACS), and Microsoft Graph. After you learn about the pillars, you can get hands-on experience provisioning cloud services and working with code in a hands-on tutorial available at [https://aka.ms/openai-acs-msgraph](https://aka.ms/openai-acs-msgraph).   

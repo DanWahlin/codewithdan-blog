@@ -7,7 +7,7 @@ categories:
 tags: 
   - "data-binding"
   - "spas"
-coverImage: "framework.jpg"
+coverImage: "framework.webp"
 ---
 
 ![](/images/blog/data-oriented-vs-control-oriented-programming/framework-1024x682.webp)

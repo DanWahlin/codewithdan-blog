@@ -9,7 +9,7 @@ tags:
   - "microsoft-identity"
   - "microsoft-learn"
   - "sdk"
-coverImage: "aspnet-core-ms-graph.png"
+coverImage: "aspnet-core-ms-graph.webp"
 ---
 
 I've been working a lot with [.NET Core](https://dot.net) and [Microsoft Graph](https://aka.ms/ms-graph-docs) lately and decided to put together a short video based on a [Microsoft Learn module](https://aka.ms/learn-msgraph-email) covering how the technologies can be used together. If you haven't used Microsoft Graph before, it provides a secure, unified API to access organizational data and intelligence (data stored in Microsoft 365 for example).  

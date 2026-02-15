@@ -10,7 +10,7 @@ tags:
   - "langchain"
   - "langchain-js"
   - "microsoft-foundry"
-coverImage: "OSS-AI-Summit-LangChain-small.jpg"
+coverImage: "OSS-AI-Summit-LangChain-small.webp"
 ---
 
 [![](/images/blog/oss-ai-summit-building-with-langchain/image-1024x400.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/12/image.png)

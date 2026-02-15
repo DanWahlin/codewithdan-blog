@@ -10,7 +10,7 @@ categories:
   - "node-js"
   - "react"
   - "vuejs"
-coverImage: "webtech_news_1.jpg"
+coverImage: "webtech_news_1.webp"
 ---
 
 I'm rebooting the Code with Dan Newsletter but decided to keep it much more focused than before (less items in each edition). Here's a quick video overview of the what I have planned as well as the first 5 items covered in edition #1 of the newsletter:

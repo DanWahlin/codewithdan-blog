@@ -6,7 +6,7 @@ categories:
 tags: 
   - "security"
   - "troubleshooting"
-coverImage: "mongodb.png"
+coverImage: "mongodb.webp"
 ---
 
 ![](/images/blog/installing-mongodb-on-mac-catalina-using-homebrew/mongodb.webp)

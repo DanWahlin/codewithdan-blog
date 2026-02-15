@@ -8,7 +8,7 @@ tags:
   - "openai"
   - "tokens"
   - "transformers"
-coverImage: "image-14.png"
+coverImage: "image-14.webp"
 ---
 
 ## Introduction

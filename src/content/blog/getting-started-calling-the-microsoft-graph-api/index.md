@@ -6,7 +6,7 @@ categories:
 tags: 
   - "microsoft-graph"
   - "microsoft-graph-explorer"
-coverImage: "2021-04-29_13-52-27-1.png"
+coverImage: "2021-04-29_13-52-27-1.webp"
 ---
 
 In this post I'm going to share a quick tip on how to get started calling the [Microsoft Graph API](https://aka.ms/msgraph-overview-docs). If you're new to Microsoft Graph, here's a short definition for you:

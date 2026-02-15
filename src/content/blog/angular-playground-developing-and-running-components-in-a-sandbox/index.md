@@ -3,7 +3,7 @@ title: "Angular Playground - Developing and Running Components in a Sandbox!"
 date: 2017-11-21
 categories: 
   - "angular"
-coverImage: "angular-playground-featured.png"
+coverImage: "angular-playground-featured.webp"
 ---
 
 [![](/images/blog/angular-playground-developing-and-running-components-in-a-sandbox/Angular-Playground.webp)](http://www.angularplayground.it/)

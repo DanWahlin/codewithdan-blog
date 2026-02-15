@@ -6,7 +6,7 @@ categories:
 tags: 
   - "javascript"
   - "typescript"
-coverImage: "image.png"
+coverImage: "image.webp"
 ---
 
 > Generative AI for Beginners - A JavaScript Adventure. Code with Legends, Conquer the Future!

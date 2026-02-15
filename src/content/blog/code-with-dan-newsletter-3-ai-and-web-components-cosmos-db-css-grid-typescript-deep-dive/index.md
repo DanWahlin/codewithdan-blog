@@ -7,7 +7,7 @@ categories:
   - "react"
   - "typescript"
   - "vscode"
-coverImage: "WordPress_FeaturedImage.png"
+coverImage: "WordPress_FeaturedImage.webp"
 ---
 
 [Edition #3](http://mailchi.mp/codewithdan/code-with-dan-development-newsletter-1367905?platform=hootsuite) of the Code with Dan Web Development Newsletter is now out including a new video walk-through!

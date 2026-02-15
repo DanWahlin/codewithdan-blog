@@ -6,7 +6,7 @@ categories:
   - "machine-learning"
   - "python"
   - "tensorflow"
-coverImage: "2018-05-03_11-24-40.png"
+coverImage: "2018-05-03_11-24-40.webp"
 ---
 
 ![](/images/blog/getting-started-with-machine-learning-using-tensorflow-and-docker/2018-05-03_11-24-40-1024x1016.webp)Machine Learning (ML) gets a lot of press now days and for good reason. It can be used to gain insight into areas that were difficult to tap into even a few years ago. Want to know what type of object is shown in a picture? [Machine learning](https://en.wikipedia.org/wiki/Machine_learning) can tell you. Need help predicting the next big stock to buy based on historical trends? Machine learning can help out there as well. The sky is the limit! Machine Learning (and more specifically a technique for implementing it called [Deep Learning (DL)](https://en.wikipedia.org/wiki/Deep_learning)) can help analyze financial information, filter spam, examine healthcare records, assess security exploits, perform face recognition, enable driver-less cars, and much more. It's one of the key drivers moving artificial intelligence (AI) forward.

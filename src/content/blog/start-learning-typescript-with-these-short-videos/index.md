@@ -10,7 +10,7 @@ tags:
   - "learn"
   - "video"
   - "web"
-coverImage: "typescript-core-concepts.png"
+coverImage: "typescript-core-concepts.webp"
 ---
 
 [TypeScript](https://www.typescriptlang.org/) continues to grow in popularity and for good reason. It adds "guard rails" to your code to help you spot issues early on, easily locate problem code, enhance productivity, provide consistency across code, and much more. While there are a lot of [TypeScript resources](https://www.typescriptlang.org/docs/) out there to get started learning the language, where can you go to get started quickly without wasting a lot of time?  

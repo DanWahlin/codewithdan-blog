@@ -8,7 +8,7 @@ tags:
   - "installation"
   - "powershell"
   - "windows11"
-coverImage: "Deno-Install-Error.png"
+coverImage: "Deno-Install-Error.webp"
 ---
 
 I've been playing around with [Deno](https://deno.land/) lately and wanted to get it installed on a new Windows 11 laptop I bought. To install Deno, you can go to the [https://deno.land/#installation](https://deno.land/#installation) page and follow the instruction for your operating system. I'm currently using Powershell 7.2 so I tried the command that was suggested since it's normally a quick and easy install:

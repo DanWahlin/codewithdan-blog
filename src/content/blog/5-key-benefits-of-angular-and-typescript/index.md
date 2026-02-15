@@ -8,7 +8,7 @@ categories:
   - "javascript"
   - "spa"
   - "typescript"
-coverImage: "5-key-benefits-angular-typescript.jpg"
+coverImage: "5-key-benefits-angular-typescript.webp"
 ---
 
  

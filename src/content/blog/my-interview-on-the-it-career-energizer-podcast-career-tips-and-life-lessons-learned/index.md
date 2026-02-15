@@ -4,7 +4,7 @@ date: 2018-04-23
 categories: 
   - "career"
   - "mindfulness"
-coverImage: "2018-04-23_22-06-10-1.png"
+coverImage: "2018-04-23_22-06-10-1.webp"
 ---
 
 [![](/images/blog/my-interview-on-the-it-career-energizer-podcast-career-tips-and-life-lessons-learned/2018-04-23_22-06-10-1024x162.webp)](http://itcareerenergizer.com/e54/)

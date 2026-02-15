@@ -8,7 +8,7 @@ tags:
   - "front-end-state"
   - "redux-devtools"
   - "state-management"
-coverImage: "reduxDevTools.png"
+coverImage: "reduxDevTools.webp"
 ---
 
 [Observable Store](https://github.com/DanWahlin/Observable-Store) now supports extensions! These can be added when the application first loads by calling **ObservableStore.addExtension()**.

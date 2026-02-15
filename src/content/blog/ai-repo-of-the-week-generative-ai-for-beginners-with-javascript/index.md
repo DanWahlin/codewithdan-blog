@@ -11,7 +11,7 @@ tags:
   - "mcp"
   - "rag"
   - "typescript"
-coverImage: "genai-thumb.png"
+coverImage: "genai-thumb.webp"
 ---
 
 [![](/images/blog/ai-repo-of-the-week-generative-ai-for-beginners-with-javascript/image-1024x576.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/03/image.png)

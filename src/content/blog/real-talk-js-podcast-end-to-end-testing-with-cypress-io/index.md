@@ -14,7 +14,7 @@ tags:
   - "podcast"
   - "realtalkjs"
   - "testing"
-coverImage: "realtalkjs270X250.png"
+coverImage: "realtalkjs270X250.webp"
 ---
 
 [![](/images/blog/real-talk-js-podcast-end-to-end-testing-with-cypress-io/realtalkjs.webp)](http://realtalkjs.com)

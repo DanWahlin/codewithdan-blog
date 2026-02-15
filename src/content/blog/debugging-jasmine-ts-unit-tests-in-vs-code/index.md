@@ -6,7 +6,7 @@ categories:
   - "typescript"
 tags: 
   - "unittest"
-coverImage: "debugging.jpg"
+coverImage: "debugging.webp"
 ---
 
 <figure>

@@ -7,7 +7,7 @@ categories:
   - "javascript"
   - "node-js"
   - "typescript"
-coverImage: "webtech_news_2.jpg"
+coverImage: "webtech_news_2.webp"
 ---
 
 Edition #2 of the Code with Dan Web Development Newsletter is now out including a new video walk-through!

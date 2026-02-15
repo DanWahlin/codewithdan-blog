@@ -7,7 +7,7 @@ tags:
   - "ai"
   - "course"
   - "mcp"
-coverImage: "image-5.png"
+coverImage: "image-5.webp"
 ---
 
 [![](/images/blog/ai-repo-of-the-week-mcp-for-beginners/image-5.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image-5.png)

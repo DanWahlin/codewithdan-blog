@@ -5,7 +5,7 @@ categories:
   - "angular-2"
   - "docker"
   - "node-js"
-coverImage: "docker-magazine-cover.jpg"
+coverImage: "docker-magazine-cover.webp"
 ---
 
 [![dockerPlayByPlay2016](/images/blog/new-pluralsight-course-play-by-play-docker-for-web-developers/dockerPlayByPlay2016.webp)](https://app.pluralsight.com/library/courses/play-by-play-docker-web-developers-john-papa-dan-wahlin/table-of-contents)

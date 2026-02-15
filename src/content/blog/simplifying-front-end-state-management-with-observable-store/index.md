@@ -13,7 +13,7 @@ tags:
   - "state-management"
   - "store"
   - "subscribe"
-coverImage: "stones-270x250.png"
+coverImage: "stones-270x250.webp"
 ---
 
 ![](/images/blog/simplifying-front-end-state-management-with-observable-store/stones-1280-1024x576.webp)

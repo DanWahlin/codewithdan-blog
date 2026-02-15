@@ -8,7 +8,7 @@ tags:
   - "observable-store"
   - "rxjs"
   - "state-management"
-coverImage: "ObservableStore.png"
+coverImage: "ObservableStore.webp"
 ---
 
 ![](/images/blog/observable-store-2-0-released-on-npm/ObservableStore-1024x499.webp)

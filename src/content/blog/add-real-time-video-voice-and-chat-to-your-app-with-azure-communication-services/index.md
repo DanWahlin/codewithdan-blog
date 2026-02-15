@@ -11,7 +11,7 @@ tags:
   - "react"
   - "typescript"
   - "web-api"
-coverImage: "acs-featured-image.jpg"
+coverImage: "acs-featured-image.webp"
 ---
 
 [![](/images/blog/add-real-time-video-voice-and-chat-to-your-app-with-azure-communication-services/image-20-1024x609.webp)](https://blog.codewithdan.com/wp-content/uploads/2021/02/image-20.png)

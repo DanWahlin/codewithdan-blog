@@ -18,7 +18,7 @@ tags:
   - "spas"
   - "typescript"
   - "web"
-coverImage: "buildfirstngapp.png"
+coverImage: "buildfirstngapp.webp"
 ---
 
 [![](/images/blog/free-course-build-your-first-angular-app/2018-10-17_00-55-32.webp)](https://scrimba.com/g/gyourfirstangularapp)

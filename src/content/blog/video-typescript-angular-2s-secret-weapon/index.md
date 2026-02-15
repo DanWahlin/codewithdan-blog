@@ -4,7 +4,7 @@ date: 2016-06-06
 categories: 
   - "angular-2"
   - "typescript"
-coverImage: "typescript_ng-conf_2016_talk.png"
+coverImage: "typescript_ng-conf_2016_talk.webp"
 ---
 
 ![typescript_ng-conf_talk](/images/blog/video-typescript-angular-2s-secret-weapon/typescript_ng-conf_2016_talk.webp)

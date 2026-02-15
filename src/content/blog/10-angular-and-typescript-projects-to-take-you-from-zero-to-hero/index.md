@@ -18,7 +18,7 @@ categories:
   - "spa"
   - "transpile"
   - "typescript"
-coverImage: "details_thumb-1.png"
+coverImage: "details_thumb-1.webp"
 ---
 
 There are a lot of great samples and posts out there to help get you started with Angular (version 2 or higher) as well as ES6/ES2015 and TypeScript. However, some are out of date, some may be more complex than you want to start with, and others have been abandoned and are no longer maintained. In this post I’m going to provide a list of 10 Angular/TypeScript projects that I’ve created that can take you from “Zero to Hero” if you like to explore project code and are interested in investing the time to learn.

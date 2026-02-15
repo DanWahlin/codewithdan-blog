@@ -9,7 +9,7 @@ tags:
   - "meditation"
   - "wellbeing"
   - "worry"
-coverImage: "serenity.jpg"
+coverImage: "serenity.webp"
 ---
 
 <figure>

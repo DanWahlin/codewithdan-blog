@@ -12,7 +12,7 @@ tags:
   - "object-oriented-programming"
   - "pluralsight"
   - "polymorphism"
-coverImage: "ts.png"
+coverImage: "ts.webp"
 ---
 
 [![](/images/blog/new-pluralsight-course-creating-object-oriented-typescript-code/2020-02-29_14-13-17-1024x180.webp)](https://pluralsight.pxf.io/ZAVoz)

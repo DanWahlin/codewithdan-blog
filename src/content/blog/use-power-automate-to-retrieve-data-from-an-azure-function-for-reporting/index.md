@@ -9,7 +9,7 @@ tags:
   - "azure-functions"
   - "json"
   - "power-automate"
-coverImage: "powerautomate-flow-feature.png"
+coverImage: "powerautomate-flow-feature.webp"
 ---
 
 In a [previous post](https://blog.codewithdan.com/migrating-a-local-node-script-to-azure-functions-using-vs-code/) I showed how to convert a local Node script into an [Azure Function](https://learn.microsoft.com/en-us/azure/azure-functions/) so that it can be called from anywhere. While that solution provides a great (and cost effective) way to call the script using HTTP, I also needed to automate the calls and add the data into a spreadsheet for reporting purposes.

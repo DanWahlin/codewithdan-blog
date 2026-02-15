@@ -10,7 +10,7 @@ tags:
   - "model-context-protocol"
   - "tools"
   - "typescript"
-coverImage: "captain-america.jpg"
+coverImage: "captain-america.webp"
 ---
 
 [![](/images/blog/integrating-ai-with-external-apis-building-a-marvel-mcp-server/captain-america.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/03/captain-america.jpg)

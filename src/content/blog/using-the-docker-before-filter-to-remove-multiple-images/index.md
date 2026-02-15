@@ -8,7 +8,7 @@ tags:
   - "filter"
   - "images"
   - "remove"
-coverImage: "docker_logo.png"
+coverImage: "docker_logo.webp"
 ---
 
 ![](/images/blog/using-the-docker-before-filter-to-remove-multiple-images/docker_logo.webp)

@@ -11,7 +11,7 @@ tags:
   - "openai"
   - "typechat"
   - "typescript"
-coverImage: "2023-07-31_00-29-32.png"
+coverImage: "2023-07-31_00-29-32.webp"
 ---
 
 [![](/images/blog/typechat-define-schemas-for-your-openai-prompts/2023-07-31_00-28-24.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/07/2023-07-31_00-28-24.png)

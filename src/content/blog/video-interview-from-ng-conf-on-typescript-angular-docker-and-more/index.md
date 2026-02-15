@@ -10,7 +10,7 @@ categories:
   - "docker"
   - "node-js"
   - "typescript"
-coverImage: "2017-10-29_23-26-21.png"
+coverImage: "2017-10-29_23-26-21.webp"
 ---
 
 I had the chance to talk with This Dot Media at ng-conf 2017 about TypeScript, Angular, Docker and more. It was a fun discussion that covered a lot of material in 15 minutes. You can view the full interview below.

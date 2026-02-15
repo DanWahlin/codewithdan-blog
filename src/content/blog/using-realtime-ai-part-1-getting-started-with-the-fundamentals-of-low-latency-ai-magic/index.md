@@ -9,7 +9,7 @@ tags:
   - "realtime-ai"
   - "typescript"
   - "websockets"
-coverImage: "image-8.png"
+coverImage: "image-8.webp"
 ---
 
 Have you ever wished your AI could keep up with you—like, actually match your pace? You know, the kind of speed where you toss out a question and get a snappy reply before you’ve even blinked twice? Enter **Realtime AI**—a total game-changer that I'll have to admit had me grinning like I had just unlocked a secret superpower the first time I got it running.

@@ -9,7 +9,7 @@ tags:
   - "containers"
   - "deployment"
   - "images"
-coverImage: "docker-small.png"
+coverImage: "docker-small.webp"
 ---
 
 [![](/images/blog/docker-for-developers-understanding-the-core-concepts/Docker-Logo-1024x576.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/06/Docker-Logo.png)

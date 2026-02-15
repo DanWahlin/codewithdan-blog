@@ -8,7 +8,7 @@ categories:
   - "docker"
   - "ecmascript6"
   - "typescript"
-coverImage: "2018-04-18-11.46.49.jpg"
+coverImage: "2018-04-18-11.46.49.webp"
 ---
 
 [![](/images/blog/containerizing-angular-with-docker-my-ng-conf-talks-and-overall-experience/2018-04-18-11.46.49-1024x768.webp)](https://blog.codewithdan.com/wp-content/uploads/2018/04/2018-04-18-11.46.49.jpg)[ng-conf 2018](https://www.ng-conf.org/) is officially over....too bad it can't go on forever. It's such a great conference that you don't want it to end. In addition to hearing a lot of high-quality talks from the Angular team and other awesome speakers, I had the opportunity to hang out with [John Papa](https://twitter.com/john_papa) a lot (one of my best friends) as well as several other close friends, and made many new friends throughout the week as well (thanks to my buddy [Brian Clark](https://www.clarkio.com/2017/06/06/new-start-at-msft/) for the picture to the right). Here's a little information about the conference and my overall experience. If you're only interested in videos of the talks I gave [scroll to the bottom](#talks) to find those.

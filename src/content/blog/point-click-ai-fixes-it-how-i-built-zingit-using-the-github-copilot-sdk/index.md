@@ -7,7 +7,7 @@ tags:
   - "github-copilot-cli"
   - "github-copilot-sdk"
   - "ui"
-coverImage: "image-1.png"
+coverImage: "image-1.webp"
 ---
 
 [![](/images/blog/point-click-ai-fixes-it-how-i-built-zingit-using-the-github-copilot-sdk/image-1024x264.webp)](https://blog.codewithdan.com/wp-content/uploads/2026/02/image.png)

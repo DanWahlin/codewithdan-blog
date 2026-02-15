@@ -3,7 +3,7 @@ title: "Developer Bliss with Docker for Mac & Docker for Windows"
 date: 2016-06-20
 categories: 
   - "docker"
-coverImage: "docker-logo-240.png"
+coverImage: "docker-logo-240.webp"
 ---
 
 ![docker-logo-240](/images/blog/developer-bliss-with-docker-for-mac-and-windows/docker-logo-240.webp)I'm a huge fan of [Docker](https://www.docker.com/) and am using it a lot in various projects now. In fact the [https://blog.codewithdan.com](https://blog.codewithdan.com) site is running in Docker containers on [Azure](https://azure.microsoft.com). Three containers are used and managed with [Docker Cloud](https://cloud.docker.com/_/dashboard/onboarding):

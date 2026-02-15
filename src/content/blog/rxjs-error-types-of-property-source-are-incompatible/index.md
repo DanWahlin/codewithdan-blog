@@ -9,7 +9,7 @@ tags:
   - "multiple-versions"
   - "packages"
   - "rxjs"
-coverImage: "wrenches.jpg"
+coverImage: "wrenches.webp"
 ---
 
 ![](/images/blog/rxjs-error-types-of-property-source-are-incompatible/wrenches-1024x768.webp)

@@ -8,7 +8,7 @@ tags:
   - "collaboration"
   - "typescript"
   - "websockets"
-coverImage: "2023-01-27_12-58-07.png"
+coverImage: "2023-01-27_12-58-07.webp"
 ---
 
 [![](/images/blog/solving-the-puzzle-of-real-time-collaboration-using-the-fluid-framework/2023-01-27_12-58-07-1024x523.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/01/2023-01-27_12-58-07.png)

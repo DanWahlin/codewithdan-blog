@@ -4,7 +4,7 @@ date: 2018-02-14
 categories: 
   - "angular"
   - "docker"
-coverImage: "fivethings.jpg"
+coverImage: "fivethings.webp"
 ---
 
 I had the opportunity to sit down with [Simona Cotin](https://twitter.com/simona_cotin) (Azure Developer Advocate at Microsoft) at the [AngularMix conference](https://angularmix.com) to talk about "Five Things About Docker". The video is one in a series of "Five Things" videos being created and produced by the Azure Developer Advocate team at Microsoft and presents various tech topics in a fun way. This particular video is focused on Docker and a few of the things I really like about it.

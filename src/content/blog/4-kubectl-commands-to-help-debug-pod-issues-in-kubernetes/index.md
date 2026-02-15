@@ -11,7 +11,7 @@ tags:
   - "diagnose"
   - "kubectl"
   - "pods"
-coverImage: "2019-03-10_16-06-42.png"
+coverImage: "2019-03-10_16-06-42.webp"
 ---
 
 <figure>

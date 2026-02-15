@@ -12,7 +12,7 @@ tags:
   - "observablestore"
   - "replaysubject"
   - "subject"
-coverImage: "mastering-the-subject-talk-ng-conf-2019.png"
+coverImage: "mastering-the-subject-talk-ng-conf-2019.webp"
 ---
 
 ![](/images/blog/ng-conf-talk-mastering-the-subject-communication-options-in-rxjs/2019-05-08_23-01-01-1024x574.webp)

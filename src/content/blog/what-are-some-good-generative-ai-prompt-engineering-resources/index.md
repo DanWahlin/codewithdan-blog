@@ -7,7 +7,7 @@ tags:
   - "copilot"
   - "prompt-engineering"
   - "tutorials"
-coverImage: "image.png"
+coverImage: "image.webp"
 ---
 
 [![](/images/blog/what-are-some-good-generative-ai-prompt-engineering-resources/image-2-1024x585.webp)](https://blog.codewithdan.com/wp-content/uploads/2023/12/image-2.png)

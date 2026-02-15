@@ -5,7 +5,7 @@ categories:
   - "express"
   - "javascript"
   - "node-js"
-coverImage: "2017-10-27_20-17-22.png"
+coverImage: "2017-10-27_20-17-22.webp"
 ---
 
 [![](/images/blog/node-js-express-convention-based-routes/2017-10-27_20-17-22.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/11/2017-10-27_20-17-22.png)I've always been a fan of convention-based routing so I converted a local route generation script I've been using with Node.js/Express applications into an npm package called [express-convention-routes](https://www.npmjs.com/package/express-convention-routes). The package can be used to automate the creation of Express routes based on a directory structure.

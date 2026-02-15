@@ -8,7 +8,7 @@ tags:
   - "docker"
   - "kubernetes"
   - "metricsserver"
-coverImage: "2019-03-10_16-06-42.png"
+coverImage: "2019-03-10_16-06-42.webp"
 ---
 
 ![](/images/blog/enabling-metrics-server-for-kubernetes-on-docker-desktop/2019-03-10_15-40-57-1.webp)

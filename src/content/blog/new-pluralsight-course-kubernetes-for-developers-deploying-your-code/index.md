@@ -15,7 +15,7 @@ tags:
   - "rolling-updates"
   - "troubleshooting"
   - "yaml"
-coverImage: "2019-03-10_16-06-42.png"
+coverImage: "2019-03-10_16-06-42.webp"
 ---
 
 [![](/images/blog/new-pluralsight-course-kubernetes-for-developers-deploying-your-code/2020-02-29_18-54-59-1024x272.webp)](https://pluralsight.pxf.io/bo0jv)

@@ -5,7 +5,7 @@ categories:
   - "net"
   - "asp-net-core"
   - "c"
-coverImage: "2017-10-27_20-17-22.png"
+coverImage: "2017-10-27_20-17-22.webp"
 ---
 
 ![](/images/blog/tech-5-tutorial-getting-started-with-asp-net-core-on-mac-and-windows/2017-10-27_20-03-24.webp)

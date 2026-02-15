@@ -9,7 +9,7 @@ categories:
   - "spa"
   - "typescript"
   - "vuejs"
-coverImage: "RightTool.jpg"
+coverImage: "RightTool.webp"
 ---
 
 [![](/images/blog/choosing-the-right-javascript-library-framework-for-your-application/RightTool.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/11/RightTool.jpg)"What's the 'right' JavaScript library/framework for us to use?". That's a question that comes up a lot nowadays given the multitude of choices available and one that doesn't have a "right" answer of course. I'm fond of saying, "Use the right tool for the right job" when I'm onsite at a company [teaching a training class](https://www.codewithdan.com/products/productType/training) or providing architecture/consulting services. While I certainly have my technology preferences, to force them on someone or on one of the companies I work with would quite honestly be naive and shortsighted. If there's one thing I've learned working in technology over 20 years now, it's that "one size fits all" is **never** a valid view in technology (or life in general). The world's way too diverse for "one size fits all". We all like to think that our way is the "right way" (I include myself in that statement), but that view is very subjective and limited to what we like and don't like, what we know and are comfortable using, our personal experiences, the types of applications we're building, as well as many other factors.

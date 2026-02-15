@@ -14,7 +14,7 @@ tags:
   - "openai"
   - "organizational-data"
   - "talk"
-coverImage: "2023-08-13_14-06-39.png"
+coverImage: "2023-08-13_14-06-39.webp"
 ---
 
 I had the incredible opportunity to grace the stage at the 2023 ng-conf conference in beautiful Salt Lake City, Utah this past June. Every year, I look forward to this event, and it’s not just because of the scenic views or the pristine organization of the conference. The magic truly lies in the amazing people I get to chat with and the new friendships I forge. If you're after a blend of fun, entertainment, and education, ng-conf is the place to be. Plus, let's not forget the golden opportunity it provides to expand your network.

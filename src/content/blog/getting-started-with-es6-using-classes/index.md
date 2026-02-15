@@ -4,7 +4,7 @@ date: 2015-08-05
 categories: 
   - "es6"
   - "javascript"
-coverImage: "es6-logo-300x300-e1459634632847.png"
+coverImage: "es6-logo-300x300-e1459634632847.webp"
 ---
 
 In a [previous post](http://weblogs.asp.net/dwahlin/getting-started-with-es6-–-transpiling-es6-to-es5) I introduced how ES6 can be transpiled to ES5 using Traceur or Babel. By using transpilers you can write“modern” code and leverage features found in ES6 today while still allowing the code to run in older browsers. In this post I’m going to dive into classes which is one of the shiny new features found in ES6.

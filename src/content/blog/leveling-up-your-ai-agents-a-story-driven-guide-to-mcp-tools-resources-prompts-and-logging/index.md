@@ -7,7 +7,7 @@ tags:
   - "agents"
   - "mcp"
   - "typescript"
-coverImage: "mcp-capabilities-2.jpg"
+coverImage: "mcp-capabilities-2.webp"
 ---
 
 [![](/images/blog/leveling-up-your-ai-agents-a-story-driven-guide-to-mcp-tools-resources-prompts-and-logging/mcp-capabilities-2-1024x683.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/07/mcp-capabilities-2.jpg)

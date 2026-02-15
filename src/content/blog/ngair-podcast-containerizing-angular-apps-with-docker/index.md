@@ -10,7 +10,7 @@ categories:
   - "pluralsight"
   - "spa"
   - "typescript"
-coverImage: "ngAir2018.png"
+coverImage: "ngAir2018.webp"
 ---
 
 I had the opportunity to chat with [Justin](https://twitter.com/schwarty), [Bonnie](https://twitter.com/bonnster75), [Alyssa](https://twitter.com/AlyssaNicoll), and [Austin](https://twitter.com/amcdnl) about Angular and Docker on the [ngAir podcast](https://angularair.com/) recently and really enjoyed talking with everyone. We talked about the benefits of containers from a developer and DevOps standpoint, how to create custom images with Dockerfiles, how to build/push/pull images, and how to run containers. We of course focused on the role that containers can play with Angular applications but the concepts apply to any front-end app (or back-end app for that matter).

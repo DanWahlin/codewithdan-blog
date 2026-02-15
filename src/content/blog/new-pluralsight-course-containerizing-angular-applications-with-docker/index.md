@@ -9,7 +9,7 @@ categories:
   - "docker"
   - "spa"
   - "typescript"
-coverImage: "ContainerizingAngularApps250.png"
+coverImage: "ContainerizingAngularApps250.webp"
 ---
 
 [![](/images/blog/new-pluralsight-course-containerizing-angular-applications-with-docker/containerizing_angular_docker.webp)](https://pluralsight.pxf.io/c/1191765/424552/7490?u=https://www.pluralsight.com/courses/containerizing-angular-apps-docker)

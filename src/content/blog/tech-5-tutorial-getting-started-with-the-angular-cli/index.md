@@ -4,7 +4,7 @@ date: 2017-10-27
 categories: 
   - "angular"
   - "tech-5"
-coverImage: "2017-10-27_20-17-22.png"
+coverImage: "2017-10-27_20-17-22.webp"
 ---
 
 [![](/images/blog/tech-5-tutorial-getting-started-with-the-angular-cli/2017-10-27_20-03-24.webp)](https://blog.codewithdan.com/wp-content/uploads/2017/10/2017-10-27_20-03-24.png)

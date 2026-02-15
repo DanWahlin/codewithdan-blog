@@ -19,7 +19,7 @@ tags:
   - "security"
   - "subjects"
   - "typescript"
-coverImage: "AngularArchitecture270x250.png"
+coverImage: "AngularArchitecture270x250.webp"
 ---
 
 [![Angular Architecture](/images/blog/new-pluralsight-course-angular-architecture-and-best-practices/AngularArchitecture-850x506.webp)](https://pluralsight.pxf.io/c/1191765/424552/7490?u=https://www.pluralsight.com/courses/angular-architecture-best-practices)

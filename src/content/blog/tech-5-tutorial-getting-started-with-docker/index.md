@@ -3,7 +3,7 @@ title: "Tech 5 Tutorial: Getting Started with Docker"
 date: 2017-11-03
 categories: 
   - "docker"
-coverImage: "2017-10-27_20-17-22.png"
+coverImage: "2017-10-27_20-17-22.webp"
 ---
 
 ![](/images/blog/tech-5-tutorial-getting-started-with-docker/2017-10-27_20-03-24.webp)

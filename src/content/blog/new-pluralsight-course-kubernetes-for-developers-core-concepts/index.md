@@ -14,7 +14,7 @@ tags:
   - "secrets"
   - "services"
   - "yaml"
-coverImage: "2019-03-10_16-06-42.png"
+coverImage: "2019-03-10_16-06-42.webp"
 ---
 
 [![](/images/blog/new-pluralsight-course-kubernetes-for-developers-core-concepts/2019-10-13_11-12-05-1-1024x236.webp)](https://pluralsight.pxf.io/R9W2N)

@@ -11,7 +11,7 @@ tags:
   - "javascript"
   - "python"
   - "vs-code"
-coverImage: "image.png"
+coverImage: "image.webp"
 ---
 
 [![](/images/blog/ai-repo-of-the-week-github-copilot-adventures/image-1024x585.webp)](https://blog.codewithdan.com/wp-content/uploads/2025/05/image.png)

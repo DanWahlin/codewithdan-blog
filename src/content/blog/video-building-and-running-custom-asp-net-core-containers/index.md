@@ -7,7 +7,7 @@ categories:
 tags: 
   - "azure"
   - "containers"
-coverImage: "aspnetcore-containers.png"
+coverImage: "aspnetcore-containers.webp"
 ---
 
 ![](/images/blog/video-building-and-running-custom-asp-net-core-containers/2020-04-26_14-10-30-1024x576.webp)

@@ -5,7 +5,7 @@ categories:
   - "angular"
   - "azure"
   - "docker"
-coverImage: "2017-10-21_13-38-46.png"
+coverImage: "2017-10-21_13-38-46.webp"
 ---
 
 I had the opportunity to speak at the [AngularMix](http://angularmix.com) conference in Orlando about something that I think every developer should learn more about - containers. The talk was titled **"Containerizing" Angular with Docker** and discussed the following concepts as they relate to Angular applications:
