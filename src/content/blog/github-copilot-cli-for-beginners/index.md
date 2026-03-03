@@ -11,7 +11,7 @@ tags:
   - "terminal"
   - "ai-tools"
   - "mcp"
-coverImage: "copilot-banner.png"
+coverImage: "copilot-banner-card.png"
 draft: false
 ---
 
