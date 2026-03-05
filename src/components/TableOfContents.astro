@@ -10,16 +10,63 @@ const showToc = tocHeadings.length >= 3;
 ---
 
 {showToc && (
-	<nav class="toc">
-		<details open>
-			<summary class="toc-title">Table of Contents</summary>
-			<ul class="toc-list">
-				{tocHeadings.map(h => (
-					<li class={`toc-item toc-depth-${h.depth}`}>
-						<a href={`#${h.slug}`}>{h.text}</a>
-					</li>
-				))}
-			</ul>
-		</details>
+	<nav class="toc" aria-label="Table of Contents">
+		<p class="toc-title">On this page</p>
+		<ul class="toc-list">
+			{tocHeadings.map(h => (
+				<li class={`toc-item toc-depth-${h.depth}`}>
+					<a href={`#${h.slug}`} data-toc-link={h.slug}>{h.text}</a>
+				</li>
+			))}
+		</ul>
 	</nav>
 )}
+
+<script>
+function initTocScrollSpy() {
+	const tocLinks = document.querySelectorAll<HTMLAnchorElement>('[data-toc-link]');
+	if (!tocLinks.length) return;
+
+	const headingIds = Array.from(tocLinks).map(link => link.dataset.tocLink!);
+	const headingElements = headingIds
+		.map(id => document.getElementById(id))
+		.filter((el): el is HTMLElement => el !== null);
+
+	if (!headingElements.length) return;
+
+	let activeId: string | null = null;
+
+	function updateActive() {
+		const scrollY = window.scrollY;
+		const offset = 120; // account for sticky headers
+
+		let currentId: string | null = null;
+
+		for (let i = headingElements.length - 1; i >= 0; i--) {
+			if (headingElements[i].offsetTop <= scrollY + offset) {
+				currentId = headingElements[i].id;
+				break;
+			}
+		}
+
+		// If scrolled to top, highlight first heading
+		if (!currentId && headingElements.length > 0) {
+			currentId = headingElements[0].id;
+		}
+
+		if (currentId !== activeId) {
+			activeId = currentId;
+			tocLinks.forEach(link => {
+				const isActive = link.dataset.tocLink === activeId;
+				link.classList.toggle('toc-active', isActive);
+			});
+		}
+	}
+
+	window.addEventListener('scroll', updateActive, { passive: true });
+	updateActive();
+}
+
+initTocScrollSpy();
+document.addEventListener('astro:after-swap', initTocScrollSpy);
+</script>

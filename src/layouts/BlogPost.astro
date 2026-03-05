@@ -69,6 +69,7 @@ const jsonLd = {
 			</div>
 		</div>
 		<div class="wrapper">
+			<div class="post-layout">
 			<article class="post-article" id="main-content" data-pagefind-body>
 				<header class="entry-header">
 					<h1 class="entry-title">{title}</h1>
@@ -109,8 +110,6 @@ const jsonLd = {
 					</div>
 				)}
 
-				<TableOfContents headings={headings} />
-
 				<section class="entry-content">
 					<slot />
 				</section>
@@ -126,6 +125,11 @@ const jsonLd = {
 					</div>
 				)}
 			</article>
+
+			<aside class="toc-sidebar">
+				<TableOfContents headings={headings} />
+			</aside>
+			</div>
 
 			<RelatedPosts currentId={postId || ''} tags={tags} categories={categories} />
 
