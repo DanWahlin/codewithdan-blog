@@ -145,8 +145,8 @@ Happy gaming...I mean...coding!
 
 ## Resources
 
-- [Copilot CLI](https://github.com/features/copilot/cli/)
-- [GitHub Copilot CLI for Beginners (free!) course](https://github.com/github/copilot-cli-for-beginners)
+- [GitHub Copilot CLI](https://github.com/features/copilot/cli/)
+- [GitHub Copilot CLI for Beginners course (free!)](https://github.com/github/copilot-cli-for-beginners)
 
 ---
 
