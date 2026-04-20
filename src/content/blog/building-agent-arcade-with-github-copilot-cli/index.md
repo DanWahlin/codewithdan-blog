@@ -14,7 +14,7 @@ tags:
 coverImage: "cover.webp"
 ---
 
-![Agent Arcade Banner](/images/blog/building-agent-arcade-with-github-copilot-cli/agent-arcade-banner-v3.png)
+![Agent Arcade Banner](/images/blog/building-agent-arcade-with-github-copilot-cli/agent-arcade-banner-v3.webp)
 
 You know that feeling when you're waiting for your AI agent to finish a task and you've got nothing to do but stare at the terminal? If you're like me, you then jump to yet another agent you have running, interact with it if needed, and then stare at the terminal some more. I spend a lot of my day working with [GitHub Copilot CLI](https://github.com/features/copilot/cli/) and other AI coding tools, and there are stretches where you're just...waiting. I had seen a few ideas shared online and a recent one by [Aman](https://x.com/Amank1412/status/2044489263799275722) really caught my attention. I wanted something that could run on Mac, Linux, and Windows (and had some other games in mind), so I thought, "What if I tried building a little retro arcade game that ran as a transparent overlay right on my desktop?". That way I could quickly switch to it between tasks, give my mind a short break, while still staying on top of what my agents are doing.
 
@@ -49,11 +49,11 @@ The solution that stuck? A combination: normal `keydown` for pausing (works when
 
 To pause it, you can press the escape key and only the HUD overlay will be interactive. That way you can get back to your AI agents without the game blocking them.
 
-![HUD Paused](/images/blog/building-agent-arcade-with-github-copilot-cli/hud-paused.png)
+![HUD Paused](/images/blog/building-agent-arcade-with-github-copilot-cli/hud-paused.webp)
 
 Press escape again and the game will unpause, returning to full-screen overlay mode so you can continue playing.
 
-![HUD](/images/blog/building-agent-arcade-with-github-copilot-cli/hud.png)
+![HUD](/images/blog/building-agent-arcade-with-github-copilot-cli/hud.webp)
 
 ### Building the games
 
@@ -71,11 +71,11 @@ I'd screenshot something that didn't look right, paste it into the conversation,
 
 That triggered a full rewrite: distance-based path following instead of frame-based animation, five enemy states (entrance, stationary, breathe-in, breathe-out, attack), formation drift patterns, and Bézier curve attack paths. I even recorded a gameplay video of the reference and had Copilot CLI extract frames to analyze the mechanics. It took several rounds of tuning ("the ships dive too fast", "the formation is too low") before it felt right, but I'm happy with where it landed. I found a great sprite sheet from [Kenney (he has a lot of fantastic game assets)](https://opengameart.org/content/space-shooter-redux) that worked well for the enemy ships. 
 
-![Galaxy Shooter Sprites](/images/blog/building-agent-arcade-with-github-copilot-cli/space_sheet.png)
+![Galaxy Shooter Sprites](/images/blog/building-agent-arcade-with-github-copilot-cli/space_sheet.webp)
 
 I wanted the ships to have a little more color since the game runs transparently on a desktop and everything needs to stand out more, so I ran the sprites through the gpt-1.5-image model on [Microsoft Foundry](https://ai.azure.com) and after some back and forth settled on this version:
 
-![Galaxy Shooter Colorful Sprites](/images/blog/building-agent-arcade-with-github-copilot-cli/space_sheet-2.png)
+![Galaxy Shooter Colorful Sprites](/images/blog/building-agent-arcade-with-github-copilot-cli/space_sheet-2.webp)
 
 Here's the game in action:
 
@@ -141,7 +141,7 @@ While this is a fun personal project and a work in progress, it demonstrates the
 
 Happy gaming...I mean...coding!
 
-![Agent Arcade](/images/blog/building-agent-arcade-with-github-copilot-cli/agent-arcade-banner.png)
+![Agent Arcade](/images/blog/building-agent-arcade-with-github-copilot-cli/agent-arcade-banner.webp)
 
 ## Resources
 
