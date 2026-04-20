@@ -125,7 +125,7 @@ Both workflows were written by Copilot CLI. The build workflow needed a few iter
 
 A few takeaways from this project.
 
-- Including screenshots in prompts is incredibly helpful. Pasting an image and saying "this is wrong, the ninja block is misaligned" is faster and more precise than trying to describe a visual bug in words. I used this constantly for the games and the website.
+- Including screenshots in prompts is incredibly helpful for this type of app (no surprise there if you work with AI coding agents a lot). Pasting an image and saying "this is wrong, the ninja block is misaligned" is faster and more precise than trying to describe a visual bug in words. I used this constantly for the games and the website.
 
 - Sessions matter. Copilot CLI remembers context within a conversation, so I could say "the same issue from earlier" and it knew what I meant. That saved a lot of re-explaining. But, having too much context especially about different features can make things worse. The `/clear` and `/new` commands are your friend.
 
