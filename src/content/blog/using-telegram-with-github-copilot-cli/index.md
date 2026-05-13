@@ -45,6 +45,8 @@ The goal was straightforward:
 
 That last point matters. A Telegram bot wired into an AI coding agent isn't just a chat toy. Depending on how you start Copilot CLI, it can read files, run commands, edit code, and interact with your machine. Treat it like remote developer access, because that's basically what it is.
 
+Also remember that Telegram bot messages go through Telegram's Bot API. Don't send prompts or outputs that contain secrets, customer data, or sensitive proprietary code unless that fits your risk model.
+
 ## The First Thing I Rejected: Remote Terminal Bots
 
 Before landing on the Copilot CLI Telegram Bridge extension, I looked at remote terminal-style projects. One of them worked with Telegram, but the experience wasn't what I wanted at all.
@@ -109,19 +111,18 @@ node --check extension.mjs
 grep -Ei 'child_process|spawn\(|exec\(|node-pty|eval\(|new Function' extension.mjs
 ```
 
-What I found:
+What I found at the commit I reviewed:
 
-- No `child_process`, `spawn`, `exec`, or `node-pty`
-- No `eval` or `new Function`
-- No package dependencies to audit
+- I didn't see direct process execution through `child_process`, `spawn`, `exec`, or `node-pty`
+- I didn't see obvious dynamic-code patterns like `eval` or `new Function`
+- There were no third-party package dependencies in that version
 - Telegram API calls were made with `fetch`
 - The extension stores bot tokens locally in `bots.json`
-- Tokens are expected to be protected with file permissions
-- Access control is handled through a local `access.json` file
+- Authorization depends on the extension correctly enforcing the local `access.json` allowlist
 
-You can also ask Copilot CLI to review the extension, but I'd still do the basic manual checks yourself first.
+This was a basic source review, not a formal security audit. Re-check the exact commit you install. You can also ask Copilot CLI to review the extension, but I'd still do the basic manual checks yourself first.
 
-The biggest security note is token storage. The README is clear about it: bot tokens are stored in plain text in `bots.json`. The file should be mode `600`, and you should never commit it, copy it into backups, paste it into logs, or send it to an AI assistant.
+The biggest security note is token storage. The README is clear about it: bot tokens are stored in plain text in `bots.json`. The extension writes that file with mode `600`, and you should never commit it, copy it into backups, paste it into logs, or send it to an AI assistant. I also keep the extension directory out of dotfile backups, cloud sync folders, search indexing, and support bundles.
 
 ## Step 2: Enable Copilot CLI Extensions
 
@@ -172,11 +173,15 @@ Next I created a Telegram bot with [@BotFather](https://t.me/BotFather):
 
 Don't paste the real token into code, docs, GitHub issues, screenshots, or chat transcripts. If the token leaks, revoke it with BotFather and generate a new one.
 
-After storing the token in an environment variable, I verified the bot with Telegram's `getMe` API:
+I stored the token in `TELEGRAM_BOT_TOKEN` only for my manual verification step. The bridge itself does not read `TELEGRAM_BOT_TOKEN` or a `.env` file; after `/telegram setup <name>`, it stores the token in `bots.json`.
+
+I verified the bot with Telegram's `getMe` API:
 
 ```bash
 curl -s "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/getMe"
 ```
+
+Avoid putting a literal bot token in the command. Even with an environment variable, remember that token-bearing URLs can end up in shell history, process listings, terminal scrollback, proxies, or logs depending on your environment.
 
 A successful response looks like this:
 
@@ -201,7 +206,9 @@ The extension supports a CLI flow:
 /telegram connect mybot
 ```
 
-During setup, the extension prompts for the bot token and validates it against the Telegram API. After connecting, I sent a message to the bot in Telegram. The extension printed a pairing code in Copilot CLI, and I sent that code back to the bot. Once paired, my Telegram user ID was written to `access.json`.
+During setup, `/telegram setup <name>` logs instructions and waits for the next token-shaped Copilot prompt. When I pasted the BotFather token into Copilot CLI, the extension intercepted it, validated it with Telegram `getMe`, stored it in `bots.json`, and replaced the raw token prompt before it reached the agent.
+
+After connecting, I sent a message to the bot in Telegram. The extension printed a pairing code in Copilot CLI, and I sent that code back to the bot. Once paired, my Telegram user ID was written to `access.json`. Treat the pairing code like a short-lived secret while setup is in progress. After pairing, `access.json` is only one layer of control: if someone gets the bot token, your Telegram account, local filesystem access, or can modify `access.json`, they may be able to reach the bridge.
 
 That pairing step matters because the bot should not accept messages from random Telegram users. A Telegram bot connected to a coding agent is not a toy unless you enjoy letting strangers remodel your filesystem.
 
@@ -211,7 +218,13 @@ In my case I registered the bot locally as:
 copilotcli
 ```
 
-The extension stores its files under:
+By default, the extension stores its files under:
+
+```text
+${COPILOT_HOME:-$HOME/.copilot}/extensions/copilot-cli-telegram-bridge/
+```
+
+If `COPILOT_HOME` is not set, that resolves to:
 
 ```text
 ~/.copilot/extensions/copilot-cli-telegram-bridge/
@@ -226,9 +239,10 @@ bots/copilotcli/state.json
 bots/copilotcli/lock.json
 ```
 
-`bots.json` contains the bot token, so lock it down:
+`bots.json` contains the bot token. The extension writes it as `0600`, but I still verify it manually. `access.json` does not contain the bot token, but it does contain allowed Telegram user IDs and may temporarily contain pending pairing codes, so I restrict it too:
 
 ```bash
+chmod 700 ~/.copilot/extensions/copilot-cli-telegram-bridge
 chmod 600 ~/.copilot/extensions/copilot-cli-telegram-bridge/bots.json
 chmod 600 ~/.copilot/extensions/copilot-cli-telegram-bridge/access.json
 ```
@@ -239,13 +253,13 @@ My sanitized `bots.json` looked like this:
 {
   "copilotcli": {
     "token": "[REDACTED]",
-    "username": "CopilotCLI_TG_bot",
+    "username": "YourCopilotBridge_bot",
     "addedAt": "2026-05-11T01:33:48Z"
   }
 }
 ```
 
-The `access.json` file controlled who could talk to the bridge:
+The extension used `access.json` as its local allowlist for Telegram user IDs:
 
 ```json
 {
@@ -256,19 +270,21 @@ The `access.json` file controlled who could talk to the bridge:
 }
 ```
 
-In my real config, this was my Telegram user ID. If you set this up yourself, use your own Telegram user ID. Don't leave this open to everyone unless you like surprise code changes from strangers.
+In my real config, this was my Telegram user ID. If you set this up yourself, use your own Telegram user ID. Don't manually add broad, shared, or group IDs unless you have tested the behavior and accept the risk. A Telegram group or shared bot changes the threat model.
+
+One important detail: `access.json` is shared across all bots managed by this extension. Pairing with one registered bot grants that Telegram user access to every bot registered in the same extension directory.
 
 ## Step 6: Clear Webhooks Before Using Long Polling
 
-The bridge uses Telegram long polling. Telegram only allows one active poller per bot token.
+The bridge uses Telegram `getUpdates` long polling and does not call `deleteWebhook` itself. Telegram only allows one active poller per bot token, and a webhook can also conflict with polling.
 
-If your bot previously had a webhook, clear it first:
+If your bot previously had a webhook, clear it manually before connecting:
 
 ```bash
 curl -s "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/deleteWebhook"
 ```
 
-This matters more than it sounds. If another process is polling the same bot, Telegram returns conflicts or one session takes over from another. I hit that during setup.
+This matters more than it sounds. If another process is polling the same bot, Telegram returns conflicts or one session takes over from another. A Telegram 409 can mean another `getUpdates` consumer is active or a webhook is still configured. I hit that during setup.
 
 The symptom looked like this in Copilot CLI:
 
@@ -299,12 +315,16 @@ copilot \
 
 A few notes on those flags:
 
-- `--experimental` loads extension support
+- `--experimental` enables experimental features, including extension/plugin support required by this bridge
 - `--model gpt-5.5` starts with the model I wanted
-- `--no-remote` keeps the session local
-- `--disable-builtin-mcps` avoids loading extra MCP servers by default
-- `--disallow-temp-dir` keeps Copilot from using temp directories unexpectedly
-- `--secret-env-vars=...` marks sensitive environment variables as secrets
+- `--no-remote` keeps the session local instead of allowing GitHub web/mobile remote control
+- `--disable-builtin-mcps` disables Copilot CLI's built-in MCP servers, currently `github-mcp-server`; it does not disable user-configured or plugin-provided MCP servers
+- `--disallow-temp-dir` prevents automatic file-access permission for the system temporary directory
+- `--secret-env-vars=...` strips those environment variables from shell/MCP server environments and redacts their values from output
+
+If you have MCP servers configured in `~/.copilot/mcp-config.json` or installed via plugins, `--disable-builtin-mcps` will not disable those. Use `copilot --help` and `/env` to inspect loaded MCPs, and disable specific servers with `--disable-mcp-server <name>` if needed. Also, `--secret-env-vars` only helps with environment variables you list. It does not protect secrets stored in files, shell history, git config, SSH agents, `.env` files, cloud CLI credentials, or credentials exposed through other tools.
+
+`TELEGRAM_BOT_TOKEN` only needs to be listed there if you exported it for your own shell commands. The bridge reads the token from `bots.json`, not from the environment.
 
 Once Copilot CLI is running, connect the Telegram bridge:
 
@@ -315,7 +335,7 @@ Once Copilot CLI is running, connect the Telegram bridge:
 Copilot prints something like:
 
 ```text
-Telegram bridge connected (@CopilotCLI_TG_bot).
+Telegram bridge connected (@YourCopilotBridge_bot).
 ```
 
 At that point, messages sent to the Telegram bot flow into the Copilot CLI session, and Copilot's responses are sent back to Telegram.
@@ -324,13 +344,13 @@ At that point, messages sent to the Telegram bot flow into the Copilot CLI sessi
 
 This is the part to think about carefully.
 
-The first bridge worked, but one review got stuck for a while because Copilot was waiting on a tool approval prompt that Telegram didn't surface cleanly. The session looked like it was still typing... forever.
+The first bridge worked, but one review got stuck for a while because Copilot was waiting on a tool approval prompt that did not surface cleanly through my Telegram flow. The session looked like it was still typing... forever.
 
-The task was harmless. Copilot wanted approval for a basic command like `wc -l`. But because the approval prompt lived inside the CLI session, the Telegram bot couldn't handle it well.
+The task was harmless. Copilot wanted approval for a basic command like `wc -l`. Current versions of the bridge include an input handler for SDK-level user questions and choices, so this behavior can vary by bridge and Copilot CLI version. If a task appears to type forever, check the terminal before assuming the agent is still working.
 
-There are two ways to deal with that.
+There are two ways to reduce that friction.
 
-### Safer Option: Approve More Tools, but Not Everything
+### Less Risky Option: Avoid `--yolo`, but Still Treat It as Powerful
 
 You can start Copilot with a more permissive but still constrained setup:
 
@@ -355,7 +375,7 @@ copilot \
   --log-level warning
 ```
 
-That command shape should work as a safer starting point for a lot of people.
+This is less risky than `--yolo`, but it is not a sandbox. `--allow-all-tools` auto-approves all tools except the exact deny patterns you list, while path and URL permissions are still controlled separately.
 
 Permission syntax can change, so verify the exact allow/deny patterns for your Copilot CLI version with:
 
@@ -363,7 +383,7 @@ Permission syntax can change, so verify the exact allow/deny patterns for your C
 copilot help permissions
 ```
 
-It avoids silly approval hangs for basic commands, while still blocking the scarier stuff: pushing, committing, resetting, deleting, shredding, and sudo.
+It can reduce approval hangs for routine commands while blocking some obvious high-risk commands. Don't treat the deny list as complete or bypass-proof; shell permissions are hard to constrain with string patterns. Equivalent destructive actions may still be possible through other commands, scripts, or tools. Prefer running this in an isolated VM/container, on a clean working tree, with limited credentials.
 
 ### Full Convenience Option: `--yolo`
 
@@ -378,6 +398,8 @@ Enable all permissions, equivalent to:
 ```
 
 Copilot CLI also has `--allow-all`, which enables the same permission shape. `--yolo` is the memorable alias, because apparently even CLIs need a chaotic little nickname.
+
+I would not recommend this as the default setup. `--yolo` removes the approval boundary and allows all tools, paths, and URLs. Only use it in an isolated environment with limited credentials and a dedicated bot/token.
 
 The launch command looked like this:
 
@@ -403,7 +425,7 @@ Then I connected the bot again:
 
 This solved the approval hang problem. It also means the Telegram bot is now extremely powerful. If you use `--yolo`, treat the bot like developer access to that machine.
 
-I wouldn't run that mode on a shared bot, a broad group chat, or a machine with secrets spread all over the filesystem. Telegram connects to Copilot CLI running on an isolated VM I run in the cloud so collateral damage is minimized in my case.
+I wouldn't run that mode on a shared bot, group chat, personal laptop, production server, or any machine with broad filesystem secrets. Telegram connects to Copilot CLI running on an isolated VM I run in the cloud so collateral damage is minimized in my case.
 
 ## Step 9: Verify the Bridge is Running
 
@@ -419,13 +441,13 @@ A sanitized version looked like this:
 
 ```json
 {
-  "pid": 2359178,
-  "sessionId": "41437818-8613-458a-a663-387fa5b6a37a",
+  "pid": 12345,
+  "sessionId": "[REDACTED-SESSION-ID]",
   "connectedAt": "2026-05-11T10:14:49.369Z"
 }
 ```
 
-I also verified the main Copilot process included the flags I expected:
+The lock file tells you which extension process and Copilot session ID currently hold the bot. It does not record the project directory or permission flags. I separately checked the main Copilot process to confirm the flags I had launched with:
 
 ```bash
 ps -p 2359053 -o pid=,ppid=,stat=,etime=,cmd=
@@ -437,11 +459,11 @@ The command included:
 copilot --banner --experimental --yolo --model gpt-5.5 ...
 ```
 
-That told me the bridge was connected to the right Copilot session, in the right project, with the permission mode I expected.
+That gave me evidence that the bridge was connected to the Copilot session I had launched, in the project and permission mode I expected.
 
 ## Gotcha 1: Slash Commands Are Awkward Through Telegram
 
-Copilot CLI slash commands like `/model` are CLI UI commands. Telegram messages are usually treated as prompts that get sent into the session.
+Copilot CLI slash commands like `/model` are CLI UI commands. With this bridge, normal Telegram text is forwarded to the session as prompt text, not dispatched through Copilot CLI's slash-command router.
 
 So if you type this in Telegram:
 
@@ -449,20 +471,20 @@ So if you type this in Telegram:
 /model
 ```
 
-it may not behave like typing `/model` directly into Copilot CLI.
+it should not be treated as the same thing as typing `/model` directly into Copilot CLI.
 
-For normal work, this is fine. Ask natural-language questions and give tasks in plain English. For CLI-level commands like changing models, connecting/disconnecting the bridge, or clearing a session, I prefer to run those in the Copilot CLI session itself.
+For normal work, this is fine. Ask natural-language questions and give tasks in plain English. For CLI-level commands like changing models, connecting/disconnecting the bridge, checking `/telegram status`, or clearing a session, run those in the Copilot CLI session itself.
 
 ## Gotcha 2: Approval Prompts Can Look Like Infinite Typing
 
 The most annoying issue was the stuck review.
 
-From Telegram, it looked like Copilot was typing forever. In reality, the CLI session was waiting for a tool approval prompt. Telegram didn't expose the approval interaction cleanly, so the session just sat there.
+From Telegram, it looked like Copilot was typing forever. In my test, the CLI session was waiting for a tool approval prompt that did not surface cleanly through my Telegram flow. The current bridge includes an input handler for SDK-level user questions and choices, so this behavior can vary by bridge and Copilot CLI version. If a task appears to type forever, check the Copilot CLI session before assuming the agent is still working.
 
 The options are:
 
 - Use safer allow/deny flags so routine commands don't require approval
-- Use `--yolo` for a fully trusted personal bot
+- Use `--yolo` only in an isolated environment where the bot, Telegram account, host, repo, and credentials are all treated as high-trust/high-risk
 - Avoid long-running review tasks from Telegram unless you can check the terminal if needed
 
 For my personal test bot, I chose `--yolo`. For a team bot, I wouldn't.
@@ -475,7 +497,7 @@ For my personal test session, I used the `--yolo` version from Step 8, then conn
 /telegram connect copilotcli
 ```
 
-For most people, I'd start with the safer allow/deny version first. Move to `--yolo` only if you understand the tradeoff.
+For most people, I'd start with the safer allow/deny version first. Move to `--yolo` only if you understand that you are effectively granting remote developer-level access to that environment.
 
 ## Final Thoughts
 
@@ -489,7 +511,7 @@ Would I run this for a team today? No, not without more guardrails.
 
 Would I use it personally to check in on a project, ask Copilot a question, or kick off a focused task while away from my desk? Yes. I used it to do research, compare some LLMs, and add several new features to an app.
 
-If you try this yourself, start with a dedicated Telegram bot. Lock the token file down, allow only your Telegram user ID, avoid multiple pollers, and be intentional about permission flags. When set up properly, I've found that the extension works really well. Shoutout to Tomas Meszaros for creating it!
+If you try this yourself, start with a dedicated Telegram bot. Lock the token file down, allow only your Telegram user ID, avoid multiple pollers, and be intentional about permission flags. With those caveats, I've found the extension works really well for a personal, isolated setup. Shoutout to Tomas Meszaros for creating it!
 
 ## Resources
 
