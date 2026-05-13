@@ -14,13 +14,13 @@ tags:
 coverImage: "cover.webp"
 ---
 
-I spend a lot of time working with [GitHub Copilot CLI](https://github.com/features/copilot/cli/). It is great when I am sitting in front of a terminal. But sometimes I am away from the machine and want to kick off a review, ask a follow-up question, or check whether an agent is still working.
+I spend a lot of time working with [GitHub Copilot CLI](https://github.com/features/copilot/cli/). It's great when I'm sitting in front of a terminal. But sometimes I'm away from the machine and want to kick off a review, ask a follow-up question, or check whether an agent is still working.
 
 That sent me down a small rabbit hole: could I use Telegram as a chat front end for Copilot CLI?
 
-I did not want a remote terminal in Telegram. I already have SSH for that. What I wanted was closer to a normal chat experience: send a message, have Copilot work in the project, and get a response back. Simple idea. Slightly less simple setup.
+I didn't want a remote terminal in Telegram. I already have SSH for that. What I wanted was closer to a normal chat experience: send a message, have Copilot work in the project, and get a response back. Simple idea. Slightly less simple setup.
 
-In this post I will walk through how I enabled a Telegram bot for GitHub Copilot CLI using the [`examon/copilot-cli-telegram-bridge`](https://github.com/examon/copilot-cli-telegram-bridge) extension, what I checked before installing it, the exact setup steps, and a few gotchas I hit along the way.
+In this post I'll walk through how I enabled a Telegram bot for GitHub Copilot CLI using the [`examon/copilot-cli-telegram-bridge`](https://github.com/examon/copilot-cli-telegram-bridge) extension, what I checked before installing it, the exact setup steps, and a few gotchas I hit along the way.
 
 ## What I was trying to build
 
@@ -32,11 +32,11 @@ The goal was straightforward:
 - Avoid a raw terminal or tmux-style experience in Telegram
 - Keep the setup locked down to my Telegram user
 
-That last point matters. A Telegram bot wired into an AI coding agent is not just a chat toy. Depending on how you start Copilot CLI, it can read files, run commands, edit code, and interact with your machine. Treat it like remote developer access, because that is basically what it is.
+That last point matters. A Telegram bot wired into an AI coding agent isn't just a chat toy. Depending on how you start Copilot CLI, it can read files, run commands, edit code, and interact with your machine. Treat it like remote developer access, because that's basically what it is.
 
 ## The first thing I rejected: remote terminal bots
 
-Before landing on the Copilot CLI Telegram Bridge extension, I looked at remote terminal-style projects. One of them worked, but the experience was not what I wanted.
+Before landing on the Copilot CLI Telegram Bridge extension, I looked at remote terminal-style projects. One of them worked, but the experience wasn't what I wanted.
 
 The problem was architectural. Some tools wrap a terminal session and stream ANSI/TUI output back to Telegram. That sounds useful until you see terminal escape sequences, broken formatting, and partial screen redraws show up in chat.
 
@@ -47,7 +47,7 @@ Things like this are a smell:
 [?2004h
 ```
 
-That is terminal state leaking into a chat interface. Once I saw that pattern, I knew I did not want to keep going in that direction.
+That's terminal state leaking into a chat interface. Once I saw that pattern, I knew I didn't want to keep going in that direction.
 
 The better approach was to use something that integrates with Copilot CLI as an extension instead of pretending Telegram is a terminal emulator.
 
@@ -65,11 +65,11 @@ The plugin description is exactly what I was looking for:
 
 The important implementation detail: it uses `joinSession` from `@github/copilot-sdk/extension`.
 
-That is a much better fit than a PTY-based wrapper. It joins the active Copilot CLI session and relays messages, instead of trying to screen-scrape a terminal.
+That's a much better fit than a PTY-based wrapper. It joins the active Copilot CLI session and relays messages, instead of trying to screen-scrape a terminal.
 
 ## Step 1: review the extension before running it
 
-I do not recommend installing random agent extensions and hoping for the best. That is how you accidentally give a weekend project access to your repo, shell, and secrets. Fun for about four seconds.
+I don't recommend installing random agent extensions and hoping for the best. That's how you accidentally give a weekend project access to your repo, shell, and secrets. Fun for about four seconds.
 
 I cloned the repo into a temporary review folder first:
 
@@ -196,7 +196,7 @@ Next I created a Telegram bot with [@BotFather](https://t.me/BotFather):
 5. Pick a username that ends with `bot`
 6. Copy the bot token
 
-Do not paste the real token into code, docs, GitHub issues, screenshots, or chat transcripts. If the token leaks, revoke it with BotFather and generate a new one.
+Don't paste the real token into code, docs, GitHub issues, screenshots, or chat transcripts. If the token leaks, revoke it with BotFather and generate a new one.
 
 I verified the bot with Telegram's `getMe` API, but I did it without printing the token:
 
@@ -278,7 +278,7 @@ The `access.json` file controlled who could talk to the bridge:
 }
 ```
 
-That user ID is my Telegram account. If you set this up yourself, use your own Telegram user ID. Do not leave this open to everyone unless you like surprise code changes from strangers. I am going to assume you do not.
+That user ID is my Telegram account. If you set this up yourself, use your own Telegram user ID. Don't leave this open to everyone unless you like surprise code changes from strangers. I'm going to assume you don't.
 
 ## Step 6: clear webhooks before using long polling
 
@@ -346,9 +346,9 @@ At that point, messages sent to the Telegram bot flow into the Copilot CLI sessi
 
 This is the part to think about carefully.
 
-The first bridge worked, but one review got stuck for hours because Copilot was waiting on a tool approval prompt that Telegram did not surface cleanly. The session looked like it was still typing forever.
+The first bridge worked, but one review got stuck for hours because Copilot was waiting on a tool approval prompt that Telegram didn't surface cleanly. The session looked like it was still typing forever.
 
-The task was harmless. Copilot wanted approval for a basic command like `wc -l`. But because the approval prompt lived inside the CLI session, the Telegram bot could not handle it well.
+The task was harmless. Copilot wanted approval for a basic command like `wc -l`. But because the approval prompt lived inside the CLI session, the Telegram bot couldn't handle it well.
 
 There are two ways to deal with that.
 
@@ -377,7 +377,7 @@ copilot \
   --log-level warning
 ```
 
-That is the version I would recommend for most people.
+That's the version I'd recommend for most people.
 
 It avoids silly approval hangs for basic commands, while still blocking the scarier stuff: pushing, committing, resetting, deleting, shredding, and sudo.
 
@@ -417,7 +417,7 @@ Then I connected the bot again:
 
 This solved the approval hang problem. It also means the Telegram bot is now extremely powerful. If you use `--yolo`, treat the bot like developer access to that machine.
 
-I would not run that mode on a shared bot, a broad group chat, or a machine with secrets spread all over the filesystem.
+I wouldn't run that mode on a shared bot, a broad group chat, or a machine with secrets spread all over the filesystem.
 
 ## Step 9: verify the bridge is running
 
@@ -453,7 +453,7 @@ copilot --banner --experimental --yolo --model gpt-5.5 ...
 
 That told me the bridge was connected to the right Copilot session, in the right project, with the permission mode I expected.
 
-## Gotcha 1: do not poll the same bot twice
+## Gotcha 1: don't poll the same bot twice
 
 This was the first real issue I hit.
 
@@ -471,7 +471,7 @@ The fix was to stop the extra poller and reconnect:
 /telegram connect copilotcli
 ```
 
-If you are testing with raw Telegram API calls, avoid `getUpdates` while the bridge is running. Use `getMe` for token validation because it does not consume updates or interfere with the long poller.
+If you're testing with raw Telegram API calls, avoid `getUpdates` while the bridge is running. Use `getMe` for token validation because it doesn't consume updates or interfere with the long poller.
 
 ## Gotcha 2: background process watches can get noisy
 
@@ -486,7 +486,7 @@ Telegram bridge released (another session took over).
 
 The watcher saw those lines and reported them as new important events. They were not new. They were terminal redraw artifacts.
 
-The fix was simple: restart without that broad watch pattern. Sometimes the bug is not the bridge. Sometimes it is your monitor yelling about yesterday's news.
+The fix was simple: restart without that broad watch pattern. Sometimes the bug isn't the bridge. Sometimes it's your monitor yelling about yesterday's news.
 
 ## Gotcha 3: slash commands are awkward through Telegram
 
@@ -506,15 +506,15 @@ For normal work, this is fine. Ask natural-language questions and give tasks in 
 
 The most annoying issue was the stuck review.
 
-From Telegram, it looked like Copilot was typing forever. In reality, the CLI session was waiting for a tool approval prompt. Telegram did not expose the approval interaction cleanly, so the session just sat there.
+From Telegram, it looked like Copilot was typing forever. In reality, the CLI session was waiting for a tool approval prompt. Telegram didn't expose the approval interaction cleanly, so the session just sat there.
 
 The options are:
 
-- Use safer allow/deny flags so routine commands do not require approval
+- Use safer allow/deny flags so routine commands don't require approval
 - Use `--yolo` for a fully trusted personal bot
 - Avoid long-running review tasks from Telegram unless you can check the terminal if needed
 
-For my personal test bot, I chose `--yolo`. For a team bot, I would not.
+For my personal test bot, I chose `--yolo`. For a team bot, I wouldn't.
 
 ## My current launch command
 
@@ -540,13 +540,13 @@ Then inside Copilot CLI:
 /telegram connect copilotcli
 ```
 
-For most people, I would start with the safer allow/deny version first. Move to `--yolo` only if you understand the tradeoff.
+For most people, I'd start with the safer allow/deny version first. Move to `--yolo` only if you understand the tradeoff.
 
 ## Final thoughts
 
-The Copilot CLI Telegram Bridge is not a polished product yet, but the basic idea works: Telegram can become a lightweight chat front end for a real Copilot CLI session.
+The Copilot CLI Telegram Bridge isn't a polished product yet, but the basic idea works: Telegram can become a lightweight chat front end for a real Copilot CLI session.
 
-The important lesson for me was that architecture matters. A PTY streamed into Telegram feels like a terminal wearing a fake mustache. It technically works, but it is not the experience I wanted. An extension that joins the Copilot session is a much better direction.
+The important lesson for me was that architecture matters. A PTY streamed into Telegram feels like a terminal wearing a fake mustache. It technically works, but it's not the experience I wanted. An extension that joins the Copilot session is a much better direction.
 
 Would I run this for a team today? Not without more guardrails.
 
