@@ -33,6 +33,10 @@ html.dark {
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -43,6 +47,7 @@ body {
   background-color: #f9fafb;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  overflow-x: hidden;
 }
 
 /* ===== Typography ===== */
@@ -310,6 +315,7 @@ html.dark .dark-mode-toggle .icon-sun {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
 }
 
 .entry-title a {
@@ -331,6 +337,7 @@ html.dark .dark-mode-toggle .icon-sun {
   align-items: center;
   gap: 0;
   flex-wrap: wrap;
+  min-width: 0;
 }
 
 .entry-date {
@@ -357,6 +364,8 @@ html.dark .dark-mode-toggle .icon-sun {
 
 .post-article {
   max-width: none;
+  min-width: 0;
+  overflow: hidden;
   margin: 0;
   margin-top: 0;
   margin-bottom: 40px;
@@ -389,6 +398,7 @@ html.dark .dark-mode-toggle .icon-sun {
   margin-top: 30px;
   text-align: justify;
   max-width: 896px;
+  min-width: 0;
 }
 
 .entry-content > p,
@@ -408,6 +418,12 @@ html.dark .dark-mode-toggle .icon-sun {
 
 .entry-content figure img {
   border-radius: 8px;
+}
+
+.entry-content img,
+.entry-content video {
+  max-width: 100%;
+  height: auto;
 }
 
 .entry-content > p img {
@@ -612,13 +628,13 @@ footer#footer .credits a:hover {
 
 .post-layout {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 0;
 }
 
 @media screen and (min-width: 1200px) {
   .post-layout {
-    grid-template-columns: 1fr 240px;
+    grid-template-columns: minmax(0, 1fr) 240px;
     gap: 32px;
     align-items: start;
   }
@@ -1089,9 +1105,9 @@ html.dark .mobile-social a {
   }
 
   .hero-banner-title {
-    font-size: 28px;
-    line-height: 1.2;
-    max-width: 78%;
+    font-size: 24px;
+    line-height: 1.18;
+    max-width: 70%;
     padding-top: 0;
   }
 }
@@ -1114,13 +1130,24 @@ html.dark .mobile-social a {
   }
 
   .entry-title {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.25;
   }
 
   .entry-meta {
+    align-items: flex-start;
+    flex-direction: column;
     row-gap: 4px;
     padding-bottom: 16px;
+  }
+
+  .entry-meta .meta-sep {
+    display: none;
+  }
+
+  .share-links a {
+    margin-left: 0;
+    margin-right: 10px;
   }
 
   .entry-content {
@@ -1141,6 +1168,11 @@ html.dark .mobile-social a {
 
   .related-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-banner-title {
+    font-size: 22px;
+    max-width: 64%;
   }
 
   .hero-banner {
@@ -1167,7 +1199,7 @@ html.dark .mobile-social a {
   }
 
   .hero-banner-title {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .hero-banner {
