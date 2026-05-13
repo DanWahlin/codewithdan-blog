@@ -27,7 +27,7 @@ In this post, I'll walk through how I enabled a Telegram bot for GitHub Copilot 
 ![Coffee with GitHub Copilot CLI and Telegram](/images/blog/using-telegram-with-github-copilot-cli/telegram-copilot-cli-coffee.jpeg)
 
 <div style="max-width: 420px; margin: 2rem auto;">
-  <video controls playsinline preload="metadata" style="width: 100%; border-radius: 16px;">
+  <video controls playsinline preload="metadata" poster="/images/blog/using-telegram-with-github-copilot-cli/telegram-copilot-poster.jpg" style="width: 100%; border-radius: 16px;">
     <source src="/images/blog/using-telegram-with-github-copilot-cli/telegram-copilot-phone-fit.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
