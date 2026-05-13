@@ -307,7 +307,6 @@ copilot \
   --experimental \
   --model gpt-5.5 \
   --no-remote \
-  --disable-builtin-mcps \
   --disallow-temp-dir \
   --secret-env-vars=TELEGRAM_BOT_TOKEN,GITHUB_TOKEN,GH_TOKEN,OPENAI_API_KEY,ANTHROPIC_API_KEY \
   --log-level warning
@@ -318,11 +317,10 @@ A few notes on those flags:
 - `--experimental` enables experimental features, including extension/plugin support required by this bridge
 - `--model gpt-5.5` starts with the model I wanted
 - `--no-remote` keeps the session local instead of allowing GitHub web/mobile remote control
-- `--disable-builtin-mcps` disables Copilot CLI's built-in MCP servers, currently `github-mcp-server`; it does not disable user-configured or plugin-provided MCP servers
 - `--disallow-temp-dir` prevents automatic file-access permission for the system temporary directory
 - `--secret-env-vars=...` strips those environment variables from shell/MCP server environments and redacts their values from output
 
-If you have MCP servers configured in `~/.copilot/mcp-config.json` or installed via plugins, `--disable-builtin-mcps` will not disable those. Use `copilot --help` and `/env` to inspect loaded MCPs, and disable specific servers with `--disable-mcp-server <name>` if needed. Also, `--secret-env-vars` only helps with environment variables you list. It does not protect secrets stored in files, shell history, git config, SSH agents, `.env` files, cloud CLI credentials, or credentials exposed through other tools.
+I am intentionally not disabling Copilot CLI's built-in GitHub MCP server in this command. For a GitHub-focused workflow, that MCP can be useful for repo, issue, PR, and GitHub context. If you want fewer integrations, you can add `--disable-builtin-mcps`, but for this workflow I'd leave it on.
 
 `TELEGRAM_BOT_TOKEN` only needs to be listed there if you exported it for your own shell commands. The bridge reads the token from `bots.json`, not from the environment.
 
@@ -369,7 +367,6 @@ copilot \
   --deny-tool='shell(sudo)' \
   --model gpt-5.5 \
   --no-remote \
-  --disable-builtin-mcps \
   --disallow-temp-dir \
   --secret-env-vars=TELEGRAM_BOT_TOKEN,GITHUB_TOKEN,GH_TOKEN \
   --log-level warning
@@ -411,7 +408,6 @@ copilot \
   --yolo \
   --model gpt-5.5 \
   --no-remote \
-  --disable-builtin-mcps \
   --disallow-temp-dir \
   --secret-env-vars=TELEGRAM_BOT_TOKEN,GITHUB_TOKEN,GH_TOKEN \
   --log-level warning
