@@ -1073,22 +1073,58 @@ html.dark .mobile-social a {
     display: flex;
   }
 
+  .site-header .header-inner {
+    height: 56px;
+  }
+
   .site-header .brand img {
-    width: 180px;
+    width: 120px;
     height: auto;
+  }
+
+  .hero-banner {
+    height: 180px;
+    background-size: cover;
+    background-position: 72% 50%;
+  }
+
+  .hero-banner-title {
+    font-size: 28px;
+    line-height: 1.2;
+    max-width: 78%;
+    padding-top: 0;
   }
 }
 
 @media screen and (max-width: 640px) {
+  .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .main-content {
+    padding-top: 12px;
+  }
+
   .post-article {
-    padding: 24px 20px;
-    margin-top: 24px;
+    padding: 20px 14px;
+    margin-top: 14px;
     margin-bottom: 24px;
     border-radius: 8px;
   }
 
   .entry-title {
-    font-size: 26px;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .entry-meta {
+    row-gap: 4px;
+    padding-bottom: 16px;
+  }
+
+  .entry-content {
+    text-align: left;
   }
 
   .post-list .post-thumbnail {
@@ -1108,8 +1144,8 @@ html.dark .mobile-social a {
   }
 
   .hero-banner {
-    height: 250px;
-    background-position: 80% 30%;
+    height: 160px;
+    background-position: 68% 50%;
   }
 }
 
