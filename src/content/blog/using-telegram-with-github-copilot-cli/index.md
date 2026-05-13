@@ -1,5 +1,5 @@
 ---
-title: "Using Telegram with GitHub Copilot CLI (Yep, it works!)"
+title: "Using Telegram with GitHub Copilot CLI"
 date: 2026-05-13
 draft: false
 categories:
