@@ -11,9 +11,9 @@ tags:
   - "telegram"
   - "copilot-cli"
   - "ai-agents"
-coverImage: "cover.png"
+coverImage: "cover.webp"
 ---
-![Using Telegram with GitHub Copilot CLI](/images/blog/using-telegram-with-github-copilot-cli/cover.png)
+![Using Telegram with GitHub Copilot CLI](/images/blog/using-telegram-with-github-copilot-cli/cover.webp)
 I spend a lot of time working with [GitHub Copilot CLI](https://github.com/features/copilot/cli/). It's great when I'm sitting in front of a terminal, but sometimes I'm away from the machine and want to kick off a review, ask a follow-up question, or check on the status of an agent task.
 
 I recently went on a family vacation to Spain and wanted to explore an app feature during downtime between sightseeing stops, without pulling out my iPad. While Copilot CLI's [remote feature](https://docs.github.com/copilot/how-tos/copilot-cli/use-copilot-cli/steer-remotely) works well, I prefer to use Telegram. I already use it with my OpenClaw and Hermes agents and like the general flow.
@@ -24,10 +24,10 @@ I didn't want a remote terminal in Telegram. I already have SSH for that, and I 
 
 In this post, I'll walk through how I enabled a Telegram bot for GitHub Copilot CLI using the [`examon/copilot-cli-telegram-bridge`](https://github.com/examon/copilot-cli-telegram-bridge) extension. I'll also cover what I checked before installing it, the setup steps, and a few gotchas I hit along the way.
 
-![Coffee with GitHub Copilot CLI and Telegram](/images/blog/using-telegram-with-github-copilot-cli/telegram-copilot-cli-coffee.jpeg)
+![Coffee with GitHub Copilot CLI and Telegram](/images/blog/using-telegram-with-github-copilot-cli/telegram-copilot-cli-coffee.webp)
 
 <div style="max-width: 420px; margin: 2rem auto;">
-  <video controls playsinline preload="metadata" poster="/images/blog/using-telegram-with-github-copilot-cli/telegram-copilot-poster.jpg" style="width: 100%; border-radius: 16px;">
+  <video controls playsinline preload="metadata" poster="/images/blog/using-telegram-with-github-copilot-cli/telegram-copilot-poster.webp" style="width: 100%; border-radius: 16px;">
     <source src="/images/blog/using-telegram-with-github-copilot-cli/telegram-copilot-phone-fit.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
@@ -499,7 +499,7 @@ For most people, I'd start with the safer allow/deny version first. Move to `--y
 
 I used the Copilot CLI Telegram Bridge extensively over vacation in Europe. Telegram became my lightweight chat front end for a real Copilot CLI session. Since I could use it directly from my phone while waiting for the family to get ready or during other downtime, my wife didn't complain that I was "working while on vacation." Yes, I probably need to completely disconnect, but that's never been my style. 😀
 
-![Using Telegram with Copilot CLI while traveling](/images/blog/using-telegram-with-github-copilot-cli/telegram-copilot-cli-ocean.png)
+![Using Telegram with Copilot CLI while traveling](/images/blog/using-telegram-with-github-copilot-cli/telegram-copilot-cli-ocean.webp)
 
 The important lesson for me was that architecture matters. A PTY streamed into Telegram feels like a terminal wearing a fake mustache. It technically works, but it's not the experience I wanted. An extension that joins the Copilot session is a much better direction.
 
