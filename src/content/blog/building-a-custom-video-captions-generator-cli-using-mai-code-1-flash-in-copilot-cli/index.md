@@ -22,7 +22,7 @@ I started this project for a very practical reason: I wanted a simple way to gen
 
 MAI-Code-1-Flash helped me research the existing OSS options, create a planning document, sketch the wrapper, implement the CLI, fix the FFmpeg path when the embed step broke, update the docs, and make the command-line behavior clearer.
 
-The end result is a tiny Node.js CLI called [`srtgen`](https://github.com/danwahlin/srtgen). It wraps two tools that already do the hard work well:
+The end result is a tiny Node.js CLI called [`srtgen`](https://github.com/danwahlin/srt-generator). It wraps two tools that already do the hard work well:
 
 - Whisper for speech-to-text and SRT generation
 - FFmpeg for embedding captions into MP4 output
