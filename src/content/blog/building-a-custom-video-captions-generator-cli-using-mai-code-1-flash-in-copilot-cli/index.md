@@ -12,7 +12,7 @@ tags:
   - "whisper"
   - "ffmpeg"
   - "srt"
-coverImage: "mai-code-1-flash.png"
+coverImage: "cover.png"
 draft: false
 ---
 
