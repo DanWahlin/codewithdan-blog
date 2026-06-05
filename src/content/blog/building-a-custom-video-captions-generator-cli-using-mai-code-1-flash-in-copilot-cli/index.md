@@ -22,7 +22,7 @@ I started this project for a very practical reason: I wanted a simple way to gen
 
 MAI-Code-1-Flash helped me research the existing OSS options, create a planning document, sketch the wrapper, implement the CLI, fix the FFmpeg path when the embed step broke, update the docs, and make the command-line behavior clearer.
 
-The end result is a tiny Node.js CLI called `srtgen`. It wraps two tools that already do the hard work well:
+The end result is a tiny Node.js CLI called [`srtgen`](https://github.com/danwahlin/srtgen). It wraps two tools that already do the hard work well:
 
 - Whisper for speech-to-text and SRT generation
 - FFmpeg for embedding captions into MP4 output
@@ -107,3 +107,5 @@ This project is a good example of what a Flash model can do well. It is not the 
 A Flash model is not only for quick answers. It can support real engineering work when the task is focused and well-defined, the tools are already known, and the goal is to make something useful. This project ended up being exactly that: a lightweight wrapper around existing tools, with a clean output path and real value for anyone who needs captions from video.
 
 To sum it up, MAI-Code-1-Flash helped me build a useful captioning tool around Whisper and FFmpeg, and the result is something you can run locally without reinventing the pipeline. All done without relying on a large, complex, and more expensive model.
+
+**SRT-Generator** Repo: https://github.com/DanWahlin/srt-generator
