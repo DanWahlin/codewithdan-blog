@@ -109,3 +109,7 @@ A Flash model is not only for quick answers. It can support real engineering wor
 To sum it up, MAI-Code-1-Flash helped me build a useful captioning tool around Whisper and FFmpeg, and the result is something you can run locally without reinventing the pipeline. All done without relying on a large, complex, and more expensive model.
 
 **SRT-Generator** Repo: https://github.com/DanWahlin/srt-generator
+
+Here's another example of using MAI-Code-1-Flash to build out an app.
+
+<iframe class="video-player" src="https://www.youtube.com/embed/fnc51rXRFY4" title="Another example of using MAI-Code-1-Flash to build out an app" width="300" height="150" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe>
