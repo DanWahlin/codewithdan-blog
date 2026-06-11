@@ -189,6 +189,7 @@ async function main() {
     const content = await readFile(join(dirPath, mdFile), 'utf-8');
     const fm = parseFrontmatter(content);
     if (!fm || !fm.title || fm.draft === 'true') continue;
+    if (fm.coverImage) continue; // use coverImage for og:image instead of generated card
 
     const outputPath = join(OG_DIR, `${slug}.png`);
 

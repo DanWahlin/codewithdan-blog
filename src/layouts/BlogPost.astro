@@ -11,11 +11,13 @@ import type { BlogPostProps } from '../types';
 
 type Props = BlogPostProps;
 
-const { title, date, lastModified, categories, tags, body, postId, headings = [], series, seriesOrder, prevPost, nextPost } = Astro.props;
+const { title, date, lastModified, categories, tags, body, postId, headings = [], series, seriesOrder, prevPost, nextPost, coverImage: coverImageFile } = Astro.props;
 const shareUrl = Astro.url;
 const shareTitle = encodeURIComponent(title);
 const readingTime = body ? getReadingTime(body) : '';
-const ogImage = postId ? `/og/${postId}.png` : undefined;
+const ogImage = coverImageFile && postId 
+  ? `/images/blog/${postId}/${coverImageFile}` 
+  : (postId ? `/og/${postId}.png` : undefined);
 
 // Build series data if this post is part of a series
 let seriesPosts: { id: string; title: string; order: number }[] = [];
