@@ -4,12 +4,17 @@
 
 import { createServer } from 'node:http';
 import { createHmac, timingSafeEqual } from 'node:crypto';
-import { execSync, spawn } from 'node:child_process';
+import { spawn } from 'node:child_process';
 
 const PORT = 9876;
-const SECRET = process.env.WEBHOOK_SECRET;
+const SECRET = process.env.WEBHOOK_SECRET?.trim();
 const REPO_DIR = '/root/production/codewithdan-blog';
 const BRANCH = 'main';
+
+if (!SECRET) {
+  console.error('WEBHOOK_SECRET environment variable is required.');
+  process.exit(1);
+}
 
 let deploying = false;
 
