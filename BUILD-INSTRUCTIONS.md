@@ -76,3 +76,13 @@ Recreate the WordPress "Code with Dan" blog in Astro, matching the current look 
 - Don't change the content schema or markdown files
 - Don't add Tailwind or any CSS framework
 - Don't over-engineer — keep it simple, it's a static blog
+
+## Publishing
+- Push content and code changes to `main` when they are ready to save, review, or share.
+- Production deploys only happen from tags that match `publish-*`.
+- To publish the current commit:
+  ```bash
+  git tag -a publish-YYYY-MM-DD -m "Publish blog"
+  git push origin publish-YYYY-MM-DD
+  ```
+- GitHub Pages and the VM fallback webhook both use the `publish-*` tag as the deployment trigger.
