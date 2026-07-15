@@ -114,7 +114,7 @@ With traditional prompt engineering, you provide text prompts and hope the model
 
 ## Getting Started with TypeChat
 
-Interested in trying TypeChat? Get started by checking out the [TypeChat GitHub repository](https://github.com/microsoft/TypeChat). You can clone the repo or run it directly using [GitHub Codespaces](https://docs.github.com/codespaces/overview) (I show how to use Codespaces in the [video overview](//www.youtube.com/watch?v=t4YStIA88Yo) mentioned earlier). The **examples** folder contains several useful code samples to help you understand TypeChat's capabilities, examine schemas, and learn more about using the TypeChat API.
+Interested in trying TypeChat? Get started by checking out the [TypeChat GitHub repository](https://github.com/microsoft/TypeChat). You can clone the repo or run it directly using [GitHub Codespaces](https://docs.github.com/codespaces/overview) (I show how to use Codespaces in the [video overview](https://www.youtube.com/watch?v=t4YStIA88Yo) mentioned earlier). The **examples** folder contains several useful code samples to help you understand TypeChat's capabilities, examine schemas, and learn more about using the TypeChat API.
 
 TypeChat works with both OpenAI and Azure OpenAI, so pick your preferred platform and set up the credentials in the **.env** file as mentioned in the **[examples/readme.md](https://github.com/microsoft/TypeChat/blob/main/examples/README.md#step-3-configure-environment-variables)** file.
 
