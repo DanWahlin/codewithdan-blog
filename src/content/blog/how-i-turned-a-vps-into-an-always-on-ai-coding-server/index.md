@@ -20,7 +20,7 @@ tags:
 coverImage: "cover.webp"
 ---
 
-![Always-on AI coding VPS controlled from Telegram](/images/blog/turning-a-hetzner-vm-into-an-ai-coding-server/cover.webp)
+![Always-on AI coding VPS controlled from Telegram](/images/blog/how-i-turned-a-vps-into-an-always-on-ai-coding-server/cover.webp)
 
 Have you ever wanted an AI coding agent to keep working after you close your laptop, or to reach it from your phone while you're away? That's what pushed me to turn a virtual private server (VPS) into an always-on coding environment.
 
@@ -57,7 +57,7 @@ While waiting in line for Big Thunder Mountain Railroad, I had an idea for a new
 
 My wife reviewed them while we were still in line and was genuinely impressed that I could do all of this from my phone. She's not easily impressed 😀. Here's the seven-screen wireframe summary the agent created. While not shown in the image, it also created full wireframes with details about API calls and more for each of the individual screens.
 
-![Seven-screen Plan My Day wireframe flow created from the VPS](/images/blog/turning-a-hetzner-vm-into-an-ai-coding-server/plan-my-day-wireframe-flow.webp)
+![Seven-screen Plan My Day wireframe flow created from the VPS](/images/blog/how-i-turned-a-vps-into-an-always-on-ai-coding-server/plan-my-day-wireframe-flow.webp)
 
 Those wireframes didn't remain a throwaway prototype. From Telegram, I used a coding agent on the VPS to turn them into a complete Plan My Day feature in the app. The implementation also handles recurring plans, reminders, time zones, completion tracking, streaks, and morning notifications. It touched 84 files and added 101 API tests, along with client and end-to-end test coverage.
 
@@ -170,7 +170,7 @@ The repository stayed on the VPS for writing and local builds, but the public si
 
 The blog uses Markdown rendered by Astro, so I still needed a practical way to edit posts on the VPS. Something that I could use on my laptop, tablet, or phone. So, I had Hermes build a custom Markdown editor and securely expose it through Cloudflare Tunnel. I'm literally using it right now as I type this sentence.
 
-![CodeWithDan content editor displaying the VPS article in preview mode](/images/blog/turning-a-hetzner-vm-into-an-ai-coding-server/content-editor-preview.webp)
+![CodeWithDan content editor displaying the VPS article in preview mode](/images/blog/how-i-turned-a-vps-into-an-always-on-ai-coding-server/content-editor-preview.webp)
 
 I also used the VPS to build a custom Telegram bridge for Grok Build through the Agent Client Protocol (ACP). I already had a bridge for Copilot CLI, so I used that implementation as the foundation.
 
@@ -221,7 +221,7 @@ The network design separates three different access paths:
 
 Telegram doesn't enter through Tailscale or an open inbound port. Hermes, OpenClaw, and the dedicated bridges initiate outbound connections to Telegram's Bot API, then receive messages and send replies over those established connections.
 
-![Always-on AI coding VPS architecture showing Telegram, Tailscale, Cloudflare Tunnel, agent workers, and the Hetzner firewall](/images/blog/turning-a-hetzner-vm-into-an-ai-coding-server/architecture.webp)
+![Always-on AI coding VPS architecture showing Telegram, Tailscale, Cloudflare Tunnel, agent workers, and the Hetzner firewall](/images/blog/how-i-turned-a-vps-into-an-always-on-ai-coding-server/architecture.webp)
 
 ### Tailscale for Private Services
 

@@ -8,6 +8,10 @@ import rehypeThirdPartyLinks from './src/plugins/rehype-third-party-links.mjs';
 
 export default defineConfig({
 	site: 'https://blog.codewithdan.com',
+	redirects: {
+		'/turning-a-hetzner-vm-into-an-ai-coding-server':
+			'/how-i-turned-a-vps-into-an-always-on-ai-coding-server',
+	},
 	integrations: [mdx(), sitemap()],
 	prefetch: {
 		defaultStrategy: 'hover',
