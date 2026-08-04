@@ -23,6 +23,14 @@ I've never liked either option.
 
 [GitHub stacked pull requests](https://docs.github.com/en/pull-requests/get-started/about-stacked-prs) let you split that work into smaller, dependent pull requests without waiting for each one to merge. I created the **[Learn GitHub Stacked PRs](https://github.com/DanWahlin/learn-github-stacked-prs)** repo to show the workflow with a real three-PR stack you can inspect and build yourself.
 
+The repo includes several ways to learn and teach the workflow:
+
+- A [live three-PR stack walkthrough](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/review-walkthrough.md) that shows the model, validation, and API review boundaries
+- A complete [GitHub CLI walkthrough](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/build-the-stack.md) for building and submitting the stack yourself
+- A 55-minute [AI coding agent workshop](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/workshop/README.md) with planning, implementation, verification, and approval checkpoints
+- A downloadable [PowerPoint deck](https://github.com/DanWahlin/learn-github-stacked-prs/raw/refs/heads/main/github-stacked-prs.pptx) and [facilitator guide](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/facilitator-guide.md) for team training
+- A [`gh stack` cheat sheet](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/cheat-sheet.md), [troubleshooting guide](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/troubleshooting.md), and [glossary](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/glossary.md) for quick reference
+
 ## One Feature, Three Focused Pull Requests
 
 A stack is a linear chain of dependent pull requests in the same repository. The bottom pull request targets the trunk branch, and each pull request above it targets the branch directly below it.
@@ -39,9 +47,9 @@ The stack has three layers:
 
 Each pull request shows only the code introduced by that layer. Reviewers can focus on the model contract first, validation second, and the HTTP API last. Meanwhile, development can continue on the dependent branches instead of waiting for each pull request to land.
 
-The public repo keeps this example open as a live stack. You can inspect [the model PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/21), [the validation PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/22), and [the API PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/23). At the time I wrote this, all three were open, ready for review, and based on the intended branch below them.
+The public repo keeps this example open as a live stack. You can inspect [the model PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/21), [the validation PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/22), and [the API PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/23). All three PRs are open, ready for review, and based on the intended branch below them.
 
-The repo's [training-resource workflow](https://github.com/DanWahlin/learn-github-stacked-prs/actions/workflows/verify-training-resource.yml) continuously checks the documented PR boundaries and runs the tests on every canonical branch. That keeps the live example from quietly drifting away from the workshop.
+The repo's [training-resource workflow](https://github.com/DanWahlin/learn-github-stacked-prs/actions/workflows/verify-training-resource.yml) continuously checks the documented PR boundaries and runs the tests on every canonical branch. That keeps the live example from quietly drifting away from the workshop (more on that later).
 
 When it's time to merge, you can land the lowest unmerged pull request by itself or select a higher pull request to merge it and every unmerged layer below it. You can't merge a middle layer by itself while leaving its dependencies open. That rule keeps the chain valid.
 
