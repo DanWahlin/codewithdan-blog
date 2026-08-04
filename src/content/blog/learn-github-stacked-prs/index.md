@@ -21,7 +21,7 @@ Say you're building an API that needs a model, validation, and an endpoint. Putt
 
 I've never liked either option.
 
-[GitHub stacked pull requests](https://docs.github.com/en/pull-requests/get-started/about-stacked-prs) give you a third path: split dependent work into small pull requests while continuing to build the layers above them. I created the **[Learn GitHub Stacked PRs](https://github.com/DanWahlin/learn-github-stacked-prs)** repo to make that workflow concrete. It includes a live three-PR stack, a complete GitHub CLI walkthrough, an AI coding agent workshop, a PowerPoint deck, and facilitator resources.
+[GitHub stacked pull requests](https://docs.github.com/en/pull-requests/get-started/about-stacked-prs) let you split that work into smaller, dependent pull requests without waiting for each one to merge. I created the **[Learn GitHub Stacked PRs](https://github.com/DanWahlin/learn-github-stacked-prs)** repo to show the workflow with a real three-PR stack you can inspect and build yourself.
 
 ## One Feature, Three Focused Pull Requests
 
@@ -41,11 +41,13 @@ Each pull request shows only the code introduced by that layer. Reviewers can fo
 
 The public repo keeps this example open as a live stack. You can inspect [the model PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/21), [the validation PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/22), and [the API PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/23). At the time I wrote this, all three were open, ready for review, and based on the intended branch below them.
 
+The repo's [training-resource workflow](https://github.com/DanWahlin/learn-github-stacked-prs/actions/workflows/verify-training-resource.yml) continuously checks the documented PR boundaries and runs the tests on every canonical branch. That keeps the live example from quietly drifting away from the workshop.
+
 When it's time to merge, you can land the lowest unmerged pull request by itself or select a higher pull request to merge it and every unmerged layer below it. You can't merge a middle layer by itself while leaving its dependencies open. That rule keeps the chain valid.
 
 ## Learn It at Your Own Pace
 
-I wanted the repo to work whether you have five minutes or an hour. The README gives you several paths:
+You don't have to complete the full workshop to learn the basics. The README includes a few ways to use the repo:
 
 - Read the core concept and decision guide in about five minutes
 - Review the live stack in about 15 minutes
@@ -55,7 +57,7 @@ I wanted the repo to work whether you have five minutes or an hour. The README g
 
 There is also a [`gh stack` cheat sheet](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/cheat-sheet.md), a [troubleshooting guide](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/troubleshooting.md), and a [glossary](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/glossary.md) for later reference.
 
-The live stack matters because stacked PRs are easier to understand when you can click through the actual **Files changed** tabs. The model PR changes two files. The validation PR changes two files relative to the model branch. The API PR changes three files relative to validation. You see the review boundary rather than reading another abstract diagram and hoping it sticks.
+I recommend opening each PR and checking its **Files changed** tab. The model PR changes two files, validation changes two files relative to the model branch, and the API layer changes three relative to validation. Seeing those small diffs makes the review boundaries easier to understand than another diagram would.
 
 ## Build One Green Layer at a Time
 
@@ -87,14 +89,14 @@ Those commands are the easy part. The habit I care about is what happens inside 
 
 Every branch contains the implementation and tests for the behavior it introduces. The model branch has one passing test. Validation builds on it and has four cumulative passing tests. The API layer finishes with six. A tests-only bottom PR that stays red until an implementation arrives above it would defeat the point of a focused, independently reviewable layer.
 
-Before submitting, the walkthrough has you inspect the stack, branch ancestry, changed files, and test results. After submitting, you inspect the live pull requests on GitHub. A successful CLI exit doesn't prove that every base, head, diff, draft state, and stack relationship is correct.
+Before submitting, the walkthrough has you inspect the branch order, changed files, and test results. Check the pull requests on GitHub afterward too. A successful command doesn't guarantee that each PR targets the right branch or contains the diff you expected.
 
 ## Build in a Disposable Workshop Repo
 
 The training repo includes a cross-platform Node.js script that creates an isolated learner repository. It supports two modes:
 
 - **Build mode** creates the scaffold so you can build the stack yourself
-- **Ready mode** recreates the complete three-PR stack for facilitator practice, a shortened session, or recovery
+- **Ready mode** creates the finished three-PR stack so you can inspect it or reset a workshop
 
 ```bash
 git clone https://github.com/DanWahlin/learn-github-stacked-prs.git
@@ -114,17 +116,17 @@ The root [`AGENTS.md`](https://github.com/DanWahlin/learn-github-stacked-prs/blo
 
 The workshop starts by asking the agent to plan the stack without changing files. You review the proposed trunk, branch order, responsibilities, exclusions, tests, and commands. Only then does the agent build one layer at a time. It stops again before pushing or submitting anything.
 
-I don't want an agent deciding those boundaries as it goes. It can implement and test the changes, but the human still approves the architecture, history rewrites, publication, synchronization, and merges. Otherwise, an agent working on the API branch may discover that the model needs a change and quietly put the model code in the API pull request. The code might work, but the review boundary is now wrong.
+I added those approval points to keep the stack from drifting. An agent working on the API branch might decide the model also needs a change and put both changes in the same pull request. The tests may still pass, but reviewers now have to sort out code that belongs in two different layers.
 
 ## Lower-Layer Feedback Has a Cost
 
-The biggest tradeoff with stacked PRs appears when feedback changes a lower layer. If the model contract changes, every branch above it depends on the rewritten history.
+The tricky part comes when review feedback changes a lower branch. If the model contract changes, you have to carry that update through every branch above it.
 
 ![Lower-layer feedback moving through rebase, testing, approval, and live PR verification](/images/blog/learn-github-stacked-prs/feedback-cascade.webp)
 
 The workshop uses a specific exercise: add `priority: 'normal'` to every task in the model layer. You update and test the bottom branch, then cascade the change through the dependent branches. After that, you run the full test suite, approve the remote update, and inspect every live pull request again.
 
-Because those commands can rewrite commit IDs or change remote state, the repo puts approval gates around `gh stack rebase`, `gh stack push`, `gh stack sync`, and `gh stack merge` when an agent is involved. It also tells agents never to use a plain force push.
+For that reason, the agent must ask before running `gh stack rebase`, `gh stack push`, `gh stack sync`, or `gh stack merge`. Those commands can rewrite commits or update the remote stack. The instructions also prohibit a plain force push.
 
 ## When a Stack Is the Wrong Tool
 
@@ -132,7 +134,7 @@ Not every set of pull requests should become a stack. Use one when you have two 
 
 A normal pull request is a better fit for one isolated change. Independent authentication and billing work should be separate normal pull requests, or separate stacks if each feature has its own dependent layers. GitHub stacks are linear, so a branching dependency graph is a sign that the work needs to be split differently.
 
-There's also a judgment call around review cost. If nobody can explain the acceptance criterion for one layer, or if formatting churn hides the functional change, the stack needs to be restructured. Smaller pull requests only help when the boundaries make sense.
+Each layer should have a clear purpose that a reviewer can explain. If formatting changes hide the functional work or a pull request can't stand on its own, reorganize the stack before submitting it.
 
 ## Try the Repo
 
