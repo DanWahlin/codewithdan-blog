@@ -21,9 +21,9 @@ Say you're building an API that needs a model, validation, and an endpoint. Putt
 
 I've never liked either option.
 
-[GitHub stacked pull requests](https://docs.github.com/en/pull-requests/get-started/about-stacked-prs) let you split that work into smaller, dependent pull requests without waiting for each one to merge. I created the **[Learn GitHub Stacked PRs](https://github.com/DanWahlin/learn-github-stacked-prs)** repo to show the workflow with a real three-PR stack you can inspect and build yourself.
+[GitHub stacked pull requests](https://docs.github.com/en/pull-requests/get-started/about-stacked-prs) solve that tradeoff. They let you split a feature into smaller, dependent pull requests while continuing work on the branches above them. I created the **[Learn GitHub Stacked PRs](https://github.com/DanWahlin/learn-github-stacked-prs)** repo because I wanted a concrete, hands-on example that shows the review boundaries and complete workflow, not just another diagram explaining the idea.
 
-The repo includes several ways to learn and teach the workflow:
+To make that useful whether you're learning on your own or teaching a team, the repo includes:
 
 - A [live three-PR stack walkthrough](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/review-walkthrough.md) that shows the model, validation, and API review boundaries
 - A complete [GitHub CLI walkthrough](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/build-the-stack.md) for building and submitting the stack yourself
@@ -33,7 +33,7 @@ The repo includes several ways to learn and teach the workflow:
 
 ## One Feature, Three Focused Pull Requests
 
-A stack is a linear chain of dependent pull requests in the same repository. The bottom pull request targets the trunk branch, and each pull request above it targets the branch directly below it.
+A stack is a linear chain of dependent pull requests in the same repository. The bottom pull request targets the trunk branch (`main` in this example), and each pull request above it targets the branch directly below it.
 
 The repo uses a small task API as the running example:
 
@@ -47,29 +47,17 @@ The stack has three layers:
 
 Each pull request shows only the code introduced by that layer. Reviewers can focus on the model contract first, validation second, and the HTTP API last. Meanwhile, development can continue on the dependent branches instead of waiting for each pull request to land.
 
-The public repo keeps this example open as a live stack. You can inspect [the model PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/21), [the validation PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/22), and [the API PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/23). All three PRs are open, ready for review, and based on the intended branch below them.
+The repo keeps [the model PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/21), [the validation PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/22), and [the API PR](https://github.com/DanWahlin/learn-github-stacked-prs/pull/23) open and ready for review so you can inspect the complete stack.
 
-The repo's [training-resource workflow](https://github.com/DanWahlin/learn-github-stacked-prs/actions/workflows/verify-training-resource.yml) continuously checks the documented PR boundaries and runs the tests on every canonical branch. That keeps the live example from quietly drifting away from the workshop (more on that later).
+Start with each PR's **Files changed** tab. The model PR changes two files, validation changes two files relative to the model branch, and the API layer changes three relative to validation. Seeing those small diffs makes the review boundaries easier to understand than another diagram would.
 
-When it's time to merge, you can land the lowest unmerged pull request by itself or select a higher pull request to merge it and every unmerged layer below it. You can't merge a middle layer by itself while leaving its dependencies open. That rule keeps the chain valid.
+The [training-resource workflow](https://github.com/DanWahlin/learn-github-stacked-prs/actions/workflows/verify-training-resource.yml) checks that the live PR boundaries still match the documentation and runs the tests on every branch in the example. That keeps the stack and workshop in sync.
 
-## Learn It at Your Own Pace
-
-You don't have to complete the full workshop to learn the basics. The README includes a few ways to use the repo:
-
-- Read the core concept and decision guide in about five minutes
-- Review the live stack in about 15 minutes
-- Build the stack with GitHub CLI in 45 to 60 minutes
-- Run the AI coding agent workshop in about 55 minutes
-- Teach the material with the PowerPoint deck and facilitator guide
-
-There is also a [`gh stack` cheat sheet](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/cheat-sheet.md), a [troubleshooting guide](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/troubleshooting.md), and a [glossary](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/docs/glossary.md) for later reference.
-
-I recommend opening each PR and checking its **Files changed** tab. The model PR changes two files, validation changes two files relative to the model branch, and the API layer changes three relative to validation. Seeing those small diffs makes the review boundaries easier to understand than another diagram would.
+Those review boundaries also determine how the stack can merge. You can land the lowest unmerged pull request by itself or select a higher pull request to merge it and every unmerged layer below it. You can't merge a middle layer by itself while leaving its dependencies open. That rule keeps the chain valid.
 
 ## Build One Green Layer at a Time
 
-The repo uses GitHub's [`gh stack`](https://github.com/github/gh-stack) extension for GitHub CLI. You'll need Git 2.20 or newer, Node.js 20 or newer, and an authenticated GitHub CLI 2.90 or newer. Install the extension once if `gh stack --version` isn't available:
+Once the review boundaries make sense, the next step is to build the same stack yourself. The repo uses GitHub's [`gh stack`](https://github.com/github/gh-stack) extension for GitHub CLI. You'll need Git 2.20 or newer, Node.js 20 or newer, and an authenticated GitHub CLI 2.90 or newer. Install the extension once if `gh stack --version` isn't available:
 
 ```bash
 gh extension install github/gh-stack
@@ -101,7 +89,7 @@ Before submitting, the walkthrough has you inspect the branch order, changed fil
 
 ## Build in a Disposable Workshop Repo
 
-The training repo includes a cross-platform Node.js script that creates an isolated learner repository. It supports two modes:
+Practice those commands somewhere you can safely rebase, synchronize, and merge. The training repo includes a cross-platform Node.js script that creates an isolated learner repository in one of two modes:
 
 - **Build mode** creates the scaffold so you can build the stack yourself
 - **Ready mode** creates the finished three-PR stack so you can inspect it or reset a workshop
@@ -118,7 +106,7 @@ I recommend using the script instead of forking the repo. A fork doesn't copy pu
 
 ## Use an AI Coding Agent Without Giving Up the Boundaries
 
-The repo also includes a hands-on workshop for [GitHub Copilot](https://github.com/features/copilot), [GitHub Copilot CLI](https://github.com/features/copilot/cli), and the [GitHub Copilot app](https://github.com/features/ai/github-app). Other coding agents can participate if they load the repo instructions and can run Git, GitHub CLI, tests, and `gh stack`.
+With an isolated repo in place, you can build each layer manually or hand the implementation to an AI coding agent. The hands-on workshop supports [GitHub Copilot](https://github.com/features/copilot), [GitHub Copilot CLI](https://github.com/features/copilot/cli), and the [GitHub Copilot app](https://github.com/features/ai/github-app). Other coding agents can participate if they load the repo instructions and can run Git, GitHub CLI, tests, and `gh stack`.
 
 The root [`AGENTS.md`](https://github.com/DanWahlin/learn-github-stacked-prs/blob/main/AGENTS.md) file defines the rules that matter for this specific repo: branch order, layer responsibilities, required tests, approval gates, and the evidence an agent must return before remote operations. GitHub also provides an official `gh-stack` agent skill with reusable command guidance.
 
@@ -128,7 +116,7 @@ I added those approval points to keep the stack from drifting. An agent working 
 
 ## Lower-Layer Feedback Has a Cost
 
-The tricky part comes when review feedback changes a lower branch. If the model contract changes, you have to carry that update through every branch above it.
+Those approval gates become especially important when review feedback changes a lower branch. If the model contract changes, you have to carry that update through every branch above it.
 
 ![Lower-layer feedback moving through rebase, testing, approval, and live PR verification](/images/blog/learn-github-stacked-prs/feedback-cascade.webp)
 
@@ -138,23 +126,22 @@ For that reason, the agent must ask before running `gh stack rebase`, `gh stack 
 
 ## When a Stack Is the Wrong Tool
 
-Not every set of pull requests should become a stack. Use one when you have two or more reviewable changes that form one linear dependency chain in the same repository.
+That cascade cost is the main reason not to use a stack by default. Use one when you have two or more reviewable changes that form one linear dependency chain in the same repository.
 
 A normal pull request is a better fit for one isolated change. Independent authentication and billing work should be separate normal pull requests, or separate stacks if each feature has its own dependent layers. GitHub stacks are linear, so a branching dependency graph is a sign that the work needs to be split differently.
 
-Each layer should have a clear purpose that a reviewer can explain. If formatting changes hide the functional work or a pull request can't stand on its own, reorganize the stack before submitting it.
+Each layer should have a clear purpose that a reviewer can explain. If formatting changes hide the functional work or the layer doesn't have a clear review boundary, reorganize the stack before submitting it.
 
 ## Try the Repo
 
-If you only have five minutes, read the explanation and decision guide. If you have more time, inspect the three open pull requests and create a private learner copy before running the commands.
+If this workflow fits your feature, start with the live stack. When you're ready to try the commands, create a private learner copy and build one yourself.
 
 **[Explore the Learn GitHub Stacked PRs repo](https://github.com/DanWahlin/learn-github-stacked-prs)**
 
 Stacked PRs add work when a lower branch changes, so I wouldn't use them for every feature. But when several small changes depend on each other, they let reviewers focus on one decision at a time without forcing development to stop after each pull request.
 
-## Resources
+## Official References
 
-- [Learn GitHub Stacked PRs](https://github.com/DanWahlin/learn-github-stacked-prs)
 - [About stacked pull requests](https://docs.github.com/en/pull-requests/get-started/about-stacked-prs)
 - [`gh stack` CLI command reference](https://docs.github.com/en/pull-requests/reference/stacked-prs-cli-commands)
 - [Stack AI-generated code in pull requests](https://docs.github.com/en/copilot/tutorials/stack-ai-generated-code-in-pull-requests)
