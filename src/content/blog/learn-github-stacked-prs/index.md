@@ -120,7 +120,9 @@ Those approval gates become especially important when review feedback changes a 
 
 ![Lower-layer feedback moving through rebase, testing, approval, and live PR verification](/images/blog/learn-github-stacked-prs/feedback-cascade.webp)
 
-The workshop uses a specific exercise: add `priority: 'normal'` to every task in the model layer. You update and test the bottom branch, then cascade the change through the dependent branches. After that, you run the full test suite, approve the remote update, and inspect every live pull request again.
+The workshop uses a specific exercise: add `priority: 'normal'` to every task in the model layer. You update and test the bottom branch, then carry the change through the dependent branches. The workshop deliberately separates the local rebase, tests, diff review, and remote push so each approval checkpoint stays visible.
+
+For routine updates, an approved `gh stack sync` performs that complete loop in one command: it fetches and reconciles remote state, fast-forwards trunk when possible, cascade-rebases stale branches, pushes the updates, and synchronizes pull request and stack state. If it encounters a rebase conflict, it restores the branches and directs you to `gh stack rebase` for recovery.
 
 For that reason, the agent must ask before running `gh stack rebase`, `gh stack push`, `gh stack sync`, or `gh stack merge`. Those commands can rewrite commits or update the remote stack. The instructions also prohibit a plain force push.
 
