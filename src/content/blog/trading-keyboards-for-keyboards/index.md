@@ -17,7 +17,9 @@ A few people have asked where the music went now that the old weblogs.asp.net bl
 
 Fair warning: some of these are more polished, some are rough demos, and a few should probably have stayed in a box. 😀 That said, here they are.
 
-My personal favorites are No Shame in Crying, Reality, and Learning to Fall. But, I had the most fun making No More DLL Hell and Silverlight with the most excellent Spike Xavier.
+My personal favorites are No Shame in Crying, Reality, and Learning to Fall. But, I had the most fun making No More DLL Hell and Silverlight with my good friend Spike Xavier (he was in the band Corporate Avenger and a few others). The highlight was Family of Friends since it made it on the radio in 1988. I was 17 years old at the time so it was pretty cool as a teenager to walk into a store and hear your song being played and being interviewed by disc jockeys (DJs) on the radio.
+
+Music didn't end up working out long-term and I traded in my electronic keyboards for my coding keyboards (which was a good move in hindsight), but I'll never forget all the fun I had making these and other songs - even though some of them are cheesy as hell.
 
 ## Tracks
 
