@@ -437,6 +437,21 @@ html.dark .dark-mode-toggle .icon-sun {
   margin-top: 5px;
 }
 
+.entry-content .song {
+  margin: 0 0 22px 0;
+}
+
+.entry-content .song p {
+  margin: 0 0 6px 0;
+}
+
+.entry-content audio {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: 40px;
+}
+
 /* ===== Post listing ===== */
 
 .post-list article {
