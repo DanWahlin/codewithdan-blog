@@ -17,6 +17,8 @@ A few people have asked where the music went now that the old weblogs.asp.net bl
 
 Fair warning: some of these are more polished, some are rough demos, and a few should probably have stayed in a box. 😀 That said, here they are.
 
+My personal favorites are No Shame in Crying, Reality, and Learning to Fall. But, I had the most fun making No More DLL Hell and Silverlight with the most excellent Spike Xavier.
+
 ## Tracks
 
 <div class="song">
