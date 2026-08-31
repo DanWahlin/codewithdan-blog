@@ -1234,7 +1234,7 @@ html.dark .mobile-social a {
   }
 
   .hero-card-image img {
-    height: 200px;
+    height: auto;
   }
 }
 
