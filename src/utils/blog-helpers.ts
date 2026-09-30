@@ -21,9 +21,10 @@ export function getExcerpt(body: string, maxLength = 300): string {
 	return stripped.substring(0, maxLength).replace(/\s+\S*$/, '') + ' …';
 }
 
-export function getCoverImagePath(post: { id: string; data: { coverImage?: string } }): string | null {
-	if (post.data.coverImage) {
-		return `/images/blog/${post.id}/${post.data.coverImage}`;
+export function getCoverImagePath(post: { id: string; data: { coverImage?: string; cardImage?: string } }): string | null {
+	const image = post.data.cardImage || post.data.coverImage;
+	if (image) {
+		return `/images/blog/${post.id}/${image}`;
 	}
 	return null;
 }

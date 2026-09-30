@@ -12,6 +12,7 @@ tags:
   - "human-in-the-loop"
   - "ai-assisted-development"
 coverImage: "cover.webp"
+cardImage: "cover-card.webp"
 draft: false
 ---
 
