@@ -1,5 +1,6 @@
 // @ts-check
 import mdx from '@astrojs/mdx';
+import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
@@ -17,16 +18,18 @@ export default defineConfig({
 		defaultStrategy: 'hover',
 	},
 	markdown: {
+		processor: unified({
+			rehypePlugins: [
+				rehypeSlug,
+				[rehypeAutolinkHeadings, { behavior: 'wrap' }],
+				rehypeThirdPartyLinks,
+			],
+		}),
 		shikiConfig: {
 			themes: {
 				light: 'github-light',
 				dark: 'github-dark',
 			},
 		},
-		rehypePlugins: [
-			rehypeSlug,
-			[rehypeAutolinkHeadings, { behavior: 'wrap' }],
-			rehypeThirdPartyLinks,
-		],
 	},
 });

@@ -1,7 +1,7 @@
 ---
 import '@pagefind/default-ui/css/ui.css';
 import '../styles/global.css';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import { SITE_TITLE } from '../consts';
 
 interface Props {
@@ -33,7 +33,7 @@ const { title, description = '', ogImage } = Astro.props;
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
 
-<ViewTransitions />
+<ClientRouter />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
